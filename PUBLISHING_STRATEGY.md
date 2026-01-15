@@ -1,366 +1,544 @@
-# PPP White Paper Publishing Strategy
+# PPP White Paper Publishing Strategy v2.0
 
 **Author:** Paul Phillips, Clear Seas Solutions LLC
 **Prepared:** January 2026
-**Status:** Strategic Planning Document
+**Status:** REVISED - Integrated Multi-Repository Analysis
 
 ---
 
 ## Executive Summary
 
-Polytopal Projection Processing (PPP) represents a paradigm shift in computational cognition—from symbol manipulation to geometric process. This strategy outlines a multi-paper publication approach targeting academic venues, industry white papers, and defense/government audiences.
+After comprehensive review of materials across three repositories:
+1. **Geometric-Dialetics-on-the-Orgin-of-Homology** - Core theory paper
+2. **ppp-info-site** - Full implementation (CPE, HDCEncoder, telemetry)
+3. **Geomtric-Trialetical-Homological-Ubiquity-In-Structure** - Extended theory (GIT, E8, consciousness)
+
+This strategy organizes your work into a **tiered publication approach** distinguishing between:
+- **Tier 1**: High-confidence, publishable contributions (AI/ML venues)
+- **Tier 2**: Theoretical extensions requiring development (Physics/Info Theory venues)
+- **Tier 3**: Speculative frontier work (Philosophy/Consciousness venues)
 
 **Core Innovation:** The rendering pipeline *constitutes* cognition; visual projection of 4D polytopes is the thinking process itself.
 
-**Key Differentiators:**
-1. Geometric grounding solves symbol grounding problem
-2. Interpretable by design (trajectories through polytope space)
-3. Scale-invariant topology enables cross-domain transfer
-4. Runs on commodity GPU hardware
+**Unique Theoretical Contribution:** Geometric Information Theory (GIT) - three foundational propositions deriving convexity as the mathematical signature of entropic equilibrium.
 
 ---
 
-## Part 1: Academic Landscape Analysis
+## Part 1: Material Inventory and Assessment
 
-### 1.1 Relevant Research Communities
+### 1.1 Existing Drafts (Assessed for Publication Readiness)
 
-| Community | Key Venues | Fit with PPP | Competition |
-|-----------|-----------|--------------|-------------|
-| **Geometric Deep Learning** | NeurIPS, ICML, ICLR | High - geometric representations | GNNs, equivariant networks |
-| **Cognitive Science** | CogSci, Topics in Cognitive Science | High - conceptual spaces | Neural networks, ACT-R |
-| **Embodied AI** | CoRL, RSS, ICRA | Medium-High - sensorimotor grounding | Standard control theory |
-| **Music Information Retrieval** | ISMIR, Computer Music Journal | High - geometric music theory | Transformer models |
-| **Philosophy of Mind** | Phil. Studies, Synthese | Medium - process philosophy | Computationalism |
-| **Visualization** | IEEE VIS, EuroVis | Medium - 4D rendering | Standard visualization |
+| Document | Repository | Readiness | Target Tier |
+|----------|------------|-----------|-------------|
+| Rendering as Cognition (index.html) | Geometric-Dialetics | 70% - needs formatting | Tier 1 |
+| CPE Status Report | ppp-info-site | 60% - internal doc | Tier 1 |
+| HDCEncoder Deep Dive | ppp-info-site | 80% - well-documented | Tier 1 |
+| Music Geometry Domain | ppp-info-site | 65% - needs experiments | Tier 1 |
+| Phillips GIT Foundation | Geomtric-Trialetical | 55% - needs formalization | Tier 2 |
+| Icositetrachoric Cognition | Geomtric-Trialetical | 75% - self-aware of gaps | Tier 2 |
+| Nested Polytopal Cognition | Geomtric-Trialetical | 60% - math solid, claims speculative | Tier 3 |
+| Convexity-Entropy | Geomtric-Trialetical | 65% - needs physics review | Tier 2 |
+| Geometric Information Theory | Geomtric-Trialetical | 50% - ambitious scope | Tier 2/3 |
 
-### 1.2 Key Researchers to Engage
+### 1.2 Key Strengths Identified
 
-**Geometric Deep Learning:**
-- Michael Bronstein (Oxford) - Geometric deep learning manifesto
-- Petar Veličković (DeepMind) - Graph attention networks
-- Taco Cohen (Qualcomm) - Equivariant networks
+**Mathematical Rigor (from Icositetrachoric Cognition assessment):**
+> "The 24-cell's 24 vertices partition exactly into three disjoint 16-cells with no shared elements"
+> "The Weyl group W(F₄) of order 1152 acts as the full symmetry group"
 
-**Conceptual Spaces:**
-- Peter Gärdenfors (Lund) - Conceptual spaces originator
-- Massimo Warglien (Venice) - Conceptual spaces + economics
+These are **proven mathematical facts** that provide solid foundation.
 
-**Enactive Cognition:**
-- Evan Thompson (UBC) - Enactivism co-founder
-- Alva Noë (Berkeley) - Action in perception
-- Andy Clark (Sussex) - Extended mind, predictive processing
+**Implementation Completeness (from ppp-info-site):**
+- 5,700+ lines of documented TypeScript
+- Working HDCEncoder with multi-provider embedding support (Gemini, Voyage, OpenAI)
+- Real-time visualization at 60fps
+- Telemetry schemas for robotics integration
 
-**Music Cognition:**
-- Dmitri Tymoczko (Princeton) - Geometry of music
-- Richard Cohn (Yale) - Neo-Riemannian theory
-- Elaine Chew (QMUL) - Music geometry
+**Honest Self-Assessment (from documents):**
+> "No published literature connects 24-cell structure to consciousness—this represents genuinely novel territory requiring substantial theoretical development."
 
-**Grid Cell Neuroscience:**
-- Edvard Moser (NTNU) - Nobel laureate, grid cells
-- Timothy Behrens (Oxford) - Cognitive maps
+This epistemic honesty is a strength for credibility.
 
-### 1.3 Positioning Against Alternatives
+### 1.3 Key Gaps Identified
 
-| Approach | Strength | PPP Advantage |
-|----------|----------|---------------|
-| **Transformers/LLMs** | Scale, generality | Interpretability, efficiency, grounding |
-| **Graph Neural Networks** | Relational reasoning | Higher-dimensional structure, continuous rotation |
-| **Vector Symbolic Architecttic** | Compositional | Visual grounding, GPU acceleration |
-| **Classical Symbolic AI** | Explainability | Handles continuous/graded concepts |
-| **Predictive Processing** | Biological plausibility | Geometric implementation |
+**Empirical Validation:**
+- No published benchmark results
+- Transfer learning claims untested
+- Music→robotics transfer undemonstrated
+
+**Theoretical Formalization:**
+- "Moiré interference patterns" in 4D lack formalization
+- Consciousness claims depend on controversial IIT
+- Physics connections (E8) are speculative extrapolations
+
+**Publication Formatting:**
+- Documents are internal notes, not journal-ready
+- Missing standard sections (Related Work, Experiments)
+- Citations incomplete or informal
 
 ---
 
-## Part 2: Proposed Paper Portfolio
+## Part 2: Revised Paper Portfolio (8 Papers, 3 Tiers)
 
-### Paper 1: Foundational Theory
+### TIER 1: HIGH-CONFIDENCE PUBLICATIONS
+
+---
+
+### Paper 1A: Foundational Theory
 **Title:** "Rendering as Cognition: A Process-Based Theory of Geometric Intelligence"
 
+**Source Materials:**
+- `Geometric-Dialetics/index.html` (primary)
+- `Geomtric-Trialetical/docs/Icositetrachoric Cognition.md` (mathematical grounding)
+
 **Target Venues (in order):**
-1. *Nature Machine Intelligence* (IF: 25.9) - Flagship AI journal
-2. *Science Robotics* (IF: 25.0) - High-impact, interdisciplinary
-3. *Behavioral and Brain Sciences* (IF: 17.9) - Target commentary format
-4. *Artificial Intelligence* (IF: 14.4) - Premier AI theory journal
+1. *Behavioral and Brain Sciences* (IF: 17.9) - Commentary format, invites debate
+2. *Artificial Intelligence* (IF: 14.4) - Theory-focused, accepts ambitious work
+3. *Minds and Machines* (IF: 4.2) - Philosophy of AI, good for paradigm proposals
+4. *arXiv cs.AI* - Preprint for visibility
+
+**Why BBS First:** The target article + commentary format is ideal for paradigm-proposing work. Reviewers expect bold claims and provide structured critique. This builds citation network even if controversial.
 
 **Key Arguments:**
-- Visual rendering constitutes (not represents) cognition
-- 24-cell provides optimal cognitive substrate
-- Phillips Synthesis formalizes dialectical reasoning
-- Scale invariance enables cross-domain transfer
+1. Visual rendering constitutes (not represents) cognition
+2. 24-cell provides mathematically optimal cognitive substrate
+3. Phillips Synthesis formalizes dialectical reasoning geometrically
+4. Scale invariance enables cross-domain transfer
 
-**Novelty Claims:**
-1. First formal geometric account of dialectical synthesis
-2. Explicit process-based (vs. representational) AI architecture
-3. Unified framework connecting music, robotics, reasoning
+**Required Revisions:**
+- [ ] Convert HTML to LaTeX/Word with proper sections
+- [ ] Add formal "Related Work" section positioning against:
+  - Gärdenfors' Conceptual Spaces
+  - Bronstein's Geometric Deep Learning
+  - Predictive Processing frameworks
+- [ ] Include comparison table: PPP vs. Transformers vs. Symbolic AI
+- [ ] Add 2-3 worked examples demonstrating Phillips Synthesis
+- [ ] Address anticipated objection: "visualization ≠ cognition"
 
-**Required Additions:**
-- [ ] Formal proofs of topological invariance claims
-- [ ] Comparison table with existing cognitive architectures
-- [ ] Worked example showing Phillips Synthesis on real concepts
-
-**Estimated Length:** 8,000-10,000 words + supplementary
+**Estimated Timeline:** 4-6 weeks to submission-ready
 
 ---
 
-### Paper 2: Technical Implementation (CPE)
-**Title:** "The Chronomorphic Polytopal Engine: Clifford Algebra for Cognitive Computation"
+### Paper 1B: Technical Implementation
+**Title:** "The Chronomorphic Polytopal Engine: Neural-Geometric Bridging via Clifford Algebra"
+
+**Source Materials:**
+- `ppp-info-site/docs/CPE-STATUS-REPORT-2026-01-09.md`
+- `ppp-info-site/docs/HDCEncoder-Deep-Dive-2026-01-09.md`
+- `ppp-info-site/lib/` (code documentation)
 
 **Target Venues:**
-1. *NeurIPS* - Top ML venue, geometric track
-2. *ICML* - Theory-friendly ML venue
-3. *ICLR* - Representation learning focus
-4. *Journal of Machine Learning Research* - Open access, no length limit
+1. *NeurIPS* (May deadline) - Geometric ML track
+2. *ICML* (Feb deadline) - Theory track
+3. *TMLR* (rolling) - Transactions on ML Research, open access
+4. *JMLR* (rolling) - No page limit, accepts systems papers
 
 **Key Contributions:**
-- Clifford algebra formulation of 4D cognitive rotations
-- HDCEncoder: neural embeddings → geometric forces
-- Epistaorthognition: formal validity checking
-- Metamorphic topology: adaptive polytope selection
+1. **CausalReasoningEngine**: Clifford algebra formulation avoiding gimbal lock
+2. **HDCEncoder v2.0**: Multi-provider embeddings → 4D force vectors
+3. **Epistaorthognition**: Coherence validation (0.0-1.0 scores)
+4. **Metamorphic Topology**: Adaptive Simplex→Hypercube→24-Cell selection
+
+**Required Experiments:**
+| Benchmark | Baseline | Metric | Status |
+|-----------|----------|--------|--------|
+| RAVEN abstract reasoning | ResNet, WReN | Accuracy | Not run |
+| ARC challenge | GPT-4, ARCLE | Solve rate | Not run |
+| SCAN compositional | Transformer | Exact match | Not run |
+| Visual analogies | VASR, Rel-AIR | mAP | Not run |
 
 **Required Additions:**
-- [ ] Ablation studies on architecture choices
-- [ ] Benchmark comparisons on reasoning tasks
-- [ ] Computational complexity analysis
-- [ ] Code release and reproducibility package
+- [ ] Ablation: rotation planes (6 vs. 3), polytope choice, temperature
+- [ ] Computational complexity: O(?) for encoding, inference
+- [ ] Reproducibility: Docker, random seeds, hyperparameters
+- [ ] Code release: Clean public repo with MIT license
 
-**Experiments Needed:**
-1. Abstract reasoning (RAVEN, ARC)
-2. Compositional generalization (SCAN, COGS)
-3. Analogical reasoning (visual analogies)
-4. Latency and throughput benchmarks
-
-**Estimated Length:** 9 pages + appendix (NeurIPS format)
+**Estimated Timeline:** 8-12 weeks (experiments dominate)
 
 ---
 
-### Paper 3: Music-Geometry Domain
-**Title:** "The 24-Cell of Keys: A Geometric Framework for Musical Cognition"
+### Paper 1C: Music-Geometry Domain
+**Title:** "The 24-Cell of Keys: Geometric Music Theory in Four Dimensions"
+
+**Source Materials:**
+- `ppp-info-site/docs/music-geometry-domain.md`
+- `Geomtric-Trialetical/MusicGeometryDomain-Design (1).md`
+- `ppp-info-site/lib/domains/MusicGeometryDomain.ts`
 
 **Target Venues:**
-1. *ISMIR* (International Society for Music Information Retrieval)
-2. *Computer Music Journal* (MIT Press)
-3. *Music Theory Online* (open access theory journal)
-4. *Cognition* (cognitive science, music perception)
+1. *ISMIR 2026* (Apr deadline) - Premier MIR venue
+2. *Computer Music Journal* (MIT Press) - Theoretical music computing
+3. *Journal of Music Theory* - Music theory community
+4. *Music Perception* - Empirical music cognition
 
 **Key Contributions:**
-- Formal mapping: 24 keys ↔ 24-cell vertices
-- Neo-Riemannian operations as geometric transformations
-- Chord geometry: triads as sub-polytopes
-- Progression analysis via 4D trajectories
+1. Formal bijection: 24 major/minor keys ↔ 24-cell vertices
+2. Neo-Riemannian PLR operations as geometric transformations
+3. Chord tension quantification via distance from convex hull
+4. Progression analysis as 4D worldline trajectories
 
-**Required Additions:**
-- [ ] Ground truth validation against music theory
-- [ ] Perceptual experiments on tension/resolution
-- [ ] Comparison with Tymoczko's chord geometry
-- [ ] Audio examples and interactive demos
+**Connection to Prior Art:**
+- Tymoczko (2006): Chord geometry in orbifolds
+- Cohn (1997): Neo-Riemannian operations
+- Lewin (1987): Generalized musical intervals
 
-**Experiments Needed:**
-1. Key detection accuracy vs. baselines
-2. Chord classification from geometric features
-3. Harmonic analysis of Bach chorales
-4. Cross-cultural validation (non-Western music)
+**PPP Distinction:** Lifts from orbifold to convex polytope; enables visual rendering and computational tractability.
 
-**Estimated Length:** 6-8 pages (ISMIR format)
+**Required Experiments:**
+1. Key detection on MIREX dataset vs. Krumhansl-Schmuckler
+2. Chord classification accuracy on annotated corpora
+3. Human perception study: Do geometric distances predict tension ratings?
+4. Bach chorale analysis: Do progressions trace coherent trajectories?
+
+**Estimated Timeline:** 6-8 weeks
 
 ---
 
-### Paper 4: Robotics Applications
-**Title:** "Polytope Navigation: 4D Geometric Control for Embodied Agents"
+### Paper 1D: Robotics Applications
+**Title:** "Polytope Navigation: 4D Geometric State Estimation for GPS-Denied Robotics"
+
+**Source Materials:**
+- `ppp-info-site/docs/telemetry-schemas.md`
+- `Geomtric-Trialetical/docs/telemetry-schemas.md`
+- Quaternion-spinor telemetry documentation
 
 **Target Venues:**
-1. *Science Robotics* - High-impact robotics
-2. *IEEE Transactions on Robotics* - Premier robotics journal
-3. *RSS* (Robotics: Science and Systems)
-4. *ICRA* (IEEE Robotics and Automation)
+1. *IEEE Robotics and Automation Letters* (RAL) - Fast turnaround
+2. *RSS 2026* (Feb deadline) - Theory + systems
+3. *ICRA 2026* (Sep deadline) - Largest robotics venue
+4. *Science Robotics* - High impact, needs strong demo
 
 **Key Contributions:**
-- IMU→4D rotation mapping
-- Balance recovery learned from musical trajectories
-- GPS-denied navigation via geometric state tracking
-- Unified perception-action architecture
+1. **IMU→SO(4) mapping**: 6 DOF sensor data → 6 rotation planes
+2. **Geometric state estimation**: Position as 24-cell vertex proximity
+3. **Balance recovery**: Musical resolution patterns → motor commands
+4. **Audit trails**: Hash-linked geometric evidence for verification
 
-**Required Additions:**
-- [ ] Physical robot demonstrations
-- [ ] Sim-to-real transfer experiments
-- [ ] Comparison with standard control baselines
-- [ ] Safety analysis and failure modes
+**Required Demonstrations:**
+- [ ] Simulation: PyBullet or MuJoCo balance recovery
+- [ ] Hardware: Quadruped or humanoid perturbation rejection
+- [ ] Comparison: vs. standard Kalman filter, vs. learned controllers
+- [ ] Transfer: Music-trained model applied to robotics task
 
-**Experiments Needed:**
-1. Balance recovery on physical platform
-2. Navigation without GPS
-3. Perturbation rejection benchmarks
-4. Transfer from music→robotics validation
-
-**Estimated Length:** 8-10 pages + video supplement
+**Estimated Timeline:** 12-16 weeks (hardware delays)
 
 ---
 
-### Paper 5: Industry White Paper
-**Title:** "Polytopal Projection Processing: Enterprise Architecture for Geometric AI"
-
-**Target Audiences:**
-1. Defense (DARPA, IARPA, ONR, AFRL)
-2. Enterprise AI teams
-3. Autonomous systems companies
-4. Quantum computing firms
-
-**Key Sections:**
-- Executive summary for non-technical stakeholders
-- Technical architecture overview
-- Deployment considerations (HPC, edge, cloud)
-- Security and auditability (geometric audit trails)
-- Roadmap and investment thesis
-- Licensing and partnership models
-
-**Required Additions:**
-- [ ] ROI analysis for specific use cases
-- [ ] Competitive landscape assessment
-- [ ] IP/patent strategy
-- [ ] Team and capability overview
-
-**Estimated Length:** 20-30 pages
+### TIER 2: THEORETICAL EXTENSIONS
 
 ---
 
-## Part 3: Publication Timeline
+### Paper 2A: Geometric Information Theory
+**Title:** "Geometric Information Theory: Convexity as the Signature of Entropic Equilibrium"
 
-### Phase 1: Foundation (Q1 2026)
-| Week | Task | Deliverable |
-|------|------|-------------|
-| 1-2 | Finalize Paper 1 theory | Complete draft |
-| 3-4 | Internal review, revisions | Polished draft |
-| 5-6 | Submit to Nature MI | Submission package |
-| 7-8 | Begin Paper 2 experiments | Experimental design |
+**Source Materials:**
+- `Geomtric-Trialetical/docs/Phillips_GIT_Foundation.md`
+- `Geomtric-Trialetical/docs/Convexity-as-the-Geometric-Signature-of-Entropic-Equilibrium.md`
+- `Geomtric-Trialetical/docs/Geometric-Information-Theory-Mathematical-foundations.md`
 
-### Phase 2: Technical Validation (Q2 2026)
-| Week | Task | Deliverable |
-|------|------|-------------|
-| 9-12 | Run CPE benchmarks | Results tables |
-| 13-16 | Write Paper 2 | Complete draft |
-| 17-18 | NeurIPS submission (May deadline) | Camera-ready |
-| 19-20 | Begin music experiments | Audio corpus |
+**Target Venues:**
+1. *Entropy* (MDPI) - Open access, interdisciplinary
+2. *Journal of Physics A: Mathematical and Theoretical*
+3. *Foundations of Physics* - Philosophy of physics
+4. *Information* (MDPI) - Information theory
 
-### Phase 3: Domain Papers (Q3 2026)
-| Week | Task | Deliverable |
-|------|------|-------------|
-| 21-24 | Paper 3 music experiments | Validation data |
-| 25-28 | ISMIR submission (June deadline) | Camera-ready |
-| 29-32 | Robotics experiments | Video demos |
+**Core Framework (Three Propositions):**
 
-### Phase 4: Applications (Q4 2026)
-| Week | Task | Deliverable |
-|------|------|-------------|
-| 33-36 | Paper 4 robotics | Complete draft |
-| 37-40 | RSS/ICRA submission | Camera-ready |
-| 41-44 | White paper finalization | Enterprise doc |
-| 45-48 | Defense briefings | Pitch materials |
+**P1 - Information Primacy:**
+> "The irreducible constituent of reality is information—distinguishable states that can influence other states."
 
----
+**P2 - Dual Entropic Drives:**
+> "Systems evolve simultaneously toward maximum entropy (dispersive) and increased integration (integrative)."
 
-## Part 4: Key Risks and Mitigations
+**P3 - Cosmic Self-Reference:**
+> "The universe operates as a closed, self-regulating system where observers participate in observed phenomena."
 
-### Risk 1: Empirical Validation Fails
-**Concern:** Transfer learning claims don't replicate
-**Mitigation:**
-- Start with narrow, well-controlled experiments
-- Pre-register hypotheses and analysis plans
-- Report negative results honestly
-- Pivot to theoretical contributions if needed
+**Derived Claims:**
+- Convexity is *mathematically necessary* for stable equilibrium (Legendre transform argument)
+- 24-cell is optimal for maximizing integrated information (self-duality + quaternionic structure)
+- Holographic bounds (Bekenstein, Ryu-Takayanagi) support geometry-information duality
 
-### Risk 2: Reviewer Skepticism
-**Concern:** "This is just visualization, not cognition"
-**Mitigation:**
-- Engage enactivist literature explicitly
-- Provide formal definitions distinguishing PPP from visualization
-- Include philosophical positioning section
-- Anticipate and preempt objections
+**Required Work:**
+- [ ] Formal proofs connecting propositions to convexity necessity
+- [ ] Physics review: Are holographic arguments applied correctly?
+- [ ] Distinguish proven mathematics from philosophical interpretation
+- [ ] Address objection: Propositions too general to be falsifiable
 
-### Risk 3: Scooped by Related Work
-**Concern:** Geometric deep learning community moves fast
-**Mitigation:**
-- arXiv preprint before journal submission
-- Emphasize unique contributions (process-based, music grounding)
-- Build relationships with key researchers
-- Cite and differentiate from recent work
+**Risk Level:** Medium-High. Claims are ambitious; may face resistance from physicists.
 
-### Risk 4: Implementation Complexity
-**Concern:** Reproducibility issues with 4D rendering
-**Mitigation:**
-- Release clean, documented code
-- Provide Docker containers
-- Create interactive web demos
-- Write detailed reproduction guide
+**Estimated Timeline:** 8-10 weeks
 
 ---
 
-## Part 5: Success Metrics
+### Paper 2B: Metamorphic Topology
+**Title:** "Adaptive Polytope Selection for Cognitive Complexity Management"
 
-### Academic Impact
-- [ ] Paper 1 accepted at top-3 venue
-- [ ] 50+ citations within 2 years
-- [ ] Invited talks at major conferences
-- [ ] Research collaborations established
+**Source Materials:**
+- `ppp-info-site/docs/metamorphic-topology-spec.md`
+- `ppp-info-site/docs/ambiguity-tension-metrics.md`
+- `ppp-info-site/lib/topology/TopologyController.ts`
 
-### Technical Validation
-- [ ] State-of-the-art on 2+ benchmarks
-- [ ] Successful sim-to-real transfer
-- [ ] Third-party replications
-- [ ] Open-source adoption
+**Target Venues:**
+1. *Neural Computation* - Computational neuroscience
+2. *Cognitive Science* - CogSci Society journal
+3. *Frontiers in Computational Neuroscience* - Open access
 
-### Industry/Defense Traction
-- [ ] $500K+ in funded research
-- [ ] Pilot project with defense agency
-- [ ] Enterprise partnership signed
-- [ ] Patent portfolio established
+**Key Contribution:**
+Dynamic polytope selection based on cognitive load:
+- **SIMPLEX** (5 vertices): Simple association, fast validity checks
+- **HYPERCUBE** (16 vertices): Binary discrimination, orthogonal logic
+- **24-CELL** (24 vertices): Full synthesis, contextual nuance
 
----
+**Tension-Driven Transitions:**
+```
+tensionScore < 0.20 → deflate to SIMPLEX
+tensionScore > 0.50 → promote to HYPERCUBE
+tensionScore > 0.80 → promote to 24-CELL
+```
 
-## Part 6: Immediate Next Steps
+**Required Work:**
+- [ ] Formalize "ambiguity" and "tension" metrics mathematically
+- [ ] Connect to cognitive load theory (Sweller)
+- [ ] Empirical: Do humans show analogous complexity modulation?
+- [ ] Ablation: Fixed polytope vs. adaptive selection
 
-### This Week
-1. **Review Paper 1 draft** - Apply `/paper-review` command
-2. **Literature gap analysis** - Use `/lit-search` for recent 2024-2026 work
-3. **Figure development** - Create publication-quality diagrams
-4. **Abstract refinement** - Craft compelling 200-word summary
-
-### This Month
-1. **Complete Paper 1** - Ready for submission
-2. **Design Paper 2 experiments** - IRB if human subjects
-3. **Begin code cleanup** - Prepare for release
-4. **Identify co-authors** - Reach out to collaborators
-
-### This Quarter
-1. **Submit Paper 1** - Track reviews
-2. **Run benchmarks** - Paper 2 experiments
-3. **Build demos** - Interactive visualizations
-4. **Network** - Conference attendance, emails
+**Estimated Timeline:** 6-8 weeks
 
 ---
 
-## Appendix A: Venue Deadlines (2026)
-
-| Venue | Deadline | Notification | Conference |
-|-------|----------|--------------|------------|
-| NeurIPS | May 15 | Sep 15 | Dec |
-| ICML | Feb 1 | May 1 | Jul |
-| ICLR | Sep 28 | Jan 21 | May |
-| ISMIR | Apr 15 | Jun 30 | Oct |
-| RSS | Feb 1 | May 15 | Jul |
-| ICRA | Sep 15 | Jan 31 | May |
-| CogSci | Feb 1 | Apr 15 | Jul |
-
-## Appendix B: Reference Collection
-
-See `CLAUDE.md` for pre-formatted citations of key references.
-
-## Appendix C: Collaboration Targets
-
-| Researcher | Institution | Expertise | Approach |
-|------------|-------------|-----------|----------|
-| Peter Gärdenfors | Lund | Conceptual Spaces | Email + paper |
-| Dmitri Tymoczko | Princeton | Music Geometry | Direct outreach |
-| Timothy Behrens | Oxford | Grid Cells | Conference meeting |
-| Michael Bronstein | Oxford | Geometric DL | Twitter/arXiv |
+### TIER 3: SPECULATIVE FRONTIER
 
 ---
 
-*This document should be updated as progress is made. Use the `/paper-review` and `/draft-section` commands for iterative refinement.*
+### Paper 3A: Nested Polytopal Architecture
+**Title:** "E8 Projections and Hierarchical Geometric Cognition"
+
+**Source Materials:**
+- `Geomtric-Trialetical/docs/Nested-Polytopal-Cognition.md`
+- E8/600-cell PDF documents
+
+**Target Venues:**
+1. *arXiv* (math-ph or hep-th) - Establish priority
+2. *Journal of Mathematical Physics* - If formalism is rigorous
+3. *Symmetry* (MDPI) - Interdisciplinary, accepts speculative work
+
+**Key Claims:**
+- 600-cell contains exactly 25 inscribed 24-cells (Denney et al. 2020 - **verified**)
+- E₈ projects to two 600-cells scaled by golden ratio φ (**verified**)
+- H₄ symmetry acts on 25 24-cells via (A₅ × A₅) ⋊ ℤ₂ (**verified**)
+- Overlapping 24-cells share 6 vertices forming regular hexagons (**verified**)
+
+**Speculative Extensions:**
+- "Moiré interference patterns" in 4D (no formalization exists)
+- Hierarchical cognition: 24-cell → 600-cell → E₈ as complexity scales
+- Connection to fundamental physics (string theory compactification)
+
+**Required Work:**
+- [ ] Literature review: What do physicists actually claim about E₈?
+- [ ] Separate verified math from speculative interpretation
+- [ ] Formalize "moiré patterns" or acknowledge as metaphor
+- [ ] Consult with mathematician on claims
+
+**Risk Level:** High. Physics community skeptical of E₈ consciousness claims.
+
+**Estimated Timeline:** 10-14 weeks
+
+---
+
+### Paper 3B: Consciousness and the 24-Cell
+**Title:** "Icositetrachoric Cognition: Toward a Geometric Theory of Conscious Experience"
+
+**Source Materials:**
+- `Geomtric-Trialetical/docs/Icositetrachoric Cognition.md`
+- IIT integration sections from various documents
+
+**Target Venues:**
+1. *Journal of Consciousness Studies* - Philosophy of mind
+2. *Neuroscience of Consciousness* - Empirical + theoretical
+3. *Phenomenology and the Cognitive Sciences*
+4. *arXiv q-bio.NC* - Preprint for feedback
+
+**Key Arguments:**
+- IIT represents consciousness as geometric structures in cause-effect space
+- 24-cell's self-duality maps to phenomenal-physical unity
+- Trinity decomposition → Whitehead's triadic prehension
+- Convexity → stability of conscious states
+
+**Honest Acknowledgment (from source):**
+> "No published literature connects 24-cell structure to consciousness—this represents genuinely novel territory."
+
+**Required Work:**
+- [ ] Engage seriously with IIT critics (Aaronson, Cerullo)
+- [ ] Distinguish mathematical possibility from empirical claim
+- [ ] Propose testable predictions (or acknowledge unfalsifiability)
+- [ ] Frame as "research program" not "established theory"
+
+**Risk Level:** Very High. Consciousness claims invite intense scrutiny.
+
+**Estimated Timeline:** 8-12 weeks
+
+---
+
+## Part 3: Recommended Publication Sequence
+
+### Strategy: "Foundation First, Speculation Later"
+
+```
+Phase 1 (Q1 2026): Establish Credibility
+├── Paper 1A: Rendering as Cognition → BBS/AI Journal
+├── Paper 1B: CPE Technical → NeurIPS/ICML
+└── arXiv preprints for both
+
+Phase 2 (Q2 2026): Domain Validation
+├── Paper 1C: Music-Geometry → ISMIR
+├── Paper 1D: Robotics → RAL/RSS
+└── Code release + demos
+
+Phase 3 (Q3 2026): Theoretical Extensions
+├── Paper 2A: GIT → Entropy/JPhysA
+├── Paper 2B: Metamorphic Topology → Neural Computation
+└── Workshop papers at CogSci, NeurIPS
+
+Phase 4 (Q4 2026): Frontier Exploration
+├── Paper 3A: Nested Architecture → arXiv
+├── Paper 3B: Consciousness → JCS
+└── Invited talks, collaborations
+```
+
+### Why This Order?
+
+1. **Credibility accumulation**: Technical papers (1A, 1B) establish you as serious researcher before speculative claims
+2. **Citation network**: Earlier papers cited by later ones, showing coherent research program
+3. **Empirical grounding**: Music and robotics experiments provide concrete validation
+4. **Risk management**: If speculative papers rejected, foundation already established
+
+---
+
+## Part 4: Critical Success Factors
+
+### 4.1 What Reviewers Will Challenge
+
+**"This is just visualization"**
+- Response: Engage enactivist literature; define "constitution" vs "representation" formally
+- Cite: Noë, Varela, O'Regan on perception as action
+
+**"No empirical validation"**
+- Response: Papers 1B-1D provide benchmarks and demonstrations
+- Acknowledge: Theory paper (1A) is theoretical; empirical work follows
+
+**"24-cell choice is arbitrary"**
+- Response: Mathematical uniqueness arguments (self-duality, quaternions, 24 keys)
+- Cite: Coxeter, Conway on exceptional polytopes
+
+**"Claims about consciousness are unfalsifiable"**
+- Response: (For Paper 3B) Frame as research program, not proven theory
+- Provide: Testable predictions where possible
+
+### 4.2 Collaboration Opportunities
+
+| Paper | Potential Collaborator | Contribution |
+|-------|----------------------|--------------|
+| 1A | Evan Thompson (UBC) | Enactivist framing |
+| 1B | Petar Veličković (DeepMind) | Geometric ML credibility |
+| 1C | Dmitri Tymoczko (Princeton) | Music theory validation |
+| 1D | Robotics lab (MIT, CMU) | Hardware experiments |
+| 2A | Physics reviewer | Holographic claims |
+| 3B | Giulio Tononi (Wisconsin) | IIT integration |
+
+### 4.3 IP and Open Science Balance
+
+**Open Source:**
+- CPE core engine (MIT license)
+- HDCEncoder (Apache 2.0)
+- Visualization demos
+
+**Proprietary:**
+- Telemetry schemas for defense applications
+- HPC optimization techniques
+- Enterprise deployment tools
+
+**Patents to Consider:**
+- "Method for cognitive state estimation using polytopal projection"
+- "Geometric encoding of neural embeddings for interpretable AI"
+- "Music-to-robotics transfer learning system"
+
+---
+
+## Part 5: Immediate Action Items
+
+### Week 1-2
+1. [ ] **Paper 1A**: Convert index.html to LaTeX, add Related Work section
+2. [ ] **Literature search**: Recent 2024-2026 geometric deep learning papers
+3. [ ] **Abstract**: Write 200-word abstract for Paper 1A
+
+### Week 3-4
+1. [ ] **Paper 1A**: Complete draft, internal review
+2. [ ] **Paper 1B**: Design experiment suite, set up infrastructure
+3. [ ] **arXiv**: Submit Paper 1A preprint
+
+### Month 2
+1. [ ] **Paper 1A**: Submit to BBS or AI Journal
+2. [ ] **Paper 1B**: Run initial experiments
+3. [ ] **Paper 1C**: Design music experiments, gather corpora
+
+### Month 3
+1. [ ] **Paper 1B**: Complete experiments, write up
+2. [ ] **Paper 1C**: Run experiments
+3. [ ] **NeurIPS deadline**: Submit Paper 1B
+
+---
+
+## Appendix A: Document Map
+
+```
+Geometric-Dialetics-on-the-Orgin-of-Homology/
+├── index.html                    → Paper 1A source
+├── CLAUDE.md                     → Project context
+├── PUBLISHING_STRATEGY.md        → This document
+└── .claude/commands/             → Paper writing tools
+
+ppp-info-site/
+├── lib/                          → Paper 1B source
+│   ├── engine/CausalReasoningEngine.ts
+│   ├── encoding/HDCEncoder.ts
+│   ├── topology/TopologyController.ts
+│   └── domains/MusicGeometryDomain.ts
+├── docs/
+│   ├── CPE-STATUS-REPORT.md      → Paper 1B
+│   ├── HDCEncoder-Deep-Dive.md   → Paper 1B
+│   ├── music-geometry-domain.md  → Paper 1C
+│   ├── metamorphic-topology.md   → Paper 2B
+│   └── telemetry-schemas.md      → Paper 1D
+└── rust-engine/                  → Performance implementation
+
+Geomtric-Trialetical-Homological-Ubiquity-In-Structure/
+├── docs/
+│   ├── Phillips_GIT_Foundation.md           → Paper 2A
+│   ├── Icositetrachoric Cognition.md        → Paper 3B
+│   ├── Nested-Polytopal-Cognition.md        → Paper 3A
+│   ├── Convexity-as-Entropy.md              → Paper 2A
+│   └── Geometric-Information-Theory.md      → Paper 2A
+└── *.pdf                         → Supporting research
+```
+
+---
+
+## Appendix B: Risk Matrix
+
+| Paper | Technical Risk | Novelty Risk | Reviewer Risk | Overall |
+|-------|---------------|--------------|---------------|---------|
+| 1A | Low | Medium | Medium | **Medium** |
+| 1B | Medium | Medium | Low | **Medium** |
+| 1C | Low | Low | Low | **Low** |
+| 1D | High | Medium | Medium | **Medium-High** |
+| 2A | Medium | High | High | **High** |
+| 2B | Low | Medium | Medium | **Medium** |
+| 3A | High | Very High | Very High | **Very High** |
+| 3B | High | Very High | Very High | **Very High** |
+
+**Recommendation:** Start with low-risk papers (1C), build to medium (1A, 1B, 1D), then high-risk (2A, 2B, 3A, 3B) once credibility established.
+
+---
+
+*Strategy document v2.0 - Revised after full repository analysis*
+*Use `/paper-review`, `/draft-section`, `/lit-search` commands for execution*
