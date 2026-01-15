@@ -143,7 +143,7 @@
 
 ### CRITICAL OBJECTION 2: "Ali Paper Verification"
 
-**The Attack**: "You cite Ali (2024) but we need to verify this paper exists and says what you claim."
+**The Attack**: "You cite Ali (2025) but we need to verify this paper exists and says what you claim."
 
 **Strength**: MODERATE - Verification should be straightforward
 

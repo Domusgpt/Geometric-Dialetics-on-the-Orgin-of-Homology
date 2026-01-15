@@ -106,10 +106,10 @@ From `E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md`:
 
 ## IV. EXTERNAL SUPPORTING LITERATURE
 
-### Ali (2024): "Quantum Spacetime Imprints"
+### Ali (2025): "Quantum Spacetime Imprints"
 - **Claim**: 24-cell geometry encodes Standard Model
 - **16-cell (8 vertices) → 8 gluons**: Consistent with SU(3) dimension
-- **Status**: PUBLISHED (European Physical Journal C)
+- **Status**: PUBLISHED October 2025 (European Physical Journal C)
 - **Link**: Must be verified - doi required
 
 ### Grid Cells and Cognitive Geometry

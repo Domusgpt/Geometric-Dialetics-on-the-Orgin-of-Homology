@@ -10,7 +10,7 @@ Paul@clearseassolutions.com | Parserator.com
 
 **Copyright Notice** (for all papers):
 ```
-© 2024-2026 Paul Phillips, Clear Seas Solutions LLC. All rights reserved.
+© 2025-2026 Paul Phillips, Clear Seas Solutions LLC. All rights reserved.
 ```
 
 ---
@@ -129,11 +129,11 @@ Paper 3: PPP / Rendering as Cognition
 
 When referencing within papers:
 
-- **E8-H4 correspondence**: "Phillips (2024-2026), building on Moxness (2014)"
-- **Trinity Decomposition**: "Phillips (2024-2026)"
-- **Phillips Synthesis**: "Phillips (2024-2026)"
-- **24-cell particle mapping**: "Ali (2024), extended by Phillips (2024-2026)"
-- **Rendering-as-cognition thesis**: "Phillips (2024-2026)"
+- **E8-H4 correspondence**: "Phillips (2025-2026), building on Moxness (2014)"
+- **Trinity Decomposition**: "Phillips (2025-2026)"
+- **Phillips Synthesis**: "Phillips (2025-2026)"
+- **24-cell particle mapping**: "Ali (2025), extended by Phillips (2025-2026)"
+- **Rendering-as-cognition thesis**: "Phillips (2025-2026)"
 
 ---
 

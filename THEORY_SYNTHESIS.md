@@ -49,7 +49,7 @@ This is not a collection of separate papers but a **single unified framework** c
 │   - 24 vertices = unit Hurwitz quaternions (group 2T)           │
 │   - Self-dual: only 4D polytope with this property              │
 │   - Decomposes into 3 × 16-cells (Phillips Synthesis)           │
-│   - ENCODES STANDARD MODEL (Ali 2024):                          │
+│   - ENCODES STANDARD MODEL (Ali 2025):                          │
 │       • 16-cell (8 vertices) → 8 GLUONS (color charge)          │
 │       • 8-cell/tesseract (16 vertices) → FERMIONS + EW bosons   │
 │                           ↓                                      │
@@ -148,7 +148,7 @@ Stable configurations (Lagrange points, figure-8 orbits) correspond to **equilib
 
 ## IV. THE STANDARD MODEL DERIVATION
 
-### 4.1 Ahmed Farag Ali's Framework (2024)
+### 4.1 Ahmed Farag Ali's Framework (2025)
 
 Ali's "Quantum Spacetime Imprints" demonstrates that the 24-cell's vertex structure **exactly encodes the Standard Model particle content**.
 
@@ -471,7 +471,7 @@ The framework draws on proven mathematics from nine domains:
 | **Physics Unification** | | |
 | 8D 3-body phase space ≅ E8 lattice | NOVEL PROOF | Independent verification |
 | Moxness matrix crystallizes chaos | NOVEL PROOF | Mathematical peer review |
-| 24-cell encodes Standard Model (Ali) | NOVEL (2024) | Experimental predictions |
+| 24-cell encodes Standard Model (Ali) | NOVEL (2025) | Experimental predictions |
 | D4 triality → 3 fermion generations | NOVEL INTERPRETATION | Particle physics validation |
 | Phillips Synthesis → color confinement | NOVEL MECHANISM | QCD comparison |
 | **Cognitive/Computational** | | |
