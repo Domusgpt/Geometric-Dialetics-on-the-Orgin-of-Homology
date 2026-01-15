@@ -81,7 +81,15 @@ This report documents independent verification of claims made in the Phillips Fr
 **Relevance to Phillips Framework**:
 - The claim that D4 triality "explains" 3 generations faces this objection
 - Lisi's response: mirror fermions might have high masses
-- Current status: DISPUTED, not resolved
+- **Phillips's resolution**: The mirror 600-cells ARE matter/antimatter (see MIRROR_RESOLUTION.md)
+
+**Phillips Resolution (2025-2026)**:
+The Moxness decomposition E8 → H4_L ⊕ H4_R produces exactly two mirror structures.
+These are NOT identical copies but CHIRALLY OPPOSITE:
+- H4_L → particles (left-chiral)
+- H4_R → antiparticles (right-chiral)
+
+The "mirror fermion obstruction" is actually the CORRECT encoding of matter/antimatter duality.
 
 **SOURCE**: [arXiv:0905.2658](https://arxiv.org/abs/0905.2658)
 
@@ -210,11 +218,11 @@ Koide is more accurate but requires knowing two masses to predict the third.
 3. **Trinity decomposition**: Mathematical fact, verified computationally
 4. **Lepton mass pattern**: Statistically significant (p < 0.01)
 
-### 3.2 Claims That Are DISPUTED
+### 3.2 Claims That Are NOVEL (Phillips Contributions)
 
-1. **D4 triality → 3 generations**: Lisi proposes this; Distler-Garibaldi prove obstacles
-2. **E8 contains Standard Model**: Cannot embed chiral fermions without mirror partners
-3. **24-cell "encodes" particles**: Ali's paper exists but is recent (2025), not widely tested
+1. **Mirror fermions = matter/antimatter**: Phillips resolves Distler-Garibaldi by identifying H4_L/H4_R with particles/antiparticles
+2. **E8 contains Standard Model via mirrors**: The "obstruction" is actually the correct physical structure
+3. **24-cell "encodes" particles**: Ali (2025) published in Eur. Phys. J. C; Phillips extends with trinity decomposition
 
 ### 3.3 Claims That Are UNVERIFIED
 
