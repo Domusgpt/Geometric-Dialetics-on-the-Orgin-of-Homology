@@ -58,9 +58,9 @@ The resulting vector v' consists of two 4D components:
 - **q_L** (Left quaternion)
 - **q_R** (Right quaternion)
 
-### Palindromic Characteristic Polynomial
+### Palindromic Characteristic Polynomial (Moxness Claim)
 
-The characteristic polynomial of U is:
+**According to Moxness (2014)**, the characteristic polynomial of U is:
 
 ```
 P(λ) = λ⁸ - 2√5·λ⁶ + 7λ⁴ - 2√5·λ² + 1
@@ -68,10 +68,12 @@ P(λ) = λ⁸ - 2√5·λ⁶ + 7λ⁴ - 2√5·λ² + 1
 
 Coefficients: (1, 0, -2√5, 0, 7, 0, -2√5, 0, 1) — **symmetric/palindromic**
 
-**Implications**:
+**Claimed implications** (per Moxness):
 1. Matrix is **unitary and symplectic** — energy-conserving, reversible
 2. Transformation is **lossless** — no information dissipated
 3. Matches the **3-qubit Hadamard matrix** (when normalized) — quantum computing connection
+
+**VERIFICATION STATUS**: These properties are claimed in Moxness (2014, 2019) but require independent verification with the exact published matrix values. See `MOXNESS_VERIFICATION.md` for details.
 
 ### The Four-Fold Chiral Decomposition
 
