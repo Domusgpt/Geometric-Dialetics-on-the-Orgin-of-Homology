@@ -46,7 +46,9 @@ The E8 → H4 mirror structure **encodes this correctly**:
 
 ## Mathematical Structure
 
-### The Moxness Folding Matrix U
+### The Folding Matrix U
+
+**Source**: Phillips (2025-2026) "E8 Lattice Graphics Pipeline Feasibility" paper, building on Moxness (2014)
 
 The matrix U is an **8×8 rotation matrix** that transforms E8 root vectors:
 
@@ -58,9 +60,11 @@ The resulting vector v' consists of two 4D components:
 - **q_L** (Left quaternion)
 - **q_R** (Right quaternion)
 
-### Palindromic Characteristic Polynomial (Moxness Claim)
+**Discovery Path**: This structure was discovered during investigation of E8 for graphics/rendering applications (PPP), which then revealed its applicability to physics triality issues.
 
-**According to Moxness (2014)**, the characteristic polynomial of U is:
+### Palindromic Characteristic Polynomial
+
+**According to Moxness (2014)**, confirmed in Phillips (2026) graphics pipeline analysis, the characteristic polynomial of U is:
 
 ```
 P(λ) = λ⁸ - 2√5·λ⁶ + 7λ⁴ - 2√5·λ² + 1
