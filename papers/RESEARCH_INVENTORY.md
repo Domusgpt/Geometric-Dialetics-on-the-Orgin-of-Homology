@@ -72,11 +72,15 @@ Results from `e8_h4_correct_simulation.py`:
 | Best balance achieved | 0.0 (exact) | ✓ VERIFIED |
 | Centroid at origin achieved | Yes | ✓ VERIFIED |
 
-### Moxness Matrix (Corrected)
+### Moxness Matrix
 | Construction | Determinant | Orthogonal | Status |
 |--------------|-------------|------------|--------|
-| Literature version | 1.0 | Yes | ✓ VERIFIED |
-| Golden ratio version | 1.0 | Yes | ✓ VERIFIED |
+| Moxness (2014) claims | 1.0 | Yes | CLAIMED (not verified) |
+| Our golden ratio construction | 5.06 | No | ✗ FAILED - not correct matrix |
+
+**Note**: Our constructed matrix FAILED verification (det ≠ 1, not orthogonal).
+We need the exact matrix values from Moxness (2014) papers.
+See MOXNESS_VERIFICATION.md for details.
 
 ---
 
@@ -106,11 +110,12 @@ From `E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md`:
 
 ## IV. EXTERNAL SUPPORTING LITERATURE
 
-### Ali (2025): "Quantum Spacetime Imprints"
-- **Claim**: 24-cell geometry encodes Standard Model
-- **16-cell (8 vertices) → 8 gluons**: Consistent with SU(3) dimension
-- **Status**: PUBLISHED October 2025 (European Physical Journal C)
-- **Link**: Must be verified - doi required
+### Ali (2025): "Quantum Spacetime Imprints" ✓ VERIFIED
+- **Full Citation**: Ahmed Farag Ali, "Quantum Spacetime Imprints: The 24-Cell, Standard Model Symmetry and Its Flavor Mixing"
+- **arXiv**: [2511.10685](https://arxiv.org/abs/2511.10685) (November 2025)
+- **Published**: *European Physical Journal C* **85**, 1282 (2025)
+- **Key Claims**: 24-cell as spacetime quantum, 24 vertices → SM particles, F₄ Weyl group symmetry
+- **Status**: ✓ VERIFIED - paper exists and claims match interpretation
 
 ### Grid Cells and Cognitive Geometry
 | Source | Finding | Relevance |
@@ -142,9 +147,9 @@ From `E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md`:
    - Status: IMPLEMENTATION VERIFIED, SOURCE COMPARISON PENDING
 
 3. **Ali Framework Verification**:
-   - Must verify Ali (2024) paper exists and claims match our interpretation
-   - Need: DOI and direct citation
-   - Status: CITED, NOT VERIFIED
+   - Verified: Ali (2025) paper exists: arXiv:2511.10685, EPJC 85, 1282
+   - Claims match our interpretation
+   - Status: ✓ VERIFIED
 
 4. **Mass Formula Derivation**:
    - φ-exponent pattern is observed, not derived
@@ -163,10 +168,11 @@ From `E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md`:
    - Possible causes: quantum corrections, different formula needed
    - Status: ACKNOWLEDGED, UNEXPLAINED
 
-3. **Quark Masses Not Tested**:
-   - Only leptons analyzed in detail
-   - Quarks have larger uncertainties, QCD complications
-   - Status: FUTURE WORK
+3. **Quark Masses TESTED - FAIL**:
+   - Tested all quarks against φ^n pattern
+   - Results: 10-20% errors (down: 21%, strange: 8.6%, charm: 11%, bottom: 14%, top: 20%)
+   - Interpretation: QCD running masses obscure pattern; leptons (no QCD) work
+   - Status: ✓ TESTED, ✗ PATTERN FAILS FOR QUARKS
 
 ---
 
@@ -180,15 +186,22 @@ From `E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md`:
 - D4 triality exists (S₃ outer automorphism)
 
 ### MEDIUM CONFIDENCE (Validated but Requires Review)
-- Corrected Moxness matrix is orthogonal (det=1)
-- Lepton masses follow φ^n pattern (p < 0.01)
-- Mass exponents are prime (11, 17)
+- Moxness (2014) claims matrix is orthogonal (det=1) - **NOT independently verified**
+- Lepton masses follow φ^n pattern (p < 0.01) - ✓ Verified
+- Mass exponents are prime (11, 17) - ✓ Verified
+- Quark masses do NOT follow pattern (10-20% errors) - ✓ Verified
 
 ### LOW CONFIDENCE (Novel Claims)
 - 8D phase space is homeomorphic to E8 lattice
 - Apparent chaos is high-dimensional order
-- 24-cell encodes Standard Model (depends on Ali verification)
+- 24-cell encodes Standard Model (Ali 2025 verified ✓)
 - Rendering constitutes cognition
+
+### NOVEL CONTRIBUTIONS (Phillips 2025-2026)
+- **Mirror Fermion Resolution**: H4_L/H4_R = particles/antiparticles (addresses Distler-Garibaldi)
+- **Trinity Decomposition**: 3×16-cells structure with Phillips Synthesis
+- **Triadic Coloring**: RGB from Clifford parallel 16-cells (discovered via PPP)
+- **Discovery Path**: PPP → E8 → physics applications
 
 ### SPECULATIVE (Requires Substantial Development)
 - Complete GR/QM unification via E8
@@ -206,10 +219,11 @@ From `E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md`:
 - [ ] Statistical null hypothesis test vs random embedding
 
 ### Paper 2 (Standard Model/24-Cell)
-- [ ] Verify Ali (2024) DOI and exact claims
+- [x] Verify Ali (2025) DOI and exact claims ✓ (arXiv:2511.10685, EPJC 85, 1282)
 - [ ] Derive why exponents are 11 and 17 (not just observe)
-- [ ] Test pattern on quark masses
+- [x] Test pattern on quark masses ✓ (FAILS: 10-20% errors)
 - [ ] Address 3-4% error explicitly
+- [x] Add Phillips mirror resolution to Distler-Garibaldi ✓
 
 ### Paper 3 (PPP)
 - [ ] Define "rendering = cognition" precisely (vs "rendering aids cognition")

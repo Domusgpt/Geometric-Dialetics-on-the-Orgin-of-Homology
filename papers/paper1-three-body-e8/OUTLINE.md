@@ -55,6 +55,11 @@
 - E8 = H4 ⊕ φ·H4 decomposition
 - 8×8 orthogonal projection matrix
 - 240 roots → two concentric 600-cells
+- **Discovery Path** (Phillips 2025-2026):
+  - Originally investigated for graphics/rendering (PPP pipeline)
+  - Nested 4D polytopal structure discovered via E8 projection
+  - Physics applications (triality, generations) emerged from geometric study
+  - Source: Phillips "E8 Lattice Graphics Pipeline Feasibility" paper
 
 ### 3. Three-Body Phase Space Analysis (2-3 pages)
 #### 3.1 Dimensional Reduction

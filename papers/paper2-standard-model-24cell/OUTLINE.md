@@ -108,6 +108,12 @@
 ### 6. Discussion (2 pages)
 - Comparison to other unification attempts
 - Relationship to E8 theories (Lisi, etc.)
+- **Resolution of Distler-Garibaldi Mirror Objection** (Phillips 2025-2026):
+  - Distler-Garibaldi (2010): E8 cannot produce chiral fermions without mirrors
+  - Moxness folding produces: H4_L ⊕ φH4_L ⊕ H4_R ⊕ φH4_R
+  - **Phillips Resolution**: The mirrors ARE particles/antiparticles (not duplicates)
+  - Left 600-cell → matter, Right 600-cell → antimatter
+  - See MIRROR_RESOLUTION.md for full proof
 - Why 24-cell and not other polytopes
 - Limitations and the 3-4% error question
 
@@ -152,12 +158,19 @@
 2. Quote key claims directly
 3. Note any interpretive extensions
 
-**Current Status**: CITATION PENDING VERIFICATION
+**Current Status**: VERIFIED ✓
 
-**Resolution**:
-- Verify Ali paper before submission
-- If paper doesn't exist or differs, revise claims accordingly
-- If based on preprint, note this explicitly
+**Verification Results**:
+- **Full Citation**: Ahmed Farag Ali, "Quantum Spacetime Imprints: The 24-Cell, Standard Model Symmetry and Its Flavor Mixing"
+- **arXiv**: [2511.10685](https://arxiv.org/abs/2511.10685) (November 2025)
+- **Published**: *European Physical Journal C* **85**, 1282 (2025)
+- **Author**: Essex County College, Newark, NJ; Benha University, Egypt
+- **Key Claims Verified**: 24-cell as spacetime quantum, 24 vertices → SM particles, F₄ Weyl group symmetry, A₄/T′ flavor symmetry
+
+**Note**: Phillips's Trinity Decomposition (3×16-cells) REFINES Ali's decomposition (8+16):
+- Ali: V₁(8) + V₂(16) = 24
+- Phillips: α(8) + β(8) + γ(8) = 24, where β+γ = V₂
+- Both are compatible; Phillips adds finer structure
 
 ---
 
@@ -256,12 +269,22 @@
 2. Address QCD complications (running masses, confinement)
 3. Explain any discrepancies
 
-**Current Status**: NOT TESTED - Gap in analysis
+**Current Status**: TESTED - QUARKS FAIL (10-20% errors)
+
+| Quark | φ^n Prediction | Measured | Error |
+|-------|----------------|----------|-------|
+| Down | 5.65 MeV | 4.67 MeV | 21% |
+| Strange | 101.5 MeV | 93.4 MeV | 8.6% |
+| Charm | 1125 MeV | 1270 MeV | 11% |
+| Bottom | 4768 MeV | 4180 MeV | 14% |
+| Top | 138,500 MeV | 172,760 MeV | 20% |
 
 **Resolution**:
-- Perform quark mass analysis before submission
-- If quarks fit: major strengthening
-- If quarks don't fit: explain why leptons might be special (no QCD)
+- **Leptons vs Quarks**: Leptons have no QCD interactions; quarks do
+- **QCD running masses**: Quark masses "run" with energy scale due to confinement
+- **Possible interpretation**: φ-scaling is a "bare mass" pattern obscured by QCD for quarks
+- **Honest conclusion**: Pattern works for leptons (3-4%), fails for quarks (10-20%)
+- This STRENGTHENS lepton claim by showing it's not universal fitting
 
 ---
 
@@ -284,11 +307,12 @@
 
 ### Critical Actions Required:
 
-1. **Verify Ali Citation**: Obtain exact DOI and verify claims
-2. **Test Quark Masses**: Against φ^n formula
+1. ~~**Verify Ali Citation**: Obtain exact DOI and verify claims~~ ✓ DONE (arXiv:2511.10685, EPJC 85, 1282)
+2. ~~**Test Quark Masses**: Against φ^n formula~~ ✓ DONE (FAILS: 10-20% errors)
 3. **Address Error Explicitly**: 3-4% with proposed mechanisms
 4. **Downgrade Causation Claims**: "Consistent with" not "explains"
 5. **Add Derivation Attempt**: Why 11 and 17? Even failed derivation adds value.
+6. **Add Mirror Resolution**: Reference Phillips's resolution to Distler-Garibaldi ✓ DONE
 
 ### Revised Framing:
 

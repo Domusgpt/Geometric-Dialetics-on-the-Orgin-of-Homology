@@ -130,10 +130,22 @@ Paper 3: PPP / Rendering as Cognition
 When referencing within papers:
 
 - **E8-H4 correspondence**: "Phillips (2025-2026), building on Moxness (2014)"
+- **E8 Lattice Graphics Pipeline**: "Phillips (2025-2026)" - original source for nested 4D polytopal structure
 - **Trinity Decomposition**: "Phillips (2025-2026)"
 - **Phillips Synthesis**: "Phillips (2025-2026)"
+- **Triadic Coloring (RGB from 3×16-cells)**: "Phillips (2025-2026)" - discovered via PPP investigation
+- **Mirror Fermion Resolution**: "Phillips (2025-2026)" - identifies H4_L/H4_R as matter/antimatter
 - **24-cell particle mapping**: "Ali (2025), extended by Phillips (2025-2026)"
 - **Rendering-as-cognition thesis**: "Phillips (2025-2026)"
+
+### Discovery Path (Required Attribution)
+
+The developmental sequence should be cited as:
+1. PPP (Polytopal Projection Processing) for graphics/rendering
+2. E8 lattice structure discovered during 4D polytope rendering investigation
+3. Physics applications (triality, generations, mirror resolution) emerged from geometric study
+
+Source: Phillips "E8 Lattice Graphics Pipeline Feasibility" paper (2025-2026)
 
 ---
 
@@ -143,14 +155,20 @@ All papers should reference these validated results:
 
 | Component | Value | Status |
 |-----------|-------|--------|
-| E8 roots | 240 (112 Type I + 128 Type II) | Verified |
-| 600-cell vertices | 120 | Verified |
-| 24-cell vertices | 24 | Verified |
-| Trinity Decomposition | 8 + 8 + 8 = 24 | Verified |
-| Phillips Synthesis valid triads | 320 | Verified |
-| Best triad balance | 0.0 (exact) | Verified |
-| 16-cell edges per component | 24 | Verified |
-| Moxness matrix determinant | 1.0 (orthogonal) | Verified |
+| E8 roots | 240 (112 Type I + 128 Type II) | ✓ Verified |
+| 600-cell vertices | 120 | ✓ Verified |
+| 24-cell vertices | 24 | ✓ Verified |
+| Trinity Decomposition | 8 + 8 + 8 = 24 | ✓ Verified |
+| Phillips Synthesis valid triads | 320 | ✓ Verified |
+| Best triad balance | 0.0 (exact) | ✓ Verified |
+| 16-cell edges per component | 24 | ✓ Verified |
+| Lepton φ^n scaling (muon) | φ^11, 3.75% error | ✓ Verified |
+| Lepton φ^n scaling (tau) | φ^17, 2.70% error | ✓ Verified |
+| Quark φ^n scaling | 10-20% errors | ✗ FAILS |
+| Moxness matrix det = 1 | Claimed by Moxness (2014) | ⚠️ Pending exact matrix |
+| Ali (2025) paper | arXiv:2511.10685, EPJC 85, 1282 | ✓ Verified |
+
+**Note**: See MOXNESS_VERIFICATION.md for details on matrix verification status.
 
 ---
 
