@@ -1,8 +1,11 @@
 # The √5-Coupling Theorem for E8→H4 Folding
 
 **Author**: Paul Phillips, Clear Seas Solutions LLC
-**Date**: January 2026
-**Status**: Novel Result - Ready for Publication
+**Created**: 2026-01-16
+**Last Updated**: 2026-01-16 04:00 UTC
+**Status**: Validated - See `SQRT5_RESEARCH_LOG.md` for full research history
+
+> **Note**: This document summarizes the main results. For the full LaTeX paper, see `sqrt5_coupling_theorem.tex`. For the research log including tautology analysis and defense, see `SQRT5_RESEARCH_LOG.md`.
 
 ---
 
@@ -214,7 +217,7 @@ To our knowledge, the specific result $\|H4L\| \times \|H4R\| = \sqrt{5}$ and it
 
 4. Ali, A.F. (2025). "Quantum Spacetime Imprints: The 24-Cell, Standard Model Symmetry and Its Flavor Mixing." *European Physical Journal C*, 85, 1282.
 
-5. Denney, T. et al. (2020). "The 600-cell." arXiv:2003.00655.
+5. Denney, T. et al. (2019). "The Geometry of H4 Polytopes." arXiv:1912.06156.
 
 ---
 
