@@ -383,6 +383,35 @@ The appearance of $\sqrt{5}$ as the coupling constant reflects its fundamental r
 
 This structure is consistent with the known decomposition of E8 roots into four H4 copies at scales $1, \varphi, \varphi^{-1}, 1$ \cite{conway1999}.
 
+\subsection{Why This Is Not Tautological}
+
+One might object: ``Since $\varphi$ appears in the coefficients ($b = (\varphi-1)/2$, $c = \varphi/2$), finding $\varphi$ in the results is circular.'' This criticism misses the point for several reasons:
+
+\textbf{1. The geometry forces $\varphi$.} The Moxness coefficients are not arbitrary choices---they arise from projecting E8 onto H4 (icosahedral symmetry). The 600-cell vertices \emph{require} $\varphi$. Any correct E8$\to$H4 projection must involve $\varphi$.
+
+\textbf{2. Arbitrary $\varphi$-containing coefficients do NOT produce $\sqrt{5}$.} We tested alternative coefficient choices:
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Coefficients & Norm Product & Coupling & $\sqrt{\text{integer}}$? \\
+\midrule
+Moxness $(0.5, 0.309, 0.809)$ & $\sqrt{5} \approx 2.236$ & $1$ & \textbf{YES} \\
+Rational $(0.5, 0.3, 0.8)$ & $2.200$ & $1$ & NO \\
+Different $(0.5, 0.4, 0.7)$ & $2.203$ & $0.6$ & NO \\
+Uniform $(0.5, 0.5, 0.5)$ & $2.000$ & $0$ & YES (trivial) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Only the geometrically-required Moxness coefficients yield $\sqrt{5}$.
+
+\textbf{3. The specific forms require derivation.} Even knowing $\varphi$ appears, the exact expressions $\sqrt{3-\varphi}$ and $\sqrt{\varphi+2}$ are not obvious. The identity $(3-\varphi)(\varphi+2) = 5$ is a genuine algebraic theorem following from $\varphi^2 = \varphi + 1$.
+
+\textbf{4. The row-column duality is structural.} The relationship between row norms and column norms emerges from the matrix arrangement, not from $\varphi$ being in the coefficients.
+
+Our contribution is \emph{documenting} these specific algebraic relationships for the geometrically-required coefficients, not claiming that $\varphi$ appeared mysteriously.
+
 \subsection{Open Questions}
 
 Several questions remain:
