@@ -1,0 +1,1073 @@
+\documentclass[12pt,a4paper]{article}
+
+% ============================================================
+% PACKAGES
+% ============================================================
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage{appendix}
+
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{matrix,positioning,arrows.meta,calc}
+
+\geometry{margin=1in}
+
+% ============================================================
+% THEOREM ENVIRONMENTS
+% ============================================================
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{construction}[theorem]{Construction}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{observation}[theorem]{Observation}
+
+% ============================================================
+% CUSTOM COMMANDS
+% ============================================================
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\ph}{\varphi}
+\newcommand{\phib}{\bar{\varphi}}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\sgn}{sgn}
+
+% Code listing style
+\lstset{
+  language=Python,
+  basicstyle=\small\ttfamily,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  frame=single,
+  breaklines=true
+}
+
+% ============================================================
+% TITLE
+% ============================================================
+\title{The $\sqrt{5}$-Coupling Theorem:\\
+Golden Ratio Structure in E8$\to$H4 Folding Projections\\[10pt]
+\large A Comprehensive Mathematical Analysis}
+
+\author{Paul Phillips\\
+Clear Seas Solutions LLC\\
+\texttt{Paul@clearseassolutions.com}\\[10pt]
+\small Parserator.com}
+
+\date{January 2026}
+
+\begin{document}
+
+\maketitle
+
+% ============================================================
+% ABSTRACT
+% ============================================================
+\begin{abstract}
+We present a comprehensive analysis of golden-ratio folding matrices that project the 240-root E8 lattice to four-dimensional H4 polytope geometry. For the specific coefficient family $(a,b,c) = (\frac{1}{2}, \frac{\varphi-1}{2}, \frac{\varphi}{2})$ where $\varphi = (1+\sqrt{5})/2$ is the golden ratio, we prove that the $8 \times 8$ projection matrix $U$ decomposes into upper (H4L) and lower (H4R) blocks whose row norms satisfy a precise coupling identity:
+\[
+\norm{U_L} \cdot \norm{U_R} = \sqrt{5}
+\]
+where $\norm{U_L} = \sqrt{3-\varphi} \approx 1.176$ and $\norm{U_R} = \sqrt{\varphi+2} \approx 1.902$. This follows from the elementary identity $(3-\varphi)(\varphi+2) = 5$.
+
+More fundamentally, we prove that the blocks satisfy a $\varphi$-scaling relationship: $U_L = \frac{1}{\varphi} U_R$, meaning corresponding rows are related by the golden ratio. This implies that after orthonormalization, the ``two'' H4 copies produced by the folding are geometrically identical---a manifestation of the self-similar structure inherent in icosahedral geometry.
+
+We provide four independent proofs of the main theorem, extensive computational verification, worked examples, and place the result in the context of the broader E8-H4-icosahedral connection that links the golden ratio, quaternions, the 600-cell, and exceptional mathematical structures.
+\end{abstract}
+
+\vspace{0.5cm}
+\noindent\textbf{Keywords:} E8 lattice, H4 Coxeter group, golden ratio, folding projection, 600-cell, icosahedral symmetry, quaternions, non-crystallographic symmetry
+
+\vspace{0.3cm}
+\noindent\textbf{MSC 2020:} 52B15 (Symmetry properties of polytopes), 20F55 (Reflection and Coxeter groups), 51M20 (Polyhedra and polytopes), 17B22 (Root systems), 11H06 (Lattices and convex bodies)
+
+\tableofcontents
+
+% ============================================================
+% SECTION 1: INTRODUCTION
+% ============================================================
+\section{Introduction}
+
+\subsection{Overview and Main Results}
+
+The exceptional structures of mathematics---the E8 lattice, icosahedral symmetry, and the golden ratio---are deeply interconnected. The E8 root system, the densest sphere packing in 8 dimensions, can be ``folded'' or projected to produce the vertices of four-dimensional polytopes with icosahedral (H4) symmetry. This folding introduces the golden ratio $\varphi = (1+\sqrt{5})/2$ into structures that originally contained only rational coordinates.
+
+This paper analyzes the algebraic structure of the folding matrices themselves. Our main results are:
+
+\begin{tcolorbox}[colback=blue!5,colframe=blue!50!black,title=Main Results]
+\begin{theorem}[$\sqrt{5}$-Coupling Theorem]\label{thm:main-intro}
+For the $\varphi$-coupled E8$\to$H4 folding matrix with coefficient triple $(a,b,c) = (\frac{1}{2}, \frac{\varphi-1}{2}, \frac{\varphi}{2})$:
+\[
+\norm{U_L} \cdot \norm{U_R} = \sqrt{5}
+\]
+where $\norm{U_L} = \sqrt{3-\varphi}$ and $\norm{U_R} = \sqrt{\varphi+2}$ are the row norms of the upper and lower $4 \times 8$ blocks.
+\end{theorem}
+
+\begin{theorem}[$\varphi$-Scaling Theorem]\label{thm:scaling-intro}
+The blocks satisfy:
+\[
+U_L = \frac{1}{\varphi} \cdot U_R
+\]
+That is, every entry in row $i$ of $U_L$ equals $1/\varphi$ times the corresponding entry in row $(i+4)$ of $U_R$.
+\end{theorem}
+\end{tcolorbox}
+
+\subsection{Historical Context}
+
+The connection between the icosahedron and E8 has been recognized since at least the work of Conway and Sloane \cite{conway1999}, who described the ``icosians''---a subring of the quaternions related to icosahedral symmetry---and showed that the icosian lattice is isometric to E8. This connection was further developed by:
+
+\begin{itemize}
+\item \textbf{Koca et al.\ (2001)} \cite{koca2001}: Explicit embedding of the non-crystallographic Coxeter group H4 into W(E8) using quaternionic representations.
+\item \textbf{Moxness (2014)} \cite{moxness2014}: Construction of explicit $8 \times 8$ folding matrices for E8$\to$H4 projection, enabling visualization of E8 structure.
+\item \textbf{Baez (2018)} \cite{baez2018}: Two constructions of E8 from the icosahedron---via icosians and via resolution of Kleinian singularities.
+\item \textbf{Denney et al.\ (2019)} \cite{denney2019}: Detailed geometry of H4 polytopes and the arrangement of 24-cells within the 600-cell.
+\end{itemize}
+
+While the \emph{existence} of E8$\to$H4 folding is well-established, the \emph{algebraic properties of specific folding matrices} have not been fully characterized. This paper fills that gap for the $\varphi$-coupled family.
+
+\subsection{Why $\sqrt{5}$?}
+
+The appearance of $\sqrt{5}$ is not accidental. The golden ratio satisfies:
+\[
+\varphi = \frac{1+\sqrt{5}}{2}, \qquad \varphi + \varphi^{-1} = \sqrt{5}, \qquad \varphi - \varphi^{-1} = 1
+\]
+
+Thus $\sqrt{5}$ is the fundamental irrational underlying $\varphi$. Our theorem shows that this same $\sqrt{5}$ governs the coupling between chiral H4 components in the folding projection---a precise algebraic manifestation of icosahedral geometry's self-similar structure.
+
+\subsection{Organization}
+
+The paper is organized as follows:
+
+\begin{itemize}
+\item \textbf{Section 2}: Mathematical preliminaries on the golden ratio, quaternions, E8, and H4.
+\item \textbf{Section 3}: Construction of the $\varphi$-coupled folding matrix with detailed derivations.
+\item \textbf{Section 4}: Four independent proofs of the $\sqrt{5}$-Coupling Theorem.
+\item \textbf{Section 5}: The $\varphi$-Scaling Theorem and its consequences.
+\item \textbf{Section 6}: Worked examples with explicit calculations.
+\item \textbf{Section 7}: Computational verification and numerical validation.
+\item \textbf{Section 8}: Discussion, connections to broader theory, and open questions.
+\item \textbf{Appendix A}: Complete proof details.
+\item \textbf{Appendix B}: Python verification code.
+\item \textbf{Appendix C}: Tables of computed values.
+\end{itemize}
+
+% ============================================================
+% SECTION 2: MATHEMATICAL PRELIMINARIES
+% ============================================================
+\section{Mathematical Preliminaries}
+
+This section provides complete background on all mathematical structures used in this paper. Readers familiar with these topics may skip to Section 3.
+
+\subsection{The Golden Ratio}
+
+\begin{definition}[Golden Ratio]
+The \textbf{golden ratio} is the positive root of $x^2 - x - 1 = 0$:
+\[
+\varphi = \frac{1 + \sqrt{5}}{2} \approx 1.6180339887
+\]
+Its algebraic conjugate is:
+\[
+\phib = \frac{1 - \sqrt{5}}{2} = -\frac{1}{\varphi} = 1 - \varphi \approx -0.6180339887
+\]
+\end{definition}
+
+\begin{lemma}[Fundamental Golden Ratio Identities]\label{lem:phi-identities}
+The golden ratio satisfies:
+\begin{enumerate}[label=(\alph*)]
+\item $\varphi^2 = \varphi + 1$ \hfill (defining property)
+\item $1/\varphi = \varphi - 1$ \hfill (reciprocal)
+\item $\varphi + 1/\varphi = \sqrt{5}$ \hfill (sum)
+\item $\varphi - 1/\varphi = 1$ \hfill (difference)
+\item $\varphi \cdot \phib = -1$ \hfill (product of conjugates)
+\item $\varphi + \phib = 1$ \hfill (sum of conjugates)
+\item $(\varphi - 1)^2 = 1/\varphi^2 = 2 - \varphi$ \hfill (squared inverse)
+\item $\varphi^n = F_n \varphi + F_{n-1}$ for Fibonacci numbers $F_n$ \hfill (Fibonacci connection)
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) By definition. (b) From $\varphi^2 = \varphi + 1$, divide by $\varphi$: $\varphi = 1 + 1/\varphi$, so $1/\varphi = \varphi - 1$. (c) $\varphi + 1/\varphi = \varphi + (\varphi - 1) = 2\varphi - 1 = 2 \cdot \frac{1+\sqrt{5}}{2} - 1 = \sqrt{5}$. (d) $\varphi - 1/\varphi = \varphi - (\varphi - 1) = 1$. (e)-(h) Follow from the characteristic equation. \qed
+\end{proof}
+
+\begin{notation}
+Throughout this paper, we write $\varphi$ for the golden ratio and reserve $\phi$ for angles. We use the identities in Lemma \ref{lem:phi-identities} freely without further reference.
+\end{notation}
+
+\begin{example}[Powers of $\varphi$]\label{ex:phi-powers}
+The first several powers:
+\begin{center}
+\begin{tabular}{cccl}
+\toprule
+$n$ & $\varphi^n$ & Decimal & Fibonacci Form \\
+\midrule
+$-2$ & $2 - \varphi$ & $0.382$ & $F_{-2}\varphi + F_{-3} = -\varphi + 2$ \\
+$-1$ & $\varphi - 1$ & $0.618$ & $F_{-1}\varphi + F_{-2} = \varphi - 1$ \\
+$0$ & $1$ & $1.000$ & $F_0\varphi + F_{-1} = 1$ \\
+$1$ & $\varphi$ & $1.618$ & $F_1\varphi + F_0 = \varphi$ \\
+$2$ & $\varphi + 1$ & $2.618$ & $F_2\varphi + F_1 = \varphi + 1$ \\
+$3$ & $2\varphi + 1$ & $4.236$ & $F_3\varphi + F_2 = 2\varphi + 1$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{example}
+
+\subsection{The Ring $\Z[\varphi]$}
+
+\begin{definition}
+The \textbf{ring of golden integers} is:
+\[
+\Z[\varphi] = \{a + b\varphi : a, b \in \Z\}
+\]
+This is the ring of integers of the quadratic field $\Q(\sqrt{5})$.
+\end{definition}
+
+\begin{proposition}
+$\Z[\varphi]$ is closed under addition, subtraction, and multiplication. The \textbf{norm} function $N: \Z[\varphi] \to \Z$ defined by $N(a + b\varphi) = (a + b\varphi)(a + b\phib) = a^2 + ab - b^2$ is multiplicative.
+\end{proposition}
+
+\subsection{Quaternions}
+
+\begin{definition}[Quaternions]
+The \textbf{quaternion algebra} $\HH$ consists of elements $q = a + bi + cj + dk$ where $a,b,c,d \in \R$ and:
+\[
+i^2 = j^2 = k^2 = ijk = -1
+\]
+The conjugate is $\bar{q} = a - bi - cj - dk$ and the norm is $\norm{q}^2 = q\bar{q} = a^2 + b^2 + c^2 + d^2$.
+\end{definition}
+
+\begin{definition}[Unit Quaternions]
+The \textbf{unit quaternions} $\{q \in \HH : \norm{q} = 1\}$ form the 3-sphere $S^3$ and are isomorphic to the Lie group $\mathrm{SU}(2)$.
+\end{definition}
+
+\subsection{The Binary Icosahedral Group}
+
+\begin{definition}
+The \textbf{binary icosahedral group} $2I$ (also denoted $\tilde{A}_5$ or $\Gamma$) is the preimage of the icosahedral rotation group $A_5 \subset \mathrm{SO}(3)$ under the 2:1 covering $\mathrm{SU}(2) \to \mathrm{SO}(3)$. It has 120 elements.
+\end{definition}
+
+\begin{proposition}[Explicit Elements of $2I$]
+The 120 elements of $2I$ can be written as unit quaternions:
+\begin{itemize}
+\item 8 elements: $\pm 1, \pm i, \pm j, \pm k$
+\item 16 elements: $\frac{1}{2}(\pm 1 \pm i \pm j \pm k)$ (even number of minus signs)
+\item 96 elements: Even permutations of $\frac{1}{2}(0, \pm 1, \pm \varphi^{-1}, \pm \varphi)$
+\end{itemize}
+\end{proposition}
+
+\begin{definition}[Icosians]
+The \textbf{icosians} are integer linear combinations of the 120 elements of $2I$ over $\Z$:
+\[
+\mathbb{I} = \Z[2I] = \left\{\sum_{g \in 2I} n_g \cdot g : n_g \in \Z\right\}
+\]
+\end{definition}
+
+\begin{theorem}[Conway-Sloane \cite{conway1999}]
+The icosians $\mathbb{I}$, viewed as 8-tuples via the identification $a + bi + cj + dk \mapsto (a_1, a_2, b_1, b_2, c_1, c_2, d_1, d_2)$ where each coefficient is written $x = x_1 + x_2\varphi$ with $x_1, x_2 \in \Z$, form a lattice isometric to the E8 root lattice.
+\end{theorem}
+
+\subsection{The E8 Root System}
+
+\begin{definition}[E8 Root Lattice]
+The \textbf{E8 root lattice} is the set of vectors $\bm{x} = (x_1, \ldots, x_8) \in \R^8$ satisfying:
+\begin{enumerate}
+\item All $x_i \in \Z$ or all $x_i \in \Z + \frac{1}{2}$
+\item $\sum_{i=1}^8 x_i \equiv 0 \pmod{2}$
+\end{enumerate}
+\end{definition}
+
+\begin{proposition}[E8 Root System]
+The E8 lattice has 240 \textbf{roots} (minimal nonzero vectors), each with squared norm 2:
+\begin{itemize}
+\item \textbf{Type I} (112 roots): All permutations of $(\pm 1, \pm 1, 0, 0, 0, 0, 0, 0)$
+\item \textbf{Type II} (128 roots): All vectors $(\pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2})$ with an even number of minus signs
+\end{itemize}
+\end{proposition}
+
+\begin{theorem}[Viazovska 2016 \cite{viazovska2017}]
+The E8 lattice achieves the optimal sphere packing density in 8 dimensions.
+\end{theorem}
+
+\begin{observation}\label{obs:e8-no-phi}
+The E8 root coordinates lie in $\{0, \pm\frac{1}{2}, \pm 1\}$. No irrational numbers appear. The golden ratio emerges only upon projection to H4.
+\end{observation}
+
+\subsection{The H4 Coxeter Group and 600-Cell}
+
+\begin{definition}[H4 Coxeter Group]
+The \textbf{H4 Coxeter group} is the symmetry group of the 600-cell, the regular 4-dimensional polytope with:
+\begin{itemize}
+\item 120 vertices
+\item 720 edges
+\item 1200 triangular faces
+\item 600 tetrahedral cells
+\end{itemize}
+It is the largest non-crystallographic (involving $\varphi$) reflection group.
+\end{definition}
+
+\begin{proposition}[600-Cell Vertices]
+The 120 vertices of the 600-cell (with unit edge length) can be given as:
+\begin{itemize}
+\item 8 vertices: Permutations of $(\pm 1, 0, 0, 0)$
+\item 16 vertices: $\frac{1}{2}(\pm 1, \pm 1, \pm 1, \pm 1)$
+\item 96 vertices: Even permutations of $\frac{1}{2}(\pm\varphi, \pm 1, \pm\varphi^{-1}, 0)$
+\end{itemize}
+These are precisely the unit quaternions in the binary icosahedral group.
+\end{proposition}
+
+\begin{theorem}[E8 $\to$ H4 Decomposition \cite{koca2001}]
+The 240 E8 roots, when projected to 4 dimensions via an appropriate folding matrix, decompose into:
+\[
+\text{E8 roots} \xrightarrow{\text{fold}} \text{H4}_L \oplus \varphi\text{H4}_L \oplus \text{H4}_R \oplus \varphi\text{H4}_R
+\]
+Four copies of the 600-cell vertices at two scales ($1$ and $\varphi$), partitioned into left (L) and right (R) chiralities.
+\end{theorem}
+
+% ============================================================
+% SECTION 3: THE FOLDING MATRIX
+% ============================================================
+\section{Construction of the $\varphi$-Coupled Folding Matrix}
+
+\subsection{The Coefficient Family}
+
+\begin{definition}[Golden-Ratio Coefficient Triple]\label{def:coefficients}
+Define the \textbf{$\varphi$-coupled coefficients}:
+\begin{align}
+a &= \frac{1}{2} \\
+b &= \frac{1}{2\varphi} = \frac{\varphi - 1}{2} \approx 0.30902 \\
+c &= \frac{\varphi}{2} \approx 0.80902
+\end{align}
+\end{definition}
+
+\begin{observation}[Geometric Sequence]
+The coefficients form a geometric sequence with common ratio $\varphi$:
+\[
+b : a : c = 1 : \varphi : \varphi^2
+\]
+Explicitly: $b \cdot \varphi = a$ and $a \cdot \varphi = c$.
+\end{observation}
+
+\begin{lemma}[Coefficient Identities]\label{lem:coeff-identities}
+The coefficients satisfy:
+\begin{enumerate}[label=(\alph*)]
+\item $a/c = 1/\varphi$
+\item $b/a = 1/\varphi$
+\item $b + c = (2\varphi - 1)/2 = \sqrt{5}/2$
+\item $c - b = 1/2 = a$
+\item $bc = (\varphi - 1)\varphi/4 = (\varphi^2 - \varphi)/4 = 1/4$
+\item $b^2 + a^2 = (3 - \varphi)/4$
+\item $c^2 + a^2 = (\varphi + 2)/4$
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) $a/c = (1/2)/(\varphi/2) = 1/\varphi$. (b) $b/a = ((\varphi-1)/2)/(1/2) = \varphi - 1 = 1/\varphi$. (c) $b + c = (\varphi-1)/2 + \varphi/2 = (2\varphi - 1)/2$. Since $2\varphi - 1 = 2 \cdot (1+\sqrt{5})/2 - 1 = \sqrt{5}$, we get $b + c = \sqrt{5}/2$. (d)-(g) follow similarly. \qed
+\end{proof}
+
+\subsection{Matrix Construction}
+
+\begin{construction}[The $\varphi$-Coupled Folding Matrix]\label{con:matrix}
+The $8 \times 8$ folding matrix $U$ has the block structure:
+\[
+U = \begin{pmatrix} U_L \\ U_R \end{pmatrix}
+\]
+where $U_L$ (rows 0--3) is the \textbf{H4L block} and $U_R$ (rows 4--7) is the \textbf{H4R block}.
+
+The explicit matrix is:
+\[
+U = \begin{pmatrix}
+a & b & a & b & a & -b & a & -b \\
+a & a & -b & -b & -a & -a & b & b \\
+a & -b & -a & b & a & -b & -a & b \\
+a & -a & b & -b & -a & a & -b & b \\
+c & a & c & a & c & -a & c & -a \\
+c & c & -a & -a & -c & -c & a & a \\
+c & -a & -c & a & c & -a & -c & a \\
+c & -c & a & -a & -c & c & -a & a
+\end{pmatrix}
+\]
+\end{construction}
+
+\begin{observation}[Entry Pattern]
+Each row of $U_L$ contains exactly 4 entries of magnitude $|a| = 1/2$ and 4 entries of magnitude $|b| = (\varphi-1)/2$.
+
+Each row of $U_R$ contains exactly 4 entries of magnitude $|c| = \varphi/2$ and 4 entries of magnitude $|a| = 1/2$.
+\end{observation}
+
+\subsection{Numerical Values}
+
+For reference, the numerical matrix (to 6 decimal places):
+\[
+U \approx \begin{pmatrix}
+0.5 & 0.309 & 0.5 & 0.309 & 0.5 & -0.309 & 0.5 & -0.309 \\
+0.5 & 0.5 & -0.309 & -0.309 & -0.5 & -0.5 & 0.309 & 0.309 \\
+0.5 & -0.309 & -0.5 & 0.309 & 0.5 & -0.309 & -0.5 & 0.309 \\
+0.5 & -0.5 & 0.309 & -0.309 & -0.5 & 0.5 & -0.309 & 0.309 \\
+0.809 & 0.5 & 0.809 & 0.5 & 0.809 & -0.5 & 0.809 & -0.5 \\
+0.809 & 0.809 & -0.5 & -0.5 & -0.809 & -0.809 & 0.5 & 0.5 \\
+0.809 & -0.5 & -0.809 & 0.5 & 0.809 & -0.5 & -0.809 & 0.5 \\
+0.809 & -0.809 & 0.5 & -0.5 & -0.809 & 0.809 & -0.5 & 0.5
+\end{pmatrix}
+\]
+
+% ============================================================
+% SECTION 4: PROOFS OF THE MAIN THEOREM
+% ============================================================
+\section{Four Proofs of the $\sqrt{5}$-Coupling Theorem}
+
+We present four independent proofs of the main theorem, each illuminating different aspects of the structure.
+
+\subsection{Proof 1: Direct Computation}
+
+\begin{theorem}[$\sqrt{5}$-Coupling, First Proof]\label{thm:main-proof1}
+$\norm{U_L} \cdot \norm{U_R} = \sqrt{5}$
+\end{theorem}
+
+\begin{proof}
+\textbf{Step 1: Compute $\norm{U_L}^2$.}
+
+Each row of $U_L$ has 4 entries of magnitude $a = 1/2$ and 4 entries of magnitude $b = (\varphi-1)/2$:
+\begin{align}
+\norm{U_L}^2 &= 4a^2 + 4b^2 \\
+&= 4 \cdot \frac{1}{4} + 4 \cdot \frac{(\varphi-1)^2}{4} \\
+&= 1 + (\varphi - 1)^2
+\end{align}
+
+Now $(\varphi - 1)^2 = \varphi^2 - 2\varphi + 1 = (\varphi + 1) - 2\varphi + 1 = 2 - \varphi$.
+
+Therefore:
+\[
+\norm{U_L}^2 = 1 + (2 - \varphi) = 3 - \varphi = \frac{5 - \sqrt{5}}{2} \approx 1.382
+\]
+
+\textbf{Step 2: Compute $\norm{U_R}^2$.}
+
+Each row of $U_R$ has 4 entries of magnitude $c = \varphi/2$ and 4 entries of magnitude $a = 1/2$:
+\begin{align}
+\norm{U_R}^2 &= 4c^2 + 4a^2 \\
+&= 4 \cdot \frac{\varphi^2}{4} + 4 \cdot \frac{1}{4} \\
+&= \varphi^2 + 1 = (\varphi + 1) + 1 = \varphi + 2 = \frac{5 + \sqrt{5}}{2} \approx 3.618
+\end{align}
+
+\textbf{Step 3: Compute the product.}
+
+We need to show $(3 - \varphi)(\varphi + 2) = 5$:
+\begin{align}
+(3 - \varphi)(\varphi + 2) &= 3\varphi + 6 - \varphi^2 - 2\varphi \\
+&= \varphi + 6 - \varphi^2 \\
+&= \varphi + 6 - (\varphi + 1) \qquad \text{(using $\varphi^2 = \varphi + 1$)} \\
+&= 5
+\end{align}
+
+Therefore $\norm{U_L} \cdot \norm{U_R} = \sqrt{(3-\varphi)(\varphi+2)} = \sqrt{5}$. \qed
+\end{proof}
+
+\subsection{Proof 2: Difference of Squares}
+
+\begin{theorem}[$\sqrt{5}$-Coupling, Second Proof]
+$\norm{U_L} \cdot \norm{U_R} = \sqrt{5}$
+\end{theorem}
+
+\begin{proof}
+Express the squared norms in terms of $\sqrt{5}$:
+\begin{align}
+\norm{U_L}^2 &= 3 - \varphi = 3 - \frac{1+\sqrt{5}}{2} = \frac{6 - 1 - \sqrt{5}}{2} = \frac{5 - \sqrt{5}}{2} \\
+\norm{U_R}^2 &= \varphi + 2 = \frac{1+\sqrt{5}}{2} + 2 = \frac{1 + \sqrt{5} + 4}{2} = \frac{5 + \sqrt{5}}{2}
+\end{align}
+
+Now:
+\begin{align}
+\norm{U_L}^2 \cdot \norm{U_R}^2 &= \frac{5 - \sqrt{5}}{2} \cdot \frac{5 + \sqrt{5}}{2} \\
+&= \frac{(5 - \sqrt{5})(5 + \sqrt{5})}{4} \\
+&= \frac{25 - 5}{4} = \frac{20}{4} = 5
+\end{align}
+
+This is a difference of squares: $(5)^2 - (\sqrt{5})^2 = 25 - 5 = 20$. Therefore $\norm{U_L} \cdot \norm{U_R} = \sqrt{5}$. \qed
+\end{proof}
+
+\subsection{Proof 3: Via $\varphi$-Scaling}
+
+\begin{theorem}[$\sqrt{5}$-Coupling, Third Proof]
+$\norm{U_L} \cdot \norm{U_R} = \sqrt{5}$
+\end{theorem}
+
+\begin{proof}
+We will show that $U_L = (1/\varphi) U_R$, which implies $\norm{U_L} = \norm{U_R}/\varphi$.
+
+By Lemma \ref{lem:coeff-identities}(a) and (b), we have $a/c = b/a = 1/\varphi$. Since every entry in $U_L$ is either $\pm a$ or $\pm b$, and every corresponding entry in $U_R$ is either $\pm c$ or $\pm a$ (with matching signs), we have:
+\[
+(U_L)_{ij} = \frac{1}{\varphi} (U_R)_{ij}
+\]
+
+Therefore:
+\begin{align}
+\norm{U_L} \cdot \norm{U_R} &= \frac{\norm{U_R}}{\varphi} \cdot \norm{U_R} \\
+&= \frac{\norm{U_R}^2}{\varphi} \\
+&= \frac{\varphi + 2}{\varphi} \\
+&= 1 + \frac{2}{\varphi} = 1 + 2(\varphi - 1) = 2\varphi - 1 = \sqrt{5}
+\end{align}
+
+The last step uses $2\varphi - 1 = 2 \cdot (1+\sqrt{5})/2 - 1 = \sqrt{5}$. \qed
+\end{proof}
+
+\subsection{Proof 4: Characteristic Polynomial}
+
+\begin{theorem}[$\sqrt{5}$-Coupling, Fourth Proof]
+$\norm{U_L} \cdot \norm{U_R} = \sqrt{5}$
+\end{theorem}
+
+\begin{proof}
+Let $x = \norm{U_L}^2 = 3 - \varphi$ and $y = \norm{U_R}^2 = \varphi + 2$. We show $xy = 5$ using the minimal polynomial of $\varphi$.
+
+Since $\varphi$ satisfies $\varphi^2 - \varphi - 1 = 0$, we can write:
+\begin{align}
+x &= 3 - \varphi \\
+y &= \varphi + 2
+\end{align}
+
+Then:
+\[
+x + y = (3 - \varphi) + (\varphi + 2) = 5
+\]
+
+And:
+\[
+xy = (3 - \varphi)(\varphi + 2) = 3\varphi + 6 - \varphi^2 - 2\varphi = \varphi + 6 - (\varphi + 1) = 5
+\]
+
+So $x$ and $y$ are roots of $t^2 - 5t + 5 = 0$, which factors over $\Q(\sqrt{5})$ as $(t - x)(t - y)$ with $xy = 5$.
+
+Therefore $\norm{U_L} \cdot \norm{U_R} = \sqrt{xy} = \sqrt{5}$. \qed
+\end{proof}
+
+% ============================================================
+% SECTION 5: THE PHI-SCALING THEOREM
+% ============================================================
+\section{The $\varphi$-Scaling Theorem}
+
+The $\sqrt{5}$-coupling is actually a consequence of a more fundamental structural property.
+
+\begin{theorem}[$\varphi$-Scaling]\label{thm:phi-scaling}
+The H4L and H4R blocks are related by:
+\[
+U_L = \frac{1}{\varphi} \cdot U_R
+\]
+That is, for all $i \in \{0,1,2,3\}$ and $j \in \{0,\ldots,7\}$:
+\[
+(U_L)_{i,j} = \frac{1}{\varphi} \cdot (U_R)_{i,j}
+\]
+where rows are indexed $0$--$3$ for $U_L$ and $0$--$3$ for $U_R$ (corresponding to rows $4$--$7$ of $U$).
+\end{theorem}
+
+\begin{proof}
+The coefficient mapping between blocks is:
+\begin{itemize}
+\item Entries with $\pm a$ in $U_L$ correspond to entries with $\pm c$ in $U_R$
+\item Entries with $\pm b$ in $U_L$ correspond to entries with $\pm a$ in $U_R$
+\end{itemize}
+
+The ratios are:
+\[
+\frac{a}{c} = \frac{1/2}{\varphi/2} = \frac{1}{\varphi}, \qquad \frac{b}{a} = \frac{(\varphi-1)/2}{1/2} = \varphi - 1 = \frac{1}{\varphi}
+\]
+
+Both ratios equal $1/\varphi$, so every entry scales by the same factor. \qed
+\end{proof}
+
+\begin{corollary}[Consequences of $\varphi$-Scaling]\label{cor:scaling-consequences}
+\begin{enumerate}[label=(\alph*)]
+\item $\norm{U_L} = \norm{U_R}/\varphi$
+\item $\inner{U_L}{U_R} = \norm{U_R}^2/\varphi = (\varphi + 2)/\varphi = \sqrt{5}$
+\item After normalizing to unit row norms, $\hat{U}_L = \hat{U}_R$ (identical rows)
+\item The ``two'' H4 copies in the folding are geometrically the same, viewed at different scales
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(a) Immediate from $U_L = U_R/\varphi$. (b) $\inner{U_L}{U_R} = (U_R/\varphi) \cdot U_R = \norm{U_R}^2/\varphi$. (c) Normalization divides by norm, but $U_L$ and $U_R$ point in the same direction. (d) Follows from (c). \qed
+\end{proof}
+
+\begin{remark}[Geometric Interpretation]
+The $\varphi$-scaling reveals that E8$\to$H4 folding doesn't produce two independent H4 copies; it produces \emph{one} H4 structure at two self-similar scales. This is a hallmark of golden-ratio geometry.
+\end{remark}
+
+% ============================================================
+% SECTION 6: WORKED EXAMPLES
+% ============================================================
+\section{Worked Examples}
+
+\subsection{Example: Computing Row 0 Norm}
+
+\begin{example}
+Compute $\norm{\text{Row}_0}$ for the H4L block.
+\end{example}
+
+\textbf{Solution.} Row 0 of $U_L$ is:
+\[
+\text{Row}_0 = (a, b, a, b, a, -b, a, -b) = \left(\frac{1}{2}, \frac{\varphi-1}{2}, \frac{1}{2}, \frac{\varphi-1}{2}, \frac{1}{2}, -\frac{\varphi-1}{2}, \frac{1}{2}, -\frac{\varphi-1}{2}\right)
+\]
+
+The squared norm is:
+\begin{align}
+\norm{\text{Row}_0}^2 &= a^2 + b^2 + a^2 + b^2 + a^2 + b^2 + a^2 + b^2 \\
+&= 4a^2 + 4b^2 \\
+&= 4 \cdot \frac{1}{4} + 4 \cdot \frac{(\varphi-1)^2}{4} \\
+&= 1 + (\varphi - 1)^2
+\end{align}
+
+Now we compute $(\varphi - 1)^2$:
+\[
+(\varphi - 1)^2 = \left(\frac{1+\sqrt{5}}{2} - 1\right)^2 = \left(\frac{\sqrt{5}-1}{2}\right)^2 = \frac{5 - 2\sqrt{5} + 1}{4} = \frac{6 - 2\sqrt{5}}{4} = \frac{3 - \sqrt{5}}{2}
+\]
+
+Therefore:
+\[
+\norm{\text{Row}_0}^2 = 1 + \frac{3 - \sqrt{5}}{2} = \frac{2 + 3 - \sqrt{5}}{2} = \frac{5 - \sqrt{5}}{2} = 3 - \varphi \approx 1.382
+\]
+
+And $\norm{\text{Row}_0} = \sqrt{3 - \varphi} \approx 1.176$. \qed
+
+\subsection{Example: Verifying $\varphi$-Scaling}
+
+\begin{example}
+Verify that $\text{Row}_0(U_L) = (1/\varphi) \cdot \text{Row}_0(U_R)$.
+\end{example}
+
+\textbf{Solution.}
+\begin{align}
+\text{Row}_0(U_L) &= (a, b, a, b, a, -b, a, -b) \\
+\text{Row}_0(U_R) &= (c, a, c, a, c, -a, c, -a)
+\end{align}
+
+Check entry by entry:
+\begin{itemize}
+\item Position 0: $a/c = (1/2)/(\varphi/2) = 1/\varphi$ \checkmark
+\item Position 1: $b/a = ((\varphi-1)/2)/(1/2) = \varphi - 1 = 1/\varphi$ \checkmark
+\item Positions 2--7: Same ratios with matching signs \checkmark
+\end{itemize}
+
+Therefore $\text{Row}_0(U_L) = (1/\varphi) \cdot \text{Row}_0(U_R)$. \qed
+
+\subsection{Example: Inner Product Computation}
+
+\begin{example}
+Compute $\text{Row}_0(U_L) \cdot \text{Row}_0(U_R)$.
+\end{example}
+
+\textbf{Solution.}
+\begin{align}
+\text{Row}_0(U_L) \cdot \text{Row}_0(U_R) &= ac + ba + ac + ba + ac + ba + ac + ba \\
+&= 4ac + 4ab \\
+&= 4a(b + c) \\
+&= 4 \cdot \frac{1}{2} \cdot \frac{\sqrt{5}}{2} \qquad \text{(using $b + c = \sqrt{5}/2$)} \\
+&= \sqrt{5}
+\end{align}
+
+Alternatively, using $\varphi$-scaling:
+\[
+\text{Row}_0(U_L) \cdot \text{Row}_0(U_R) = \frac{1}{\varphi} \norm{U_R}^2 = \frac{\varphi + 2}{\varphi} = 1 + \frac{2}{\varphi} = 2\varphi - 1 = \sqrt{5}
+\]
+\qed
+
+% ============================================================
+% SECTION 7: COMPUTATIONAL VERIFICATION
+% ============================================================
+\section{Computational Verification}
+
+All algebraic results have been verified numerically to machine precision ($\sim 10^{-15}$).
+
+\subsection{Verification Table}
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Identity & Algebraic Value & Numerical Verification \\
+\midrule
+$\varphi$ & $(1+\sqrt{5})/2$ & $1.6180339887498949$ \\
+$\varphi^2 - \varphi - 1$ & $0$ & $2.22 \times 10^{-16}$ \\
+$\varphi - 1/\varphi - 1$ & $0$ & $0$ \\
+$a$ & $1/2$ & $0.5$ \\
+$b$ & $(\varphi-1)/2$ & $0.30901699437494742$ \\
+$c$ & $\varphi/2$ & $0.80901699437494745$ \\
+$a/c$ & $1/\varphi$ & $0.6180339887498949$ \\
+$b/a$ & $1/\varphi$ & $0.6180339887498949$ \\
+$\norm{U_L}^2$ & $3 - \varphi$ & $1.3819660112501051$ \\
+$\norm{U_R}^2$ & $\varphi + 2$ & $3.6180339887498949$ \\
+$\norm{U_L}$ & $\sqrt{3-\varphi}$ & $1.1755705045849463$ \\
+$\norm{U_R}$ & $\sqrt{\varphi+2}$ & $1.9021130325903071$ \\
+$\norm{U_L} \cdot \norm{U_R}$ & $\sqrt{5}$ & $2.2360679774997898$ \\
+$\sqrt{5}$ & $\sqrt{5}$ & $2.2360679774997898$ \\
+Error & $0$ & $0$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Cross-Validation}
+
+The identity $(3-\varphi)(\varphi+2) = 5$ was verified by:
+\begin{enumerate}
+\item Direct algebraic expansion (Section 4.1)
+\item Difference of squares (Section 4.2)
+\item Characteristic polynomial (Section 4.4)
+\item Numerical computation to 16 significant figures
+\end{enumerate}
+
+All methods agree to machine precision.
+
+% ============================================================
+% SECTION 8: DISCUSSION
+% ============================================================
+\section{Discussion}
+
+\subsection{The Fundamental Structure}
+
+Our analysis reveals a hierarchy of results:
+
+\begin{enumerate}
+\item \textbf{Most fundamental}: The coefficient triple $(a, b, c)$ forms a geometric sequence with ratio $\varphi$
+\item \textbf{Implies}: $U_L = (1/\varphi) U_R$ ($\varphi$-scaling)
+\item \textbf{Implies}: $\norm{U_L} \cdot \norm{U_R} = \sqrt{5}$ ($\sqrt{5}$-coupling)
+\end{enumerate}
+
+The $\sqrt{5}$-coupling is thus a \emph{consequence} of the self-similar structure built into the coefficient choice.
+
+\subsection{Relationship to Prior Work}
+
+\textbf{Conway-Sloane \cite{conway1999}}: Established the E8-icosian connection via quaternions. Our work provides the matrix-level algebraic structure.
+
+\textbf{Moxness \cite{moxness2014}}: Introduced the folding matrix for visualization. We characterize its intrinsic algebraic properties.
+
+\textbf{Koca et al.\ \cite{koca2001}}: Embedded H4 in W(E8) using quaternions. Our results provide complementary matrix characterization.
+
+\textbf{Baez \cite{baez2018}}: Connected icosahedron to E8 via two constructions. Our $\sqrt{5}$-coupling may relate to his open question about the connection between constructions.
+
+\subsection{Connections to Broader Theory}
+
+The $\sqrt{5}$-coupling connects to several themes:
+
+\begin{enumerate}
+\item \textbf{Self-similarity}: Golden ratio structures exhibit self-similarity at scales related by $\varphi$. Our result shows this extends to folding matrices.
+
+\item \textbf{Chirality}: The L/R decomposition in E8$\to$H4 mirrors chirality in physics. The $\sqrt{5}$ coupling constrains this relationship.
+
+\item \textbf{Non-crystallographic geometry}: H4 is the largest non-crystallographic Coxeter group. The irrational coupling $\sqrt{5}$ reflects this.
+\end{enumerate}
+
+\subsection{Open Questions}
+
+\begin{enumerate}
+\item \textbf{Generalization}: Does every E8$\to$H4 folding matrix exhibit a similar coupling identity, or is the $\sqrt{5}$-coupling specific to the $\varphi$-coupled family?
+
+\item \textbf{Other foldings}: What are the analogous coupling identities for E6$\to$G2, E7$\to$?, and other exceptional foldings?
+
+\item \textbf{Physical interpretation}: Does the $\sqrt{5}$-coupling have physical significance in E8-based theories?
+
+\item \textbf{Baez connection}: How does the $\sqrt{5}$-coupling relate to Baez's two constructions of E8 from the icosahedron?
+\end{enumerate}
+
+\subsection{Conclusion}
+
+We have proven that the $\varphi$-coupled E8$\to$H4 folding matrix exhibits a precise $\sqrt{5}$-coupling between its chiral components:
+\[
+\norm{U_L} \cdot \norm{U_R} = \sqrt{5}
+\]
+
+More fundamentally, the blocks satisfy $U_L = (1/\varphi) U_R$, revealing that the ``two'' H4 copies are geometrically identical at different scales---a manifestation of golden ratio self-similarity.
+
+To our knowledge, the specific identities $\norm{U_L} \cdot \norm{U_R} = \sqrt{5}$ and $U_L = (1/\varphi) U_R$ have not been previously published.
+
+% ============================================================
+% ACKNOWLEDGMENTS
+% ============================================================
+\section*{Acknowledgments}
+
+The author thanks J.G. Moxness for foundational work on E8$\to$H4 folding matrices, and the mathematical physics community for the rich literature on E8 and icosahedral symmetry.
+
+% ============================================================
+% APPENDICES
+% ============================================================
+\appendix
+
+\section{Complete Derivation Details}\label{app:derivations}
+
+\subsection{Derivation of $(\varphi - 1)^2 = 2 - \varphi$}
+
+Starting from $\varphi^2 = \varphi + 1$:
+\begin{align}
+(\varphi - 1)^2 &= \varphi^2 - 2\varphi + 1 \\
+&= (\varphi + 1) - 2\varphi + 1 \\
+&= 2 - \varphi
+\end{align}
+
+Numerically: $(\varphi - 1)^2 = (0.618...)^2 = 0.382... = 2 - 1.618... = 2 - \varphi$. \checkmark
+
+\subsection{Derivation of $b + c = \sqrt{5}/2$}
+
+\begin{align}
+b + c &= \frac{\varphi - 1}{2} + \frac{\varphi}{2} \\
+&= \frac{2\varphi - 1}{2}
+\end{align}
+
+Now $2\varphi - 1 = 2 \cdot \frac{1+\sqrt{5}}{2} - 1 = 1 + \sqrt{5} - 1 = \sqrt{5}$.
+
+Therefore $b + c = \sqrt{5}/2$. \checkmark
+
+\subsection{Derivation of $(3-\varphi)(\varphi+2) = 5$}
+
+Method 1 (expansion):
+\begin{align}
+(3-\varphi)(\varphi+2) &= 3\varphi + 6 - \varphi^2 - 2\varphi \\
+&= \varphi + 6 - \varphi^2 \\
+&= \varphi + 6 - (\varphi + 1) \\
+&= 5
+\end{align}
+
+Method 2 (numerical): $(3 - 1.618...)(1.618... + 2) = (1.382...)(3.618...) = 5.000...$. \checkmark
+
+\section{Python Verification Code}\label{app:code}
+
+\begin{lstlisting}
+import numpy as np
+
+# Golden ratio
+phi = (1 + np.sqrt(5)) / 2
+
+# Coefficients
+a = 0.5
+b = (phi - 1) / 2
+c = phi / 2
+
+# Verify coefficient relationships
+print(f"a/c = {a/c:.15f}")
+print(f"1/phi = {1/phi:.15f}")
+print(f"b/a = {b/a:.15f}")
+print(f"Difference: {abs(a/c - 1/phi):.2e}")
+
+# Construct the matrix
+U = np.array([
+    [a, b, a, b, a, -b, a, -b],
+    [a, a, -b, -b, -a, -a, b, b],
+    [a, -b, -a, b, a, -b, -a, b],
+    [a, -a, b, -b, -a, a, -b, b],
+    [c, a, c, a, c, -a, c, -a],
+    [c, c, -a, -a, -c, -c, a, a],
+    [c, -a, -c, a, c, -a, -c, a],
+    [c, -c, a, -a, -c, c, -a, a]
+])
+
+# Split into blocks
+U_L = U[:4, :]
+U_R = U[4:, :]
+
+# Compute row norms
+norm_L = np.linalg.norm(U_L[0, :])
+norm_R = np.linalg.norm(U_R[0, :])
+
+print(f"\n||U_L|| = {norm_L:.15f}")
+print(f"sqrt(3-phi) = {np.sqrt(3-phi):.15f}")
+print(f"||U_R|| = {norm_R:.15f}")
+print(f"sqrt(phi+2) = {np.sqrt(phi+2):.15f}")
+
+# Verify main theorem
+product = norm_L * norm_R
+print(f"\n||U_L|| * ||U_R|| = {product:.15f}")
+print(f"sqrt(5) = {np.sqrt(5):.15f}")
+print(f"Difference: {abs(product - np.sqrt(5)):.2e}")
+
+# Verify phi-scaling
+scaling_check = U_L / U_R
+print(f"\nU_L / U_R (should be 1/phi):")
+print(f"Mean: {np.mean(np.abs(scaling_check)):.15f}")
+print(f"1/phi = {1/phi:.15f}")
+
+# Verify (3-phi)(phi+2) = 5
+algebraic = (3 - phi) * (phi + 2)
+print(f"\n(3-phi)(phi+2) = {algebraic:.15f}")
+print(f"Difference from 5: {abs(algebraic - 5):.2e}")
+\end{lstlisting}
+
+\textbf{Output:}
+\begin{verbatim}
+a/c = 0.618033988749895
+1/phi = 0.618033988749895
+b/a = 0.618033988749895
+Difference: 0.00e+00
+
+||U_L|| = 1.175570504584946
+sqrt(3-phi) = 1.175570504584946
+||U_R|| = 1.902113032590307
+sqrt(phi+2) = 1.902113032590307
+
+||U_L|| * ||U_R|| = 2.236067977499790
+sqrt(5) = 2.236067977499790
+Difference: 0.00e+00
+
+U_L / U_R (should be 1/phi):
+Mean: 0.618033988749895
+1/phi = 0.618033988749895
+
+(3-phi)(phi+2) = 5.000000000000000
+Difference from 5: 0.00e+00
+\end{verbatim}
+
+\section{Tables of Computed Values}\label{app:tables}
+
+\subsection{Golden Ratio Powers}
+
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$n$ & $\varphi^n$ & Decimal & Fibonacci Form \\
+\midrule
+$-3$ & $(2-\varphi)/\varphi$ & $0.236$ & $2F_{-3} + F_{-4}$ \\
+$-2$ & $2 - \varphi$ & $0.382$ & $2 - \varphi$ \\
+$-1$ & $\varphi - 1$ & $0.618$ & $\varphi - 1$ \\
+$0$ & $1$ & $1.000$ & $1$ \\
+$1$ & $\varphi$ & $1.618$ & $\varphi$ \\
+$2$ & $\varphi + 1$ & $2.618$ & $\varphi + 1$ \\
+$3$ & $2\varphi + 1$ & $4.236$ & $2\varphi + 1$ \\
+$4$ & $3\varphi + 2$ & $6.854$ & $3\varphi + 2$ \\
+$5$ & $5\varphi + 3$ & $11.090$ & $5\varphi + 3$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Key Algebraic Values}
+
+\begin{center}
+\begin{tabular}{cccl}
+\toprule
+Symbol & Algebraic & Decimal & Description \\
+\midrule
+$a$ & $1/2$ & $0.500$ & Coefficient \\
+$b$ & $(\varphi-1)/2$ & $0.309$ & Coefficient \\
+$c$ & $\varphi/2$ & $0.809$ & Coefficient \\
+$\norm{U_L}^2$ & $3-\varphi$ & $1.382$ & H4L row norm squared \\
+$\norm{U_R}^2$ & $\varphi+2$ & $3.618$ & H4R row norm squared \\
+$\norm{U_L}$ & $\sqrt{3-\varphi}$ & $1.176$ & H4L row norm \\
+$\norm{U_R}$ & $\sqrt{\varphi+2}$ & $1.902$ & H4R row norm \\
+$\norm{U_L}\norm{U_R}$ & $\sqrt{5}$ & $2.236$ & Coupling constant \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{The $\varphi$-Hierarchy}
+
+\begin{center}
+\begin{tabular}{cccl}
+\toprule
+Value & Decimal & Algebraic Form & Role in E8$\to$H4 \\
+\midrule
+$\varphi^{-2}$ & $0.382$ & $2-\varphi$ & Scaling factor \\
+$\varphi^{-1}$ & $0.618$ & $\varphi-1$ & Coefficient ratio \\
+$1$ & $1.000$ & $1$ & Unit scale \\
+$\sqrt{3-\varphi}$ & $1.176$ & $\sqrt{(5-\sqrt{5})/2}$ & \textbf{H4L row norm} \\
+$\sqrt{2}$ & $1.414$ & $\sqrt{2}$ & E8 root norm \\
+$\varphi$ & $1.618$ & $(1+\sqrt{5})/2$ & Golden ratio \\
+$\sqrt{\varphi+2}$ & $1.902$ & $\sqrt{(5+\sqrt{5})/2}$ & \textbf{H4R row norm} \\
+$\sqrt{5}$ & $2.236$ & $\sqrt{5}$ & \textbf{Coupling constant} \\
+$\varphi^2$ & $2.618$ & $\varphi+1$ & Golden ratio squared \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% ============================================================
+% BIBLIOGRAPHY
+% ============================================================
+\begin{thebibliography}{99}
+
+\bibitem{conway1999}
+J.H. Conway and N.J.A. Sloane,
+\textit{Sphere Packings, Lattices and Groups},
+Grundlehren der mathematischen Wissenschaften, vol.~290, 3rd ed.
+Springer, New York, 1999.
+ISBN: 978-0-387-98585-5.
+DOI: \href{https://doi.org/10.1007/978-1-4757-6568-7}{10.1007/978-1-4757-6568-7}.
+
+\bibitem{coxeter1973}
+H.S.M. Coxeter,
+\textit{Regular Polytopes}, 3rd ed.
+Dover Publications, New York, 1973.
+ISBN: 978-0-486-61480-9.
+
+\bibitem{viazovska2017}
+M. Viazovska,
+``The sphere packing problem in dimension 8,''
+\textit{Annals of Mathematics}, vol.~185, no.~3, pp.~991--1015, 2017.
+DOI: \href{https://doi.org/10.4007/annals.2017.185.3.7}{10.4007/annals.2017.185.3.7}.
+
+\bibitem{moxness2014}
+J.G. Moxness,
+``The 3D Visualization of E8 using an H4 Folding Matrix,''
+viXra:1411.0130, 2014.
+Available: \url{https://vixra.org/abs/1411.0130}.
+
+\bibitem{koca2001}
+M. Koca, R. Ko\c{c}, and M. Al-Barwani,
+``Noncrystallographic Coxeter group H4 in E8,''
+\textit{Journal of Physics A: Mathematical and General}, vol.~34, no.~50, pp.~11201--11213, 2001.
+DOI: \href{https://doi.org/10.1088/0305-4470/34/50/303}{10.1088/0305-4470/34/50/303}.
+
+\bibitem{denney2019}
+T. Denney, D. Hooker, D. Johnson, T. Robinson, M. Butler, and S. Claiborne,
+``The Geometry of H4 Polytopes,''
+arXiv:1912.06156 [math.MG], 2019.
+DOI: \href{https://doi.org/10.48550/arXiv.1912.06156}{10.48550/arXiv.1912.06156}.
+
+\bibitem{baez2018}
+J.C. Baez,
+``From the Icosahedron to E8,''
+\textit{London Mathematical Society Newsletter}, no.~476, pp.~18--23, 2018.
+arXiv: \href{https://arxiv.org/abs/1712.06436}{1712.06436}.
+
+\bibitem{humphreys1990}
+J.E. Humphreys,
+\textit{Reflection Groups and Coxeter Groups},
+Cambridge Studies in Advanced Mathematics, vol.~29.
+Cambridge University Press, 1990.
+ISBN: 978-0-521-43613-7.
+
+\bibitem{moody1988}
+R.V. Moody and J. Patera,
+``Quasicrystals and icosians,''
+\textit{Journal of Physics A: Mathematical and General}, vol.~26, pp.~2829--2853, 1993.
+DOI: \href{https://doi.org/10.1088/0305-4470/26/12/022}{10.1088/0305-4470/26/12/022}.
+
+\bibitem{sadoc2001}
+J.F. Sadoc and R. Mosseri,
+\textit{Geometrical Frustration}.
+Cambridge University Press, 2001.
+ISBN: 978-0-521-44198-8.
+
+\end{thebibliography}
+
+\end{document}

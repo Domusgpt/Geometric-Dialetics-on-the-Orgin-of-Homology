@@ -8,7 +8,7 @@
 
 ## PROPOSED TITLE
 
-"The 24-Cell and Standard Model Particle Content: Geometric Origins of Gauge Structure and Mass Hierarchy"
+"The 24-Cell and Standard Model Particle Content: Geometric Origins of Gauge Structure"
 
 **Subtitle**: "From Polytope Geometry to Particle Physics via D4 Triality"
 
@@ -22,13 +22,10 @@
 **Claim 2**: D4 triality explains three fermion generations.
 - Status: NOVEL INTERPRETATION of established mathematics
 
-**Claim 3**: Charged lepton masses follow φ^n scaling with prime exponents.
-- Status: EMPIRICAL (p < 0.01) - 3.75% and 2.70% errors
-
-**Claim 4**: Color confinement has geometric interpretation via Phillips Synthesis.
+**Claim 3**: Color confinement has geometric interpretation via Phillips Synthesis.
 - Status: NOVEL MECHANISM
 
-**Central Thesis**: "The Standard Model's gauge structure and mass hierarchy emerge from 4D polytope geometry."
+**Central Thesis**: "The Standard Model's gauge structure emerges from 4D polytope geometry."
 
 ---
 
@@ -73,39 +70,18 @@
 - 320 valid triads with centroid at origin
 - Incomplete structure → confined states
 
-### 4. Mass Hierarchy from Golden Ratio (2-3 pages)
-#### 4.1 The φ-Scaling Hypothesis
-- m = m_e × φ^n where n is integer
-- Connection to E8 → H4 folding
-- Why golden ratio appears
-
-#### 4.2 Lepton Mass Predictions
-- m_μ = m_e × φ^11 (error 3.75%)
-- m_τ = m_e × φ^17 (error 2.70%)
-- Both exponents are prime
-
-#### 4.3 Statistical Significance
-- Monte Carlo: p = 0.0033
-- Less than 0.33% chance of random pattern
-- Exceeds p < 0.01 threshold
-
-#### 4.4 The Prime Number Question
-- Why 11 and 17 specifically?
-- Possible E8 Coxeter theory origin
-- Open problem requiring derivation
-
-### 5. Computational Validation (1-2 pages)
-#### 5.1 Trinity Decomposition Verification
+### 4. Computational Validation (1-2 pages)
+#### 4.1 Trinity Decomposition Verification
 - 8+8+8=24 confirmed
 - Each 16-cell has 24 edges
 - Valid geometric structure
 
-#### 5.2 Phillips Synthesis Results
+#### 4.2 Phillips Synthesis Results
 - 320 valid triads found
 - Best balance = 0.0 (exact)
 - Color neutrality achieved
 
-### 6. Discussion (2 pages)
+### 5. Discussion (2 pages)
 - Comparison to other unification attempts
 - Relationship to E8 theories (Lisi, etc.)
 - **Resolution of Distler-Garibaldi Mirror Objection** (Phillips 2025-2026):
@@ -115,9 +91,9 @@
   - Left 600-cell → matter, Right 600-cell → antimatter
   - See MIRROR_RESOLUTION.md for full proof
 - Why 24-cell and not other polytopes
-- Limitations and the 3-4% error question
+- Limitations and open questions
 
-### 7. Conclusion (0.5 pages)
+### 6. Conclusion (0.5 pages)
 - Summary of geometric correspondence
 - Significance for physics beyond Standard Model
 - Open problems
@@ -174,51 +150,7 @@
 
 ---
 
-### CRITICAL OBJECTION 3: "Mass Formula is Fitted, Not Derived"
-
-**The Attack**: "You have 2 free parameters (exponents 11 and 17) fitting 2 data points (muon and tau masses). This is curve-fitting, not prediction."
-
-**Strength**: STRONG - Valid statistical concern
-
-**Defense Required**:
-1. Monte Carlo shows statistical significance despite fitting
-2. Exponents are constrained to integers (discrete, not continuous)
-3. Prime pattern is additional structure not fitted
-
-**Current Status**: DEFENSE MODERATE - Statistical argument helps but doesn't fully resolve
-
-**Resolution**:
-- Acknowledge fitting concern explicitly
-- Emphasize: p-value accounts for multiple hypothesis testing
-- Propose testable extension: predict quark masses
-- Note: true test would be predicting NEW particle mass
-
----
-
-### CRITICAL OBJECTION 4: "3-4% Error is Large"
-
-**The Attack**: "The Standard Model predicts particle interactions to 10+ decimal places. Your 3-4% error is enormous by particle physics standards."
-
-**Strength**: STRONG - Valid precision concern
-
-**Defense Required**:
-1. This is a ZEROTH-ORDER approximation
-2. Quantum corrections could account for discrepancy
-3. Standard Model doesn't predict masses AT ALL
-
-**Current Status**: DEFENSE MODERATE
-
-**Resolution**:
-- Frame as: "We predict to 3-4%, SM predicts 0%"
-- Propose mechanisms for correction:
-  - QED radiative corrections
-  - Running masses vs pole masses
-  - Higher-order φ terms
-- Honestly acknowledge limitation
-
----
-
-### CRITICAL OBJECTION 5: "D4 Triality Doesn't Actually Explain Generations"
+### CRITICAL OBJECTION 3: "D4 Triality Doesn't Actually Explain Generations"
 
 **The Attack**: "D4 triality is a mathematical fact about Lie algebras. It doesn't explain WHY nature uses D4 or why generations correspond to 16-cells."
 
@@ -238,7 +170,7 @@
 
 ---
 
-### CRITICAL OBJECTION 6: "Why 24-Cell and Not Other Polytopes?"
+### CRITICAL OBJECTION 4: "Why 24-Cell and Not Other Polytopes?"
 
 **The Attack**: "There are infinitely many polytopes. Why is 24-cell special? This seems arbitrary."
 
@@ -258,45 +190,15 @@
 
 ---
 
-### CRITICAL OBJECTION 7: "Quark Masses Don't Fit Pattern"
-
-**The Attack**: "If this is universal, quarks should follow same pattern. Do they?"
-
-**Strength**: STRONG - Obvious extension to test
-
-**Defense Required**:
-1. Test quark masses against φ^n formula
-2. Address QCD complications (running masses, confinement)
-3. Explain any discrepancies
-
-**Current Status**: TESTED - QUARKS FAIL (10-20% errors)
-
-| Quark | φ^n Prediction | Measured | Error |
-|-------|----------------|----------|-------|
-| Down | 5.65 MeV | 4.67 MeV | 21% |
-| Strange | 101.5 MeV | 93.4 MeV | 8.6% |
-| Charm | 1125 MeV | 1270 MeV | 11% |
-| Bottom | 4768 MeV | 4180 MeV | 14% |
-| Top | 138,500 MeV | 172,760 MeV | 20% |
-
-**Resolution**:
-- **Leptons vs Quarks**: Leptons have no QCD interactions; quarks do
-- **QCD running masses**: Quark masses "run" with energy scale due to confinement
-- **Possible interpretation**: φ-scaling is a "bare mass" pattern obscured by QCD for quarks
-- **Honest conclusion**: Pattern works for leptons (3-4%), fails for quarks (10-20%)
-- This STRENGTHENS lepton claim by showing it's not universal fitting
-
----
-
 ### MODERATE OBJECTIONS
 
-**Objection 8**: "SU(3) has 8 generators by definition - not a geometric insight"
+**Objection 5**: "SU(3) has 8 generators by definition - not a geometric insight"
 - Defense: The geometric structure PROVIDES the SU(3), not the other way
 
-**Objection 9**: "Gauge symmetries aren't spatial symmetries"
+**Objection 6**: "Gauge symmetries aren't spatial symmetries"
 - Defense: Kaluza-Klein and string theory precedent for geometric origin
 
-**Objection 10**: "24-cell lives in 4D, but spacetime is 3+1D Minkowski"
+**Objection 7**: "24-cell lives in 4D, but spacetime is 3+1D Minkowski"
 - Defense: Internal symmetry space, not spacetime
 
 ---
@@ -308,16 +210,14 @@
 ### Critical Actions Required:
 
 1. ~~**Verify Ali Citation**: Obtain exact DOI and verify claims~~ ✓ DONE (arXiv:2511.10685, EPJC 85, 1282)
-2. ~~**Test Quark Masses**: Against φ^n formula~~ ✓ DONE (FAILS: 10-20% errors)
-3. **Address Error Explicitly**: 3-4% with proposed mechanisms
-4. **Downgrade Causation Claims**: "Consistent with" not "explains"
-5. **Add Derivation Attempt**: Why 11 and 17? Even failed derivation adds value.
-6. **Add Mirror Resolution**: Reference Phillips's resolution to Distler-Garibaldi ✓ DONE
+2. **Downgrade Causation Claims**: "Consistent with" not "explains"
+3. **Add Mirror Resolution**: Reference Phillips's resolution to Distler-Garibaldi ✓ DONE
+4. **Strengthen Structural Arguments**: Show correspondence is more than cardinality match
 
 ### Revised Framing:
 
 **FROM**: "The 24-cell IS the Standard Model"
-**TO**: "The 24-cell exhibits remarkable structural parallels to Standard Model that warrant investigation, with statistically significant mass predictions"
+**TO**: "The 24-cell exhibits remarkable structural parallels to Standard Model that warrant investigation"
 
 ---
 
@@ -325,13 +225,13 @@
 
 | Aspect | Paper 1 (3-Body) | Paper 2 (SM) |
 |--------|-----------------|--------------|
-| Central claim strength | WEAK (needs homeomorphism) | MODERATE (has statistics) |
+| Central claim strength | WEAK (needs homeomorphism) | MODERATE (geometric structure) |
 | Novelty | HIGH | HIGH |
 | Verifiability | DIFFICULT | MODERATE |
 | Controversial factor | VERY HIGH | HIGH |
 | Publication risk | HIGH | MODERATE |
 
-**Recommendation**: Paper 2 is closer to publication-ready due to statistical evidence. Paper 1 needs more mathematical development.
+**Recommendation**: Both papers need careful framing to distinguish established mathematics from novel interpretations. Paper 1 needs more mathematical development.
 
 ---
 

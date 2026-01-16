@@ -7,29 +7,75 @@
 
 ---
 
-## I. REPOSITORY STRUCTURE
+## I. REPOSITORY STRUCTURE (FINAL - January 2026)
 
 ```
 Geometric-Dialetics-on-the-Orgin-of-Homology/
+├── CLAUDE.md                            # ★ FULL PROJECT CONTEXT (READ FIRST)
+├── THEORY_SYNTHESIS.md                  # Unified theory summary
+├── PUBLISHING_STRATEGY.md               # Publication roadmap
+├── DEV_TRACK.md                         # Development tracking
+├── index.html                           # Main theory paper (HTML)
+│
 ├── papers/                              # Publication preparation
 │   ├── paper1-three-body-e8/           # E8/Three-Body paper
+│   │   └── OUTLINE.md                  # Red team analysis
 │   ├── paper2-standard-model-24cell/   # Standard Model paper
+│   │   └── OUTLINE.md                  # Red team analysis
 │   ├── MASTER_INVENTORY.md             # THIS FILE
 │   ├── PHILOSOPHICAL_FOUNDATIONS.md    # Core GIT framework
 │   ├── DISTLER_GARIBALDI_ANALYSIS.md   # Mirror fermion analysis
+│   ├── MIRROR_RESOLUTION.md            # Resolves Distler-Garibaldi
 │   ├── STYLE_GUIDE.md                  # Attribution & terminology
-│   ├── RESEARCH_INVENTORY.md           # Evidence assessment
-│   └── [other support docs]
+│   └── RESEARCH_INVENTORY.md           # Evidence assessment
 │
-├── source_documents/                    # Original research documents
-│   ├── 01_music_ai_origin/             # TRINITY DECOMPOSITION ORIGIN
+├── source_documents/                    # Original research documents (ORGANIZED)
+│   ├── 01_music_ai_origin/             # ★★★★★ TRINITY DECOMPOSITION ORIGIN
+│   │   ├── Polytopal Engine Trinity Refactor.txt
+│   │   ├── Polytope Decompositions for Musical Mapping.txt
+│   │   └── MusicGeometryDomain-Design.md
 │   ├── 02_ppp_framework/               # PPP/Rendering as Cognition
+│   │   ├── Phillips_Rendering_as_Cognition.html
+│   │   ├── Phillips_Rendering_as_Cognition_v2.md
+│   │   ├── Phillips_Rendering_as_Cognition.tex
+│   │   ├── Polytopal Metamorphosis...txt
+│   │   └── Evolving Music AI Architecture...txt
 │   ├── 03_git_theory/                  # Geometric Information Theory
-│   ├── 04_analysis_documents/          # Critical validations (ESSENTIAL)
-│   ├── 05_implementation/              # Code specs
-│   └── 06_pdfs/                        # PDF versions
+│   │   ├── Phillips_GIT_Foundation.md
+│   │   ├── Phillips_Geometric_Information_Theory.md
+│   │   ├── Phillips_Geometric_Information_Theory.html
+│   │   └── AI Architecture and Biological Information.txt
+│   ├── 04_analysis_documents/          # ★★★★★ Critical validations
+│   │   ├── ANALYSIS_PPP_Comprehensive_Validation.md
+│   │   ├── ANALYSIS_Nested_Polytopal_Cognition_25_24cells.md
+│   │   ├── ANALYSIS_Phillips_Synthesis_Critical_Assessment.md
+│   │   ├── ANALYSIS_Entropic_Tension_Unified_Framework.md
+│   │   ├── ANALYSIS_Dynamic_Polytopal_Interference.md
+│   │   ├── ANALYSIS_GIT_Mathematical_Foundations.md
+│   │   ├── ANALYSIS_Convexity_Entropic_Equilibrium.md
+│   │   ├── ANALYSIS_Icositetrachoric_Cognition_Assessment.md
+│   │   └── ANALYSIS_Process_Based_Visual_Computation.md
+│   ├── 05_implementation/              # Code specs (empty - use ppp-implementation/)
+│   ├── 06_pdfs/                        # PDFs and images
+│   │   ├── E8_Geometry_Unifying_Macro_and_Micro_Physics.pdf (18MB)
+│   │   ├── Geometric Physics_ 3-Body to Subatomic.pdf
+│   │   ├── Proving Geometric Unification Theory.pdf
+│   │   ├── Quantum Rendering with E8 Lattice.pdf
+│   │   └── [other PDFs and images]
+│   └── 07_synthesis/                   # Integration documents
+│       └── THEORY_SYNTHESIS_Complete.md
 │
-└── [root level files]                   # Main theory papers
+├── ppp-implementation/                  # Code and technical documentation
+│   ├── E8_LEPTON_MASS_DISCOVERY.md     # ★★★★★ Key physics result
+│   ├── E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md
+│   ├── E8_THREE_BODY_ACADEMIC_DOCUMENTATION.md
+│   └── telemetry-schemas.md
+│
+└── .claude/commands/                    # AI assistant skills
+    ├── paper-review.md
+    ├── lit-search.md
+    ├── draft-section.md
+    └── cite-format.md
 ```
 
 ---
@@ -464,15 +510,15 @@ PHASE 5: UNIFIED THEORY (2026)
 
 ---
 
-## VI. DUPLICATES (Should be deleted)
+## VI. DUPLICATES STATUS
 
-| File | Keep | Delete |
-|------|------|--------|
-| Evolving Music AI...txt | ✓ | |
-| Evolving Music AI...(1).txt | | ✓ |
-| Evolving Music AI...(2).txt | | ✓ |
-| Phillips_GIT...(1).html | | ✓ |
-| Geometric Cognition...(1).pdf | | ✓ |
+**All duplicates have been cleaned up (January 2026 reorganization):**
+- Removed: `Evolving Music AI...(1).txt` and `(2).txt`
+- Removed: `Phillips_GIT...(1).html`
+- Removed: `Geometric Cognition...(1).pdf`
+- Removed: `ANALYSIS_GIT_Mathematical_Foundations_Unified.md` (identical to ANALYSIS_GIT_Mathematical_Foundations.md)
+- Removed: `ANALYSIS_Nested_Polytopal_Formalization.md` (identical to ANALYSIS_Nested_Polytopal_Cognition_25_24cells.md)
+- Merged all docs/ folder contents into source_documents/ structure
 
 ---
 
