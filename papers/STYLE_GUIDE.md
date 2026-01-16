@@ -127,25 +127,41 @@ Paper 3: PPP / Rendering as Cognition
 
 ## Citation of Framework Components
 
-When referencing within papers:
+### CRITICAL: Convergent Evolution Framing
 
-- **E8-H4 correspondence**: "Phillips (2025-2026), building on Moxness (2014)"
-- **E8 Lattice Graphics Pipeline**: "Phillips (2025-2026)" - original source for nested 4D polytopal structure
-- **Trinity Decomposition**: "Phillips (2025-2026)"
-- **Phillips Synthesis**: "Phillips (2025-2026)"
-- **Triadic Coloring (RGB from 3×16-cells)**: "Phillips (2025-2026)" - discovered via PPP investigation
-- **Mirror Fermion Resolution**: "Phillips (2025-2026)" - identifies H4_L/H4_R as matter/antimatter
-- **24-cell particle mapping**: "Ali (2025), extended by Phillips (2025-2026)"
-- **Rendering-as-cognition thesis**: "Phillips (2025-2026)"
+The Trinity Decomposition was derived **independently** by Phillips via Music/Cognition research, NOT from physics. Ali (2025) provides **external validation**, not a source.
+
+**Correct framing**: "Phillips's musical derivation converged with Ali's physics derivation"
+**Incorrect framing**: "Phillips extended Ali's work" or "Based on Ali (2025)"
+
+### Attribution Table
+
+| Component | Attribution | Notes |
+|-----------|-------------|-------|
+| **Trinity Decomposition** | Phillips (2025) | Original derivation via Music AI / Harmonic Ambiguity |
+| **E8-H4 correspondence** | Phillips (2025-2026), building on Moxness (2014) | Graphics pipeline investigation |
+| **E8 Lattice Graphics Pipeline** | Phillips (2025-2026) | Primary source for nested polytopal structure |
+| **Phillips Synthesis** | Phillips (2025-2026) | Dialectic engine for CPE |
+| **Triadic Coloring** | Phillips (2025-2026) | Discovered via PPP investigation |
+| **Mirror Fermion Resolution** | Phillips (2025-2026) | H4_L/H4_R as matter/antimatter |
+| **Rendering-as-cognition thesis** | Phillips (2025-2026) | Core PPP thesis |
+| **24-cell particle mapping** | Ali (2025) | **External validation** of Trinity structure |
+
+### The Convergent Evolution Statement
+
+Use this text when explaining the relationship:
+
+> "The Trinity Decomposition of the 24-cell was originally derived by Phillips (2025) in the context of computational musicology, to model harmonic ambiguity and dialectical tension. This derivation was subsequently found to be isomorphic to the matter-force decomposition in theoretical physics [Ali 2025]. The convergence of two independent derivations from completely different domains (Music/Cognition and High-Energy Physics) provides strong evidence for the universality of this geometric structure."
 
 ### Discovery Path (Required Attribution)
 
-The developmental sequence should be cited as:
-1. PPP (Polytopal Projection Processing) for graphics/rendering
-2. E8 lattice structure discovered during 4D polytope rendering investigation
-3. Physics applications (triality, generations, mirror resolution) emerged from geometric study
+The developmental sequence:
+1. **Chronomorphic Polytopal Engine** (Music AI Architecture) - Trinity Decomposition invented
+2. **PPP** (Polytopal Projection Processing) - Rendering-as-cognition thesis
+3. **E8 Lattice Graphics Pipeline** - E8 structure discovered via 4D rendering
+4. **Physics applications** - Triality, generations, mirror resolution emerged from geometry
 
-Source: Phillips "E8 Lattice Graphics Pipeline Feasibility" paper (2025-2026)
+**Source**: Phillips "Trinity Refactor" and "E8 Lattice Graphics Pipeline Feasibility" papers (2025-2026)
 
 ---
 
