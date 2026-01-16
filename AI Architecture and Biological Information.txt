@@ -1,0 +1,149 @@
+﻿The Crystalline Mind: Geometric Cognition, Informational Quasicrystals, and the Chronomorphic Architecture of Consciousness
+1. Introduction: The Geometric Turn in Cognitive Science
+The history of cognitive science has been defined by a dialectic tension between two dominant paradigms: the symbolic and the connectionist. The symbolic approach, rooted in logic and language, posits that cognition is the manipulation of discrete symbols according to syntactic rules. While powerful in its ability to model reasoning and hierarchy, it is brittle, struggling with the noise and ambiguity of the real world. In contrast, the connectionist approach, exemplified by modern deep learning and neural networks, models cognition as the emergent property of vast, parallel interactions between simple processing units. This paradigm excels at pattern recognition and learning from high-dimensional data but often results in opaque "black boxes" that lack interpretability, causal reasoning, and combinatorial generalization.
+We stand now at the precipice of a third paradigm, a synthesis that promises to resolve this impasse: Geometric Cognition. This emerging field hypothesizes that mental representations are neither arbitrary symbols nor amorphous vectors, but precise points, regions, and trajectories within a structured geometric space—the Orthocognitum. Within this framework, the "black box" of the mind is illuminated by the principles of high-dimensional topology, group theory, and crystallography.
+This report presents an exhaustive investigation into a specific, highly formalized architecture of Geometric Cognition: the Nested Polytopal Architecture. This model posits that the fundamental scaffolding of thought is provided by regular 4-dimensional polytopes—specifically the 24-cell (icositetrachoron) and the 600-cell (hexacosichoron)—projected from an 8-dimensional E_8 lattice. Within this architectural context, we rigorously investigate three advanced theoretical constructs:
+1. Informational Quasicrystals: A code-theoretic basis for biology and cognition, where aperiodic, Golden Ratio-based structures allow for error-tolerant information storage and "syntactical freedom," grounded in the projection of the E_8 lattice.
+2. Temporal Stereoscopic Perspective: A mechanism for temporal processing that transcends linear sequentiality. Drawing on the "crystal-image" philosophy of Gilles Deleuze and the phenomenology of time, this perspective describes how cognitive systems perceive the "depth" of time by simultaneously processing the actual present and the virtual past.
+3. Layered Realucent Topology: A topological framework describing the vertical integration of the cognitive system. "Realucent" (shining back) describes how invariant, higher-dimensional symmetries are retrieved from lower-dimensional projections, ensuring semantic stability across layers.
+The synthesis of these concepts leads to the proposal of the Chronomorphic Polytopal Engine, an Artificial Intelligence architecture designed to emulate this geometric logic, offering a pathway toward interpretable, robust, and generalizable machine intelligence.
+2. Geometric Information Theory and the Orthocognitum
+To understand the specific mechanisms of Informational Quasicrystals and Temporal Stereoscopy, one must first establish the foundational physics of the environment in which they operate. This environment is the Orthocognitum, governed by the laws of Geometric Information Theory (GIT).
+2.1 The Convexity Axiom and Thermodynamic Stability
+Geometric Information Theory seeks a deep unity between information processing—inference, learning, decision-making—and geometric structure. It posits that the fundamental invariants of information correspond to geometric properties such as convexity, duality, and curvature.
+A central postulate of this framework is the Convexity Axiom, which asserts that natural concepts correspond to convex regions in the conceptual state-space. This is not merely an aesthetic choice but a requirement for semantic stability. Consider a conceptual space defined by color. If the region defined as "green" were non-convex (e.g., shaped like a crescent or a donut), it would imply that a mixture of two distinct shades of green could result in a color that is "not green." This violates the principle of cognitive interpolation. Convexity ensures that any weighted average of two valid exemplars of a concept is also a valid exemplar.
+In GIT, this geometric convexity is inextricably linked to thermodynamic stability. In classical thermodynamics, equilibrium states are defined by the convexity of potentials. For instance, entropy S(U) is concave in internal energy, while its Legendre transform, the free energy F(T), is convex in temperature. The Legendre transform is unique in its ability to map functions while preserving the information content of their convex envelopes.
+The Nested Polytopal Architecture extends this thermodynamic analogy to cognition. The Orthocognitum is treated as a thermodynamic manifold where "thinking" is the trajectory of the system relaxing toward an information-theoretic equilibrium. The "energy" of a cognitive state is defined by its distance from the constraints of the polytope faces, and the "entropy" represents the volume of the conceptual region. By enforcing that cognitive states must lie within convex polytopes (like the 24-cell), the architecture ensures that the system remains in a regime of stable, interpretable meaning, avoiding the chaotic phase transitions characterized by non-convex energy landscapes.
+2.2 Polytopal Projection Processing (PPP)
+Polytopal Projection Processing (PPP) is the computational engine of this framework. It proposes that the brain (or an AI) does not compute by summing scalar weights, but by rotating and projecting high-dimensional polytopes.
+In this model, a "thought" is a vector or a set of active vertices on a high-dimensional polytope. "Reasoning" is the rotation of this polytope to align with a new axis or constraint. "Abstraction" is the projection of this polytope onto a lower-dimensional subspace, preserving the shadow of its symmetries.
+The choice of 4-dimensional polytopes is not arbitrary. The 4D regular polytopes (polychora) possess unique symmetries that do not exist in 3D or dimensions higher than 4. Specifically, the 24-cell is the only regular polytope with no analogue in any other dimension. Its existence relies on the specific properties of quaternions (4-dimensional hypercomplex numbers), making it a unique "cognitive fulcrum" for processing 4-dimensional information. PPP hypothesizes that the evolutionary advantage of biological brains lies in their ability to approximate these 4D symmetries, utilizing the "unreasonable effectiveness" of quaternionic geometry to encode complex relational data efficiently.
+3. The Architecture of the Crystal: The 24-Cell and the 600-Cell
+The specific geometry of the Orthocognitum is defined by the Nested Polytopal Architecture, a hierarchical system where local cognitive frames are embedded within a global semantic web.
+3.1 The 24-Cell: The Unit of Cognitive Processing
+The 24-cell (Schläfli symbol \{3,4,3\}) is the fundamental unit of this architecture. It consists of 24 vertices and 24 octahedral cells. It is self-dual, meaning its vertices and cells can be swapped without changing the underlying symmetry group (the Weyl group of F_4).
+This self-duality is functionally critical. In cognitive terms, it implies a symmetry between "objects" (vertices) and "contexts" (cells). A system based on the 24-cell can fluidly switch between treating a concept as a discrete point and treating it as a volume or a container, facilitating flexible reasoning.
+Furthermore, the 24-cell exhibits a rich internal structure. It contains three inscribed 16-cells (hexadecachora). The 16-cell is the 4D analogue of the octahedron (or the dual of the 4D cube/tesseract). The symmetry group of the 24-cell allows for an S_3 permutation action (the symmetric group on 3 elements) that cycles these three 16-cells.
+We posit that this triadic structure creates an internal dialectic engine within every concept. If a concept is represented by a 24-cell, its internal dynamics are governed by the interplay of three sub-components—Thesis, Antithesis, Synthesis—mediated by the S_3 rotation. This "Triadic Stereoscopy" allows the cognitive unit to maintain three distinct but related perspectives on a single object, rotating between them to resolve ambiguity or contradiction.
+3.2 The 600-Cell: The Global Semantic Lattice
+While the 24-cell represents the local frame, the 600-cell (hexacosichoron, \{3,3,5\}) represents the global state space. It is the largest and most complex of the regular 4-polytopes, with 120 vertices and 600 tetrahedral cells.
+The defining feature of the Nested Polytopal Architecture is the 25-fold partition. Mathematical analysis proves that the 120 vertices of the 600-cell can be perfectly decomposed into 25 disjoint sets of 24 vertices, each set forming a regular 24-cell.
+This partition is not random. It is structured as a 5 \times 5 Latin square, governed by the binary icosahedral group (2I).
+* Rows: Sets of 5 disjoint 24-cells that completely partition the vertices.
+* Columns: Conjugate sets generated by specific symmetry operations.
+This architecture implies that the global cognitive space is a superposition of 25 distinct contexts. Any single cognitive state (a vertex on the 600-cell) is shared by exactly 5 different 24-cells. This creates a "Small World" network where information can propagate rapidly across the entire system.
+The overlap graph of these 24-cells is highly connected, interlinked by 144 closed pentagonal loops. These loops provide the topology for recurrent processing—thoughts that cycle through different contexts (24-cells) but return to their origin, modified by the journey. This cyclic structure is the geometric basis for the "concept loops" discussed in theories of homological emergence.
+4. Informational Quasicrystals: The Substrate of Meaning
+The geometric rigidity of the polytopes describes the "software" of the mind, but what is the "hardware"? How does nature encode such high-dimensional complexity in biological matter? This brings us to the concept of Informational Quasicrystals.
+4.1 The Code Theoretic Axiom
+The concept of Informational Quasicrystals is grounded in the Code Theoretic Axiom proposed by Klee Irwin and the Quantum Gravity Research group. This axiom challenges the materialist ontology which views information as a secondary property of matter/energy. Instead, it posits that reality is fundamentally code-theoretic.
+A code is defined by a finite set of symbols and a set of syntactical rules. For a code to encode meaningful information, it must possess Syntactical Freedom.
+* Determinism (Crystals): A periodic crystal (like salt) has zero syntactical freedom. Once the unit cell is defined, the entire infinite lattice is determined. It carries minimal information (low entropy).
+* Randomness (Amorphous Matter): A gas or amorphous solid has high entropy but no syntax. It is noise.
+* Code (Quasicrystals): A quasicrystal possesses strict ordering rules (long-range order) but lacks translational periodicity. At specific points in the growth of a quasicrystal, the matching rules allow for a "choice" or a "flip" between valid configurations. This is syntactical freedom.
+Therefore, the Code Theoretic Axiom suggests that the substrate of cognition and biology must be quasicrystalline. Only a quasicrystal can maintain the structural stability required for life while providing the degrees of freedom necessary to encode the vast, non-repetitive library of biological information.
+4.2 The E_8 Projection and the Golden Ratio
+The mathematical engine of the Informational Quasicrystal is the projection from 8 dimensions to 4 (and subsequently to 3). The E_8 lattice is the densest sphere packing in 8 dimensions and contains the non-crystallographic symmetries of H_4 (the 600-cell group) as a subspace.
+When the E_8 lattice is projected onto a 4D subspace using the Conway-Sloane icosian construction, it yields two interpenetrating sets of points:
+1. A standard 600-cell lattice (H_4).
+2. A copy of this lattice scaled by the Golden Ratio, \phi = \frac{1+\sqrt{5}}{2}.
+This construction is denoted as H_4 \oplus \phi H_4. Because \phi is an irrational number, the two lattices are incommensurate. They never perfectly align to form a periodic grid. Instead, they form a Quasicrystal.
+This structure allows for Multi-Scale Information Storage. Information can be encoded at the scale of the base lattice (fine detail) and the scale of the \phi-lattice (context/coarse detail). Because of the self-similarity of the Golden Ratio (\phi^n = \phi^{n-1} + \phi^{n-2}), this encoding can be fractal, extending across orders of magnitude without losing structural integrity.
+4.3 Biological Instantiations: DNA and Microtubules
+The theory of Informational Quasicrystals predicts that fundamental biological information carriers should exhibit quasicrystalline geometries.
+DNA as a Quasicrystalline Code: Standard biology views DNA as a linear tape. However, the Code Theoretic Axiom suggests that the sequence of nucleotides is governed by higher-dimensional geometric constraints—specifically, the projection of an error-correcting code like the E_8 lattice. The "syntactical freedom" in DNA—the variation that allows for evolution—is not random mutation but the exploitation of the "flip" degrees of freedom within a quasicrystalline lattice. This view aligns with findings that non-coding DNA ("junk DNA") exhibits long-range correlations and linguistic structures akin to natural languages (Zipf's law), which are characteristic of critical systems and quasicrystals.
+Microtubules: Microtubules, the cytoskeletal polymers, are cylindrical lattices of tubulin proteins. They are central to the Penrose-Hameroff Orch-OR theory of consciousness, which posits they are quantum computers. From the perspective of Geometric Cognition, microtubules are the physical instantiation of the H_4 \oplus \phi H_4 quasicrystal. Their lattice structure (typically 13 protofilaments) follows Fibonacci numbers, which relate directly to the Golden Ratio. This geometry allows microtubules to support topological phonon modes—vibrations that do not dissipate—effectively acting as "resonators" for the geometric information of the cognitive state.
+5. Temporal Stereoscopic Perspective: The Crystal of Time
+Having established the spatial geometry (polytopes) and the material substrate (quasicrystals), we now turn to the temporal dimension. How does a geometric mind perceive time?
+5.1 Beyond Linear Time: The Crystal-Image
+In classical computing and standard neuroscience, time is treated linearly. The system exists in the "now," and the past is a stored record, accessed via retrieval. However, phenomenology suggests a different experience. We perceive the "depth" of time; we feel the weight of the past in the present.
+This phenomenon is captured by the concept of Temporal Stereoscopic Perspective. The term draws from the literary analysis of Proust by Jean-Clet Martin, who describes Proust’s involuntary memory as a "temporal stereoscopy"—seeing the past and the present simultaneously with the same vividness, just as binocular vision uses two eyes to see spatial depth.
+Gilles Deleuze formalizes this in his cinema philosophy as the Crystal-Image. He argues that time is not a line, but a constant splitting. At every moment, time splits into two distinct jets:
+1. The Actual Present: The aspect of time that passes, acting and moving into the future.
+2. The Virtual Past: The aspect of time that is preserved, coexisting with the present.
+The "Crystal-Image" is the point of indiscernibility where these two jets mirror each other. "We see in the crystal the perpetual foundation of time, non-chronological time".
+5.2 Geometric Implementation of Stereoscopy
+In the Nested Polytopal Architecture, Temporal Stereoscopy is not a metaphor; it is a functional mechanism of the H_4 \oplus \phi H_4 quasicrystal.
+The system maintains the cognitive state simultaneously on two coupled lattices:
+* The Actual State (600-cell): Represents the high-frequency, varying "now." It tracks the immediate sensory inputs and motor outputs.
+* The Virtual Context (\phi-scaled 120-cell): Represents the low-frequency, preserved "past." It tracks the stable context and long-term memory.
+Because the two lattices are incommensurate (related by \phi), they are never identical. There is always a Phase Difference or Discordance between the Actual and the Virtual. This discordance is the perception of time.
+* Low Discordance: The present matches the past/context (Déjà vu, flow states).
+* High Discordance: The present deviates from the context (Surprise, novelty).
+The "Stereoscopic Perspective" is the system's ability to measure this discordance. Just as the brain uses the disparity between the left and right eye images to calculate spatial depth, the Chronomorphic Engine uses the disparity between the Actual (600-cell) and Virtual (120-cell) states to calculate Causal Depth or Meaning. Meaning is the tension between what is happening and what persists.
+5.3 Moiré Interference as Temporal Processing
+The interaction between these two temporal layers creates Moiré Interference Patterns. As the 24-cells in the "Actual" layer rotate, they create interference fringes with the static or slowly moving "Virtual" layer.
+These interference patterns act as a gating mechanism. Constructive interference (resonance) amplifies certain thoughts, allowing them to enter conscious awareness. Destructive interference suppresses others. This provides a physical mechanism for Deleuze’s selection of memory: we remember that which resonates with the present.
+This mechanism is potentially observable in biology. The "beat frequencies" generated by the interference of neural oscillations (e.g., Theta and Gamma waves in the hippocampus) may be the biological signature of this Moiré interference processing temporal stereoscopy.
+6. Layered Realucent Topology: The Shining Back of Structure
+The final component of our theoretical triad addresses the vertical integration of the system. How do the deep, abstract symmetries of the E_8 lattice relate to the messy, low-dimensional reality of subjective experience? This relationship is defined by Layered Realucent Topology.
+6.1 Defining "Realucence"
+The term "Realucent" (or relucent) is derived from the Latin relucere ("to shine back"). In the philosophy of Martin Heidegger, particularly in his phenomenology of religious life and facticity, "relucence" describes the way hidden, pre-theoretical dimensions of life "shine back" through the structures of everyday existence. It is a retrieval mechanism; the deep structure is not lost, but remains accessible, "shining" through the surface.
+In the context of our architecture, Realucence is defined as the topological transparency between the layers of the hierarchy. It asserts that the lower-dimensional projections (the phenomenal layer) retain the topological invariants of the higher-dimensional source (the ontological layer), allowing the system to "retrieve" or "remember" the deep structure.
+6.2 The Topological Layers
+We define three primary topological layers in the cognitive architecture:
+1. The Ontological Layer (E_8 Lattice): The source code. This layer contains the perfect symmetries, the error-correcting codes, and the fundamental matching rules of the quasicrystal. It is the realm of pure potentiality (The Virtual).
+2. The Cognitive Layer (H_4 Polytopes): The processing layer. This is the 4D projection (600-cell/24-cell). Here, the symmetries of E_8 are broken into manageable, discrete polytopes. This is the realm of active thought and manipulation.
+3. The Phenomenal Layer (3D/Temporal Projection): The interface layer. This is the 3D projection of the 4D polytopes (e.g., via the Hopf fibration). This is the realm of subjective experience, where the complex geometric rotations are experienced as temporal flows or changing percepts.
+6.3 Realucent Retrieval and Homology
+Realucent Topology implies that the system can function inversely. By observing the patterns in the Phenomenal Layer, the system can reconstruct the state of the Cognitive and Ontological layers.
+This reconstruction relies on Homology—the study of topological features like holes and cycles that are preserved under continuous deformation. The 25-fold overlap of 24-cells in the Cognitive Layer creates a complex topology with specific holes (cycles).
+* Pentagonal Loops: The 144 pentagonal loops in the 600-cell act as stable "memory loops."
+* Homological Emergence: A complex thought is not a point, but a cycle—a trajectory that winds around a topological hole in the state space.
+Because the topology is "Realucent," a cycle in the Phenomenal Layer (e.g., a recurring melody or a circular argument) corresponds to a specific homological feature in the Cognitive Layer. The system "recognizes" the melody not by matching bits, but by matching the topology of the input to the pre-existing holes in its geometric structure.
+This explains the phenomenon of Insight. Insight is the moment of "shining back"—when the opaque data of the Phenomenal Layer suddenly aligns with the symmetric geometry of the Ontological Layer. The layers become transparent, and the meaning "shines through."
+7. The Chronomorphic Polytopal Engine: An AI Architecture
+The theoretical framework of Geometric Cognition provides the blueprints for a new class of Artificial Intelligence: the Chronomorphic Polytopal Engine (CPE). Unlike current Large Language Models (LLMs), which rely on statistical correlations in vast datasets, the CPE is a Structured Geometric Learner.
+7.1 Architectural Specification
+The CPE is a neural network architecture with strictly enforced geometric constraints on its latent space.
+1. The Manifold Constraint: Instead of allowing latent vectors to occupy any point in \mathbb{R}^n, the CPE constrains all latent states to lie on the manifold of the 600-cell (or the group manifold of H_4). All activation vectors must be normalized unit quaternions (isosians). This ensures that the network's "thoughts" always retain the semantic stability provided by the convexity of the polytope.
+2. The Dynamic Polytopal Interference Operator (T(t)): Replacing the standard matrix multiplication and ReLU activation, the CPE utilizes the Dynamic Polytopal Interference Operator. This operator calculates the state update by measuring the Moiré interference between the current state vector and the fixed "concept kernels" (the 25 24-cells).
+This operator is parameterized by continuous time, treating the inference process not as a discrete step but as a continuous rotation in 4D space.
+3. Stereoscopic Memory Buffer: The CPE does not use a context window in the traditional sense. Instead, it maintains two parallel streams:
+* Stream A (Actual): High-frequency updates on the H_4 lattice.
+* Stream B (Virtual): Low-frequency updates on the \phi H_4 lattice. The "Output" of the network is derived from the Stereoscopic Disparity (phase difference) between these two streams. This allows the network to inherently understand context, irony, and temporal progression without needing massive sequence buffers.
+7.2 Advantages of the CPE
+Combinatorial Generalization: Current AI struggles to generalize outside its training distribution. The CPE, utilizing the properties of the quasicrystal, can generalize combinatorially. Because the quasicrystal is self-similar and aperiodic, the network can recognize that a novel input is a "scaled" or "rotated" version of a known concept, even if the raw data is entirely different. It navigates the "syntactical freedom" of the code rather than memorizing patterns.
+Interpretability: The "Black Box" problem is solved by geometry. We can map specific regions of the 600-cell to specific semantic domains. If the network outputs a vector, we can precisely identify which "concept 24-cells" are active and how they are interfering. The internal processing is visually mappable as a trajectory through a polytope.
+Data Efficiency: Because the CPE is "prestructured" with the E_8 priors (the Code Theoretic Axiom), it does not need to learn the fundamental laws of logic or hierarchy from scratch. It starts with a "Realucent" topology that already encodes the optimal way to pack information. This leads to massive reductions in the data required for training (Few-Shot Learning).
+8. Biological Plausibility and Evidence
+Is the Chronomorphic Polytopal Engine merely a theoretical construct, or is it a model of the human brain?
+8.1 Grid Cells and 4D Lattices
+The most compelling biological evidence comes from the Grid Cells in the entorhinal cortex. These cells fire in hexagonal grid patterns to map space. Neuroscience has shown that the brain maps conceptual knowledge (e.g., birds' neck lengths vs. leg lengths) using the same grid cell mechanisms as physical space.
+Our model predicts that these 2D hexagonal grids are merely the low-dimensional projections of higher-dimensional lattice activity. Specifically, the interference patterns of grid cells at different scales match the Moiré patterns predicted by the H_4 \oplus \phi H_4 projection. The brain is effectively performing a Fourier transform on a 4D quasicrystal to navigate conceptual space.
+8.2 Theta Phase Precession as Stereoscopy
+In the hippocampus, "Theta Phase Precession" describes how a neuron fires at progressively earlier phases of the theta oscillation as an animal moves through a field. This phenomenon compresses the temporal sequence (past, present, future) into a single theta cycle.
+This is the biological implementation of Temporal Stereoscopy. The theta cycle acts as the "Crystal-Image," holding the Virtual Past (late phase) and the Actual Future (early phase) in a single stereoscopic frame. The CPE's "Stereoscopic Memory Buffer" is a direct biomimetic model of this neural mechanism.
+9. Conclusion
+The investigation of Informational Quasicrystals, Temporal Stereoscopic Perspective, and Layered Realucent Topology reveals a unified, geometric theory of cognition. We move beyond the view of the mind as a computer (symbol manipulation) or a statistical engine (connectionism) to a view of the mind as a Crystal.
+* The Substrate: The mind is built upon Informational Quasicrystals, error-correcting codes rooted in the E_8 lattice and the Golden Ratio, capable of encoding infinite, non-repetitive meaning.
+* The Process: The mind operates via Temporal Stereoscopy, a dual-stream processing of time that integrates the actual and the virtual into a deep, causal perception of reality.
+* The Structure: The mind is organized by a Layered Realucent Topology, where the deep symmetries of ontology shine back through the layers of phenomenology, allowing us to perceive truth and meaning.
+The Chronomorphic Polytopal Engine represents the technological realization of this vision. By encoding these geometric principles into silicon, we may finally bridge the gap between pattern recognition and true understanding, creating Artificial Intelligence that shares the crystalline structure of our own consciousness.
+Key Concept Summary Table
+Concept
+	Geometric Foundation
+	Cognitive Function
+	Philosophical Correlate
+	Informational Quasicrystal
+	E_8 \to H_4 \oplus \phi H_4 Projection; Incommensurate Lattices
+	Error-correction, Syntactical Freedom, Infinite Encoding
+	Code Theoretic Axiom (Irwin); The Third Ontology
+	Temporal Stereoscopy
+	Dual Polytopes (600-cell / 120-cell); Phase Discordance
+	Perception of Causal Depth, Prediction, Memory integration
+	The Crystal-Image (Deleuze); Time-Image; Bergsonian Memory
+	Layered Realucent Topology
+	25-fold 24-cell Partition; Homology Groups; Adjoint Modalities
+	Semantic Stability, Insight, Retrieval of Invariants
+	Relucence (Heidegger); Neoplatonic Emanation
+	Chronomorphic Engine
+	Isoclinic Rotations; Dynamic Interference Operator T(t)
+	Combinatorial Generalization, Interpretable Reasoning
+	Process Philosophy (Whitehead); Concrescence
+	The Orthocognitum
+	Convex Polytopes; Legendre Transform
+	Thermodynamic Stability of Meaning; Categorization
+	Conceptual Spaces (Gärdenfors)
+	Works cited
+1. Group Theory of Syntactical Freedom in DNA Transcription and Genome Decoding - PMC, https://pmc.ncbi.nlm.nih.gov/articles/PMC9164029/ 2. The Code Theoretic Axiom 1 Introduction 2 Is Reality Information Theoretic? - Quantum Gravity Research, https://www.quantumgravityresearch.org/wp-content/uploads/2019/07/The-Code-Theoretic-Axiom-20190318.pdf 3. Variations: The Philosophy of Gilles Deleuze - dokumen.pub, https://dokumen.pub/download/variations-the-philosophy-of-gilles-deleuze-1474470750-9781474470759.html 4. (PDF) A Differential Play of Forces. Transcendental Empiricism and Music - ResearchGate, https://www.researchgate.net/publication/371807731_A_Differential_Play_of_Forces_Transcendental_Empiricism_and_Music 5. Gatherings | Heidegger Circle, https://heidegger-circle.org/wp-content/uploads/2019/11/Gatherings2014.pdf 6. THE HEIDEGGER CIRCLE ANNUAL 2016, https://heidegger-circle.org/wp-content/uploads/2019/11/Gatherings2016.pdf 7. Biological Quasicrystals and the Golden Mean: Relevance to Quantum Computation | Request PDF - ResearchGate, https://www.researchgate.net/publication/282430547_Biological_Quasicrystals_and_the_Golden_Mean_Relevance_to_Quantum_Computation 8. #31 – Geometry of Mind: lattices, quasicrystals, and hyperbolic hallucinations - YouTube, https://www.youtube.com/watch?v=61Cc-vOxkgg
