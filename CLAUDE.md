@@ -48,14 +48,7 @@ The theory emerged in this order - important for understanding claims:
 - Connections to Standard Model particle content (Ali 2025)
 - Three-body problem phase space = 8D = E8 dimension
 
-### Phase 4: Lepton Mass Prediction (★★★★★ KEY RESULT)
-- **m_μ = m_e × φ^11** (error: 3.75%)
-- **m_τ = m_e × φ^17** (error: 2.70%)
-- **Statistical significance: p = 0.0033 (p < 0.01)**
-- Exponents 11 and 17 are PRIME NUMBERS
-- Document: `ppp-implementation/E8_LEPTON_MASS_DISCOVERY.md`
-
-### Phase 5: Mirror Resolution
+### Phase 4: Mirror Resolution
 - Distler-Garibaldi (2010) objection: E8 produces mirrors
 - Phillips Resolution: Mirrors ARE matter/antimatter
 - Left 600-cell → matter, Right 600-cell → antimatter
@@ -105,10 +98,9 @@ The theory emerged in this order - important for understanding claims:
 | 3-body reduced phase space = 8D | Hamiltonian mechanics |
 | Golden ratio in H4/600-cell | Icosahedral geometry |
 
-### NOVEL CLAIMS (Phillips Original, Statistically Supported)
+### NOVEL CLAIMS (Phillips Original)
 | Claim | Evidence |
 |-------|----------|
-| Lepton masses follow φ^n (n prime) | p = 0.0033 |
 | Trinity Decomposition for dialectics | Conceptual framework |
 | Mirror particles = matter/antimatter | Resolves Distler-Garibaldi |
 
@@ -122,15 +114,6 @@ The theory emerged in this order - important for understanding claims:
 ---
 
 ## CRITICAL PHYSICS RESULTS
-
-### Lepton Mass Predictions (★★★★★)
-```
-m_μ = m_e × φ^11 = 101.69 MeV   (measured: 105.66 MeV, error: 3.75%)
-m_τ = m_e × φ^17 = 1824.78 MeV  (measured: 1776.86 MeV, error: 2.70%)
-
-φ = (1+√5)/2 ≈ 1.618 (golden ratio)
-Monte Carlo p-value: 0.0033 (statistically significant at p < 0.01)
-```
 
 ### Standard Model Mapping (Ali 2025 + Phillips)
 ```
@@ -187,9 +170,13 @@ Geometric-Dialetics-on-the-Orgin-of-Homology/
 │   └── 07_synthesis/           # Integration documents
 │
 ├── ppp-implementation/          # Code and technical docs
-│   ├── E8_LEPTON_MASS_DISCOVERY.md
 │   ├── E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md
 │   └── E8_THREE_BODY_ACADEMIC_DOCUMENTATION.md
+│
+├── archive/problematic/         # Archived broken agent output
+│   ├── E8_LEPTON_MASS_DISCOVERY.md
+│   ├── e8_lepton_prediction.py
+│   └── e8_exponent_derivation.py
 │
 ├── docs/                        # Additional documentation
 └── .claude/commands/            # AI assistant skills
@@ -208,15 +195,11 @@ Geometric-Dialetics-on-the-Orgin-of-Homology/
    - PROVES independent derivation from music AI
    - Contains complete Trinity Decomposition mathematics
 
-2. `ppp-implementation/E8_LEPTON_MASS_DISCOVERY.md`
-   - Lepton mass prediction with statistical analysis
-   - Key result: φ^11 and φ^17 with p = 0.0033
-
-3. `source_documents/04_analysis_documents/ANALYSIS_PPP_Comprehensive_Validation.md`
+2. `source_documents/04_analysis_documents/ANALYSIS_PPP_Comprehensive_Validation.md`
    - Validates mathematical foundations
    - Identifies what is proven vs needs proof
 
-4. `papers/MIRROR_RESOLUTION.md`
+3. `papers/MIRROR_RESOLUTION.md`
    - Resolves Distler-Garibaldi objection
    - Critical for physics paper viability
 
@@ -259,14 +242,14 @@ Phase 3: Unified Framework
 ### Do NOT:
 - Conflate Phillips's independent Trinity derivation with Lisi's E8 work
 - Claim the 3-body/E8 connection is "proven" (it's dimensional, not structural)
-- Ignore the 3-4% error in lepton mass predictions
 - Present speculative claims as established facts
+- Reference archived "problematic" files (broken agent output)
 
 ### Do:
 - Cite specific documents for specific claims
 - Distinguish ESTABLISHED vs NOVEL vs SPECULATIVE
 - Reference the discovery path (music AI → physics, not physics-first)
-- Note statistical significance of lepton mass result (p = 0.0033)
+- Note that φ appears naturally in H4/600-cell geometry (established math)
 
 ### Key Citations
 - Ali, A.F. (2025). "Quantum Spacetime Imprints: The 24-Cell" - EPJC 85, 1282
@@ -305,10 +288,11 @@ Phase 3: Unified Framework
 |-----------|--------|
 | Theory Framework | Complete |
 | Music AI Origin Docs | Organized |
-| Physics Analysis | Complete (needs verification) |
-| Lepton Mass Result | Statistically significant |
+| Physics Analysis | In progress |
 | Paper Outlines | Complete with red team |
 | Implementation | Needs Trinity Refactor |
 | Publications | Draft phase |
 
 **Primary Focus:** Final draft preparation for publication
+
+**Note:** Some files from broken agent testing have been archived to `archive/problematic/` and should not be referenced.

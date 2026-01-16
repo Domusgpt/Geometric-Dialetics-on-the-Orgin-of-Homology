@@ -84,31 +84,7 @@ See MOXNESS_VERIFICATION.md for details.
 
 ---
 
-## III. MASS PREDICTION RESULTS
-
-From `E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md`:
-
-### Lepton Mass Formula: m = m_e × φⁿ
-
-| Particle | Exponent n | Predicted | Measured | Error |
-|----------|------------|-----------|----------|-------|
-| Electron | 0 (base) | 0.511 MeV | 0.511 MeV | 0% |
-| Muon | 11 | 101.69 MeV | 105.66 MeV | 3.75% |
-| Tau | 17 | 1824.78 MeV | 1776.86 MeV | 2.70% |
-
-### Statistical Significance
-- **p-value**: 0.0033 (Monte Carlo, 100,000 trials)
-- **Interpretation**: Less than 0.33% chance pattern is random
-- **Status**: SIGNIFICANT (p < 0.01)
-
-### Prime Number Pattern
-- Exponents 11 and 17 are both prime
-- 11 is the 5th prime, 17 is the 7th prime
-- Sum: 11 + 17 = 28 (perfect number)
-
----
-
-## IV. EXTERNAL SUPPORTING LITERATURE
+## III. EXTERNAL SUPPORTING LITERATURE
 
 ### Ali (2025): "Quantum Spacetime Imprints" ✓ VERIFIED
 - **Full Citation**: Ahmed Farag Ali, "Quantum Spacetime Imprints: The 24-Cell, Standard Model Symmetry and Its Flavor Mixing"
@@ -132,7 +108,7 @@ From `E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md`:
 
 ---
 
-## V. GAPS AND WEAKNESSES IDENTIFIED
+## IV. GAPS AND WEAKNESSES IDENTIFIED
 
 ### Critical Gaps (Must Address)
 
@@ -151,32 +127,9 @@ From `E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md`:
    - Claims match our interpretation
    - Status: ✓ VERIFIED
 
-4. **Mass Formula Derivation**:
-   - φ-exponent pattern is observed, not derived
-   - Need: Theoretical justification for why 11 and 17
-   - Status: EMPIRICAL, NOT DERIVED
-
-### Methodological Concerns
-
-1. **Curve Fitting vs Prediction**:
-   - Mass formula has 2 free parameters (exponents)
-   - Fitting 2 data points with 2 parameters → overfitting risk
-   - Mitigation: Statistical significance test addresses this
-
-2. **3-4% Error**:
-   - Not explained by framework
-   - Possible causes: quantum corrections, different formula needed
-   - Status: ACKNOWLEDGED, UNEXPLAINED
-
-3. **Quark Masses TESTED - FAIL**:
-   - Tested all quarks against φ^n pattern
-   - Results: 10-20% errors (down: 21%, strange: 8.6%, charm: 11%, bottom: 14%, top: 20%)
-   - Interpretation: QCD running masses obscure pattern; leptons (no QCD) work
-   - Status: ✓ TESTED, ✗ PATTERN FAILS FOR QUARKS
-
 ---
 
-## VI. CLAIMS BY CONFIDENCE LEVEL
+## V. CLAIMS BY CONFIDENCE LEVEL
 
 ### HIGH CONFIDENCE (Proven Mathematics)
 - E8 has 240 roots
@@ -187,9 +140,7 @@ From `E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md`:
 
 ### MEDIUM CONFIDENCE (Validated but Requires Review)
 - Moxness (2014) claims matrix is orthogonal (det=1) - **NOT independently verified**
-- Lepton masses follow φ^n pattern (p < 0.01) - ✓ Verified
-- Mass exponents are prime (11, 17) - ✓ Verified
-- Quark masses do NOT follow pattern (10-20% errors) - ✓ Verified
+- Ali (2025) paper verified: arXiv:2511.10685, EPJC 85, 1282
 
 ### LOW CONFIDENCE (Novel Claims)
 - 8D phase space is homeomorphic to E8 lattice
@@ -210,7 +161,7 @@ From `E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md`:
 
 ---
 
-## VII. REQUIRED ACTIONS BEFORE PUBLICATION
+## VI. REQUIRED ACTIONS BEFORE PUBLICATION
 
 ### Paper 1 (Three-Body/E8)
 - [ ] Verify Moxness matrix against original publication
@@ -220,10 +171,8 @@ From `E8_PHI_HIERARCHY_COMPLETE_ANALYSIS.md`:
 
 ### Paper 2 (Standard Model/24-Cell)
 - [x] Verify Ali (2025) DOI and exact claims ✓ (arXiv:2511.10685, EPJC 85, 1282)
-- [ ] Derive why exponents are 11 and 17 (not just observe)
-- [x] Test pattern on quark masses ✓ (FAILS: 10-20% errors)
-- [ ] Address 3-4% error explicitly
 - [x] Add Phillips mirror resolution to Distler-Garibaldi ✓
+- [ ] Address 24-cell particle mapping mechanism (avoid numerology critique)
 
 ### Paper 3 (PPP)
 - [ ] Define "rendering = cognition" precisely (vs "rendering aids cognition")
