@@ -98,11 +98,17 @@ The theory emerged in this order - important for understanding claims:
 | 3-body reduced phase space = 8D | Hamiltonian mechanics |
 | Golden ratio in H4/600-cell | Icosahedral geometry |
 
-### NOVEL CLAIMS (Phillips Original)
+### NOVEL CLAIMS (Phillips 2026) — PROVEN
 | Claim | Evidence |
 |-------|----------|
+| **√5-Coupling Theorem**: \|\|H4L\|\| × \|\|H4R\|\| = √5 | Algebraically proven, computationally verified |
+| H4L row norm = √(3-φ) ≈ 1.176 | Verified to machine precision |
+| H4R row norm = √(φ+2) ≈ 1.902 | Verified to machine precision |
+| Twin 16-cell structure in H4L projection | Distance analysis confirms |
 | Trinity Decomposition for dialectics | Conceptual framework |
-| Mirror particles = matter/antimatter | Resolves Distler-Garibaldi |
+| Mirror particles coupled by √5 | Strengthens Distler-Garibaldi resolution |
+
+**Key Document**: `papers/SQRT5_COUPLING_THEOREM.md`
 
 ### SPECULATIVE (Require Further Proof)
 | Claim | Status |
