@@ -46,18 +46,65 @@ The E8 → H4 mirror structure **encodes this correctly**:
 
 ## Mathematical Structure
 
-### The Four-Fold Decomposition
+### The Moxness Folding Matrix U
 
-The Moxness matrix produces four 600-cells:
+The matrix U is an **8×8 rotation matrix** that transforms E8 root vectors:
+
+```
+v' = v · U
+```
+
+The resulting vector v' consists of two 4D components:
+- **q_L** (Left quaternion)
+- **q_R** (Right quaternion)
+
+### Palindromic Characteristic Polynomial
+
+The characteristic polynomial of U is:
+
+```
+P(λ) = λ⁸ - 2√5·λ⁶ + 7λ⁴ - 2√5·λ² + 1
+```
+
+Coefficients: (1, 0, -2√5, 0, 7, 0, -2√5, 0, 1) — **symmetric/palindromic**
+
+**Implications**:
+1. Matrix is **unitary and symplectic** — energy-conserving, reversible
+2. Transformation is **lossless** — no information dissipated
+3. Matches the **3-qubit Hadamard matrix** (when normalized) — quantum computing connection
+
+### The Four-Fold Chiral Decomposition
+
+The Moxness matrix produces **four chiral copies**:
 
 | Component | Scale | Chirality | Physical Interpretation |
 |-----------|-------|-----------|------------------------|
-| H4_L | 1 | Left | Particles (light) |
-| φH4_L | φ | Left | Particles (heavy) |
-| H4_R | 1 | Right | Antiparticles (light) |
-| φH4_R | φ | Right | Antiparticles (heavy) |
+| H4_L | 1 | Left | Left-chiral particles |
+| φH4_L | φ | Left | Left-chiral (heavy scale) |
+| H4_R | 1 | Right | Right-chiral antiparticles |
+| φH4_R | φ | Right | Right-chiral (heavy scale) |
 
-### Palindromic Structure
+**Critical Point**: The L and R copies are **orthogonal in 8D space**.
+
+This means:
+- They can be separated by projection angle
+- Chirality is **built into the mathematics**, not imposed
+- The "mirror fermion problem" is actually the **correct chiral structure**
+
+### Chirality as Orthogonality
+
+The Left and Right 600-cells occupy **orthogonal 4D subspaces** within E8:
+
+```
+E8 (8D) = [Left 4D subspace] ⊕ [Right 4D subspace]
+              ↓                      ↓
+           H4_L ⊕ φH4_L          H4_R ⊕ φH4_R
+           (particles)          (antiparticles)
+```
+
+This orthogonality is **not accidental** — it emerges from the palindromic structure of U.
+
+### Palindromic Structure and Self-Duality
 
 The 600-cell is **self-dual** (palindromic):
 - 120 vertices ↔ 600 tetrahedral cells
@@ -69,6 +116,60 @@ The golden ratio nesting is also palindromic:
 ```
 
 This encodes **scale invariance** — the same structure repeats at all scales.
+
+### Connection to Quantum Information
+
+The characteristic polynomial matching the 3-qubit Hadamard matrix suggests:
+- 8D lattice ↔ 3 qubits (2³ = 8 states)
+- Natural mapping to quantum computing architectures
+- "Holographic" encoding: higher-dimensional information in lower-dimensional projections
+
+---
+
+## Triadic Coloring: Trinity Decomposition as RGB
+
+**Discovery**: Paul Phillips (2025-2026) via Polytopal Projection Processing (PPP)
+
+### The 24-Cell Substructure
+
+The 600-cell decomposes into **five disjoint 24-cells** (5 × 24 = 120 vertices).
+
+Each 24-cell further decomposes into **three orthogonal 16-cells** (3 × 8 = 24 vertices):
+- These three 16-cells are **Clifford Parallel** (isoclinic rotations of each other)
+- Rotated by 60° and 120° relative to each other in Petrie projection planes
+
+### Geometric RGB Isomorphism
+
+This threefold symmetry maps to the **RGB additive color model**:
+
+| 16-Cell | Rotation | Color Channel |
+|---------|----------|---------------|
+| Set A (8 vertices) | 0° | **Red** |
+| Set B (8 vertices) | 60° | **Green** |
+| Set C (8 vertices) | 120° | **Blue** |
+
+**Key Insight**: Color is not stored — it is **computed from geometry**.
+
+A point's color is determined by which sub-lattice (16-cell A, B, or C) it belongs to.
+
+### Dialectic Color Synthesis
+
+This implements the **Phillips Synthesis** visually:
+
+| Role | 16-Cell | Color | Geometric Phase |
+|------|---------|-------|-----------------|
+| **Thesis** | α | Red | First orthogonal axis set |
+| **Antithesis** | β | Green | Opposing axis set (60° rotation) |
+| **Synthesis** | γ | Blue | Resolving axis set (120° rotation) |
+
+**Visual Result**: **Structural Iridescence**
+
+When the 4D object rotates, vertices migrate between sub-lattices:
+- A vertex in the "Red" 16-cell at t=0
+- Transitions to "Green" alignment under 4D rotation
+- Creates color shifts based on viewing angle
+
+This eliminates texture mapping entirely — color emerges from geometry.
 
 ---
 
