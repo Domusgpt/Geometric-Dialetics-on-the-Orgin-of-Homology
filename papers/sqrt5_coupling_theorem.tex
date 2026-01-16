@@ -2,6 +2,7 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{geometry}
 \usepackage{hyperref}
+\usepackage{url}
 \usepackage{booktabs}
 \usepackage{bm}
 
@@ -31,13 +32,17 @@ Clear Seas Solutions LLC\\
 We study a class of $8 \times 8$ projection matrices that map the E8 root system to H4 polytope geometry via golden ratio coefficients. For matrices constructed with the coefficient triple $(a,b,c) = (\frac{1}{2}, \frac{\varphi-1}{2}, \frac{\varphi}{2})$, where $\varphi = (1+\sqrt{5})/2$ is the golden ratio, we prove that the row norms of the upper and lower $4 \times 8$ blocks satisfy a precise coupling identity: if $\|\text{H4L}\| = \sqrt{3-\varphi}$ and $\|\text{H4R}\| = \sqrt{\varphi+2}$ denote these row norms, then $\|\text{H4L}\| \cdot \|\text{H4R}\| = \sqrt{5}$. This follows from the elementary identity $(3-\varphi)(\varphi+2) = 5$. We further show that this $\sqrt{5}$-coupling persists as a $1/\sqrt{5}$ inner product between corresponding normalized rows. The result provides a precise algebraic characterization of the relationship between chiral components in E8$\to$H4 folding constructions.
 \end{abstract}
 
+\noindent\textbf{Keywords:} E8 lattice, H4 Coxeter group, golden ratio, folding projection, 600-cell, icosahedral symmetry
+
+\noindent\textbf{MSC 2020:} 52B15 (Symmetry properties of polytopes), 20F55 (Reflection groups), 51M20 (Polyhedra and polytopes; regular figures)
+
 \section{Introduction}
 
 \subsection{Background}
 
 The E8 root system is the unique even unimodular lattice in 8 dimensions and plays a distinguished role in both mathematics and mathematical physics \cite{conway1999}. Its 240 root vectors achieve the optimal sphere packing density in 8 dimensions \cite{viazovska2017}. The H4 Coxeter group, with its associated 600-cell and 120-cell polytopes in 4 dimensions, is the largest non-crystallographic reflection group and is characterized by the appearance of the golden ratio $\varphi = (1+\sqrt{5})/2$ in its geometric structure \cite{coxeter1973}.
 
-A fundamental relationship exists between E8 and H4: the E8 root system can be ``folded'' or projected to produce H4 polytope vertices with golden ratio scaling. This connection has been studied by numerous authors \cite{conway1999, moxness2014, koca2012}. Specifically, an $8 \times 8$ projection matrix can map the 240 roots of E8 to produce multiple copies of the 120-vertex 600-cell at scales related by powers of $\varphi$.
+A fundamental relationship exists between E8 and H4: the E8 root system can be ``folded'' or projected to produce H4 polytope vertices with golden ratio scaling. This connection has been studied by numerous authors \cite{conway1999, moxness2014, koca2001, baez2018}. Specifically, an $8 \times 8$ projection matrix can map the 240 roots of E8 to produce multiple copies of the 120-vertex 600-cell at scales related by powers of $\varphi$.
 
 \subsection{Motivation}
 
@@ -90,7 +95,7 @@ These follow directly from $\varphi = (1+\sqrt{5})/2$ and the characteristic equ
 \end{proof}
 
 \begin{definition}
-The \textbf{H4 Coxeter group} is the symmetry group of the 600-cell, a regular 4-dimensional polytope with 120 vertices. The 600-cell's vertex coordinates necessarily involve the golden ratio.
+The \textbf{H4 Coxeter group} is the symmetry group of the 600-cell, a regular 4-dimensional polytope with 120 vertices. The 600-cell's vertex coordinates necessarily involve the golden ratio. The geometry of the 600-cell and its relationship to E8 has been studied extensively \cite{denney2019, baez2018}.
 \end{definition}
 
 \subsection{E8 to H4 Folding}
@@ -409,33 +414,47 @@ The author thanks J.G. Moxness for foundational work on E8$\to$H4 folding matric
 
 \bibitem{conway1999}
 J.H. Conway and N.J.A. Sloane,
-\textit{Sphere Packings, Lattices and Groups}, 3rd ed.
-Springer-Verlag, New York, 1999.
+\textit{Sphere Packings, Lattices and Groups},
+Grundlehren der mathematischen Wissenschaften, vol.~290, 3rd ed.
+Springer, New York, 1999.
+ISBN: 978-0-387-98585-5.
+DOI: 10.1007/978-1-4757-6568-7.
 
 \bibitem{coxeter1973}
 H.S.M. Coxeter,
 \textit{Regular Polytopes}, 3rd ed.
 Dover Publications, New York, 1973.
+ISBN: 978-0-486-61480-9.
 
 \bibitem{viazovska2017}
 M. Viazovska,
 ``The sphere packing problem in dimension 8,''
 \textit{Annals of Mathematics}, vol.~185, no.~3, pp.~991--1015, 2017.
+DOI: 10.4007/annals.2017.185.3.7.
 
 \bibitem{moxness2014}
 J.G. Moxness,
 ``The 3D Visualization of E8 using an H4 Folding Matrix,''
 viXra:1411.0130, 2014.
+Available: \url{https://vixra.org/abs/1411.0130}.
 
-\bibitem{koca2012}
-M. Koca, N.O. Koca, and R. Ko\c{c},
-``Quaternionic roots of E8 related Coxeter graphs and quasicrystals,''
-\textit{Turkish Journal of Physics}, vol.~22, pp.~421--435, 1998.
+\bibitem{koca2001}
+M. Koca, R. Ko\c{c}, and M. Al-Barwani,
+``Noncrystallographic Coxeter group H4 in E8,''
+\textit{Journal of Physics A: Mathematical and General}, vol.~34, no.~50, pp.~11201--11213, 2001.
+DOI: 10.1088/0305-4470/34/50/303.
 
-\bibitem{denney2020}
-T. Denney, D. Hooker, T. Johnson, G. Robinson, N. Shams, and P. Winger,
-``The 600-cell,''
-arXiv:2003.00655, 2020.
+\bibitem{denney2019}
+T. Denney, D. Hooker, D. Johnson, T. Robinson, M. Butler, and S. Claiborne,
+``The Geometry of H4 Polytopes,''
+arXiv:1912.06156 [math.MG], 2019.
+DOI: 10.48550/arXiv.1912.06156.
+
+\bibitem{baez2018}
+J.C. Baez,
+``From the Icosahedron to E8,''
+\textit{London Mathematical Society Newsletter}, no.~476, pp.~18--23, 2018.
+arXiv:1712.06436.
 
 \end{thebibliography}
 
