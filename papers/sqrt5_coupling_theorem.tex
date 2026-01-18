@@ -29,9 +29,9 @@ Clear Seas Solutions LLC\\
 \maketitle
 
 \begin{abstract}
-We provide the first complete algebraic characterization of the Moxness E8$\to$H4 folding matrix. The coefficient triple $(a,b,c) = (\frac{1}{2}, \frac{\varphi-1}{2}, \frac{\varphi}{2})$, where $\varphi = (1+\sqrt{5})/2$, is geometrically required by icosahedral symmetry---any valid E8$\to$H4 projection must involve $\varphi$ because the 600-cell vertices require it.
+We analyze an E8$\to$H4 folding matrix constructed with golden-ratio-coupled coefficients $(a,b,c) = (\frac{1}{2}, \frac{\varphi-1}{2}, \frac{\varphi}{2})$, where $\varphi = (1+\sqrt{5})/2$. These coefficients are geometrically motivated by icosahedral symmetry---any valid E8$\to$H4 projection must involve $\varphi$ because the 600-cell vertices require it.
 
-For this matrix, we document: (1) Row norms $\|U_L\| = \sqrt{3-\varphi}$ and $\|U_R\| = \sqrt{\varphi+2}$, satisfying $\|U_L\| \cdot \|U_R\| = \sqrt{5}$; (2) The $\varphi$-scaling relationship $U_L = (1/\varphi) U_R$ between blocks; (3) Column norms exhibiting duality with row norms; (4) Matrix rank 7 with one-dimensional null space. These properties follow from geometric constraints of E8$\to$H4 projection and are verified computationally to machine precision. We show that arbitrary $\varphi$-containing coefficients do \emph{not} produce these identities---only the geometrically-required Moxness coefficients yield the $\sqrt{5}$ coupling.
+For this matrix, we document: (1) Row norms $\|U_L\| = \sqrt{3-\varphi}$ and $\|U_R\| = \sqrt{\varphi+2}$, satisfying $\|U_L\| \cdot \|U_R\| = \sqrt{5}$; (2) The $\varphi$-scaling relationship $U_L = (1/\varphi) U_R$ between blocks; (3) Matrix rank 4, consistent with 8D$\to$4D projection. These properties follow from geometric constraints and are verified computationally to machine precision. We show that arbitrary $\varphi$-containing coefficients do \emph{not} produce these identities---only the geometrically-motivated coefficients yield the $\sqrt{5}$ coupling.
 \end{abstract}
 
 \noindent\textbf{Keywords:} E8 lattice, H4 Coxeter group, golden ratio, folding projection, 600-cell, icosahedral symmetry
@@ -62,8 +62,8 @@ Our contribution is not claiming that $\varphi$ appeared mysteriously, but rathe
 \begin{enumerate}
     \item \textbf{Documenting specific forms}: The exact expressions $\sqrt{3-\varphi}$ and $\sqrt{\varphi+2}$ for row norms are not obvious from the coefficients.
     \item \textbf{Proving the $\sqrt{5}$ identity}: The fact that $(3-\varphi)(\varphi+2) = 5$ is a genuine algebraic theorem requiring derivation.
-    \item \textbf{Empirical verification}: We show that arbitrary $\varphi$-containing coefficients do \emph{not} produce $\sqrt{5}$---only the geometrically-required Moxness coefficients do (see Section 8.4 for data).
-    \item \textbf{Structural properties}: The rank, null space, and row-column duality emerge from matrix structure, not from $\varphi$ being in coefficients.
+    \item \textbf{Empirical verification}: We show that arbitrary $\varphi$-containing coefficients do \emph{not} produce $\sqrt{5}$---only the geometrically-motivated coefficients do (see Section 8.4 for data).
+    \item \textbf{Structural properties}: The rank 4 and the $\varphi$-scaling between blocks emerge from matrix structure.
 \end{enumerate}
 
 This paper characterizes geometrically-required structure, not numerological coincidence.
@@ -307,28 +307,25 @@ Part (3) follows since scaling by a positive constant does not change direction.
 This $\varphi$-scaling relationship provides an alternative proof of Theorem \ref{thm:main}: since $\|U_L\| = \|U_R\|/\varphi$, we have $\|U_L\| \cdot \|U_R\| = \|U_R\|^2/\varphi = (\varphi+2)/\varphi = \sqrt{5}$.
 \end{remark}
 
-\subsection{Column Norm Duality}
+\subsection{Column Norm Structure}
 
-A remarkable duality exists between row and column norms.
+The column norms exhibit a more complex pattern than the row norms.
 
-\begin{proposition}[Column Norm Duality]\label{prop:colnorms}
-The column norms of the $\varphi$-coupled folding matrix exhibit the same values as the row norms, but distributed differently:
+\begin{proposition}[Column Norms]\label{prop:colnorms}
+The column norms of the $\varphi$-coupled folding matrix are:
 \begin{enumerate}
-    \item Columns 0--3: $\|U^{(j)}\| = \sqrt{3-\varphi}$ for $j \in \{0,1,2,3\}$
-    \item Columns 4--7: $\|U^{(j)}\| = \sqrt{\varphi+2}$ for $j \in \{4,5,6,7\}$
+    \item Columns 0 and 4: $\|U^{(j)}\| = \sqrt{\varphi+2}$ (the H4R row norm)
+    \item Columns 1, 2, 5, and 6: $\|U^{(j)}\| = \sqrt{2.5} = \frac{\sqrt{10}}{2}$
+    \item Columns 3 and 7: $\|U^{(j)}\| = \sqrt{3-\varphi}$ (the H4L row norm)
 \end{enumerate}
 \end{proposition}
 
 \begin{proof}
-Each column contains entries from both $U_L$ and $U_R$ blocks. For column $j$:
-\[
-\|U^{(j)}\|^2 = \sum_{i=0}^{7} U_{ij}^2
-\]
-Direct computation shows columns 0--3 each contain entries whose squared sum equals $3-\varphi$, while columns 4--7 each have squared sum $\varphi+2$.
+Direct computation of each column's squared norm. For example, Column 0 contains four entries of $|a| = 1/2$ (from U_L) and four entries of $|c| = \varphi/2$ (from U_R), giving $\|U^{(0)}\|^2 = 4(1/4) + 4(\varphi^2/4) = 1 + \varphi^2 = \varphi + 2$.
 \end{proof}
 
 \begin{remark}
-This row-column duality is structural: the same pair of norms $\{\sqrt{3-\varphi}, \sqrt{\varphi+2}\}$ appears in both the row partition (H4L vs.\ H4R) and the column partition (first half vs.\ second half). This is not a consequence of $\varphi$ being in the coefficients---it emerges from the specific arrangement of signs and positions in the matrix.
+Unlike the simple row partition (all U_L rows share one norm, all U_R rows share another), the columns exhibit three distinct norm values. The row norms $\sqrt{3-\varphi}$ and $\sqrt{\varphi+2}$ still appear in columns 3, 7 and 0, 4 respectively, while the remaining columns have the intermediate norm $\sqrt{2.5}$.
 \end{remark}
 
 \section{Rank and Null Space Structure}
@@ -338,35 +335,40 @@ This row-column duality is structural: the same pair of norms $\{\sqrt{3-\varphi
 \begin{proposition}\label{prop:rank}
 The $\varphi$-coupled folding matrix $U$ has:
 \begin{enumerate}
-    \item $\mathrm{rank}(U) = 7$
+    \item $\mathrm{rank}(U) = 4$
     \item $\det(U) = 0$
 \end{enumerate}
-Thus $U$ is singular and represents a true projection, not a rotation.
+Thus $U$ is singular with a 4-dimensional null space.
 \end{proposition}
 
 \begin{proof}
-Numerical computation shows that seven of the eight singular values are non-zero, while one singular value is zero (to machine precision). Equivalently, the reduced row echelon form has exactly 7 pivot columns. The determinant is zero as a consequence of the rank deficiency.
+Numerical computation via singular value decomposition shows exactly four non-zero singular values (approximately $2.62, 2.24, 2.24, 1.77$), with the remaining four being zero to machine precision. The determinant is zero as a consequence of this rank deficiency.
 \end{proof}
+
+\begin{remark}
+The rank being exactly 4 (half of 8) is significant: the matrix $U$ projects 8-dimensional space onto a 4-dimensional subspace, consistent with its role as an E8$\to$H4 folding matrix. Each 4-dimensional block (U_L and U_R) contributes to this same 4-dimensional image.
+\end{remark}
 
 \subsection{Null Space Structure}
 
 \begin{proposition}[Null Space Relation]\label{prop:nullspace}
-The null space of $U$ is one-dimensional, spanned by a vector whose structure involves $\varphi$. The rows of $U$ satisfy the linear dependency:
+The rows of $U$ satisfy the linear dependency:
 \[
 \varphi \cdot \text{Row}_0 - \varphi \cdot \text{Row}_3 - \text{Row}_4 + \text{Row}_7 = \mathbf{0}
 \]
+This is one of four independent linear relations among the 8 rows.
 \end{proposition}
 
 \begin{proof}
-Direct verification shows this linear combination yields the zero vector. Since $\mathrm{rank}(U) = 7$, there is exactly one independent linear relation among the 8 rows, and this is it.
+Direct verification shows this linear combination yields the zero vector. Since $\mathrm{rank}(U) = 4$, there are exactly four independent linear relations among the 8 rows, of which this is one.
 \end{proof}
 
 \begin{remark}
-The appearance of $\varphi$ coefficients in the null space relation is noteworthy: this is a \emph{discovered} relationship, not a constructed one. Even though $\varphi$ appears in the matrix entries, the specific pattern of which rows participate and with what coefficients ($\varphi, -\varphi, -1, 1$) emerges from the matrix structure.
+The appearance of $\varphi$ coefficients in this null space relation is noteworthy: this is a \emph{discovered} relationship, not a constructed one. Even though $\varphi$ appears in the matrix entries, the specific pattern of which rows participate and with what coefficients ($\varphi, -\varphi, -1, 1$) emerges from the matrix structure.
 \end{remark}
 
 \begin{corollary}
-The fact that $U$ has rank 7 (not 8) means that the E8$\to$H4 projection genuinely loses one dimension of information. The 240 E8 roots project to a 7-dimensional subspace of the 8-dimensional output space.
+The fact that $U$ has rank 4 means that the E8$\to$H4 projection maps 8-dimensional input to a 4-dimensional output, losing exactly half the dimensions---precisely what is expected for an 8D$\to$4D folding operation.
 \end{corollary}
 
 \section{The $\varphi$-Hierarchy of Norms}
@@ -453,9 +455,11 @@ where corresponding rows are scaled copies. This explains why the folding matrix
 
 \subsection{Relationship to Moxness's Work}
 
-Moxness \cite{moxness2014} introduced folding matrices for E8$\to$H4 projection in the context of visualization. The coefficient triple $(a,b,c) = (1/2, (\varphi-1)/2, \varphi/2)$ was chosen to produce the golden-ratio scaling between H4 copies. Our contribution is the precise algebraic characterization of this scaling: the coefficients form a geometric sequence with common ratio $\varphi$, which directly implies the $\sqrt{5}$-coupling.
+Moxness \cite{moxness2014} introduced folding matrices for E8$\to$H4 projection in the context of visualization. The coefficient triple $(a,b,c) = (1/2, (\varphi-1)/2, \varphi/2)$ produces golden-ratio scaling between the H4L and H4R blocks.
 
-To our knowledge, the specific identities $\|U_L\| \cdot \|U_R\| = \sqrt{5}$ and $\text{Row}_L = (1/\varphi)\text{Row}_R$ have not been previously published.
+\textbf{Important clarification:} Moxness's later work \cite{moxness2014} describes an $8 \times 8$ \emph{unimodular rotation matrix} with $\det(U) = 1$, orthogonality ($U U^T = I$), and palindromic characteristic polynomial. The matrix we analyze here has $\det(U) = 0$ and rank 4---it is a \emph{projection}, not a rotation. While both matrices use the same golden-ratio coefficient structure, they differ in their overall construction and properties.
+
+Our contribution is the algebraic characterization of the coefficient structure itself: when entries use $(a, a/\varphi, a\varphi)$ with the specific sign pattern of Definition \ref{def:matrix}, the $\sqrt{5}$-coupling and $\varphi$-scaling identities hold regardless of whether the full matrix is a rotation or projection. The identities $\|U_L\| \cdot \|U_R\| = \sqrt{5}$ and $\text{Row}_L = (1/\varphi)\text{Row}_R$ follow directly from the coefficient relationships.
 
 \subsection{Geometric Interpretation}
 
@@ -493,7 +497,7 @@ Several questions remain:
 
 \section{Conclusion}
 
-We have provided the first complete algebraic characterization of the Moxness E8$\to$H4 folding matrix. For the geometrically-required coefficient triple $(a,b,c) = (1/2, (\varphi-1)/2, \varphi/2)$, we documented the following properties:
+We have analyzed an E8$\to$H4 folding matrix constructed with golden-ratio-coupled coefficients $(a,b,c) = (1/2, (\varphi-1)/2, \varphi/2)$. For this matrix, we documented the following properties:
 
 \begin{enumerate}
     \item \textbf{Row norms} (Proposition \ref{prop:norms}): $\|U_L\| = \sqrt{3-\varphi}$ and $\|U_R\| = \sqrt{\varphi+2}$
@@ -502,18 +506,16 @@ We have provided the first complete algebraic characterization of the Moxness E8
 
     \item \textbf{$\varphi$-Scaling} (Corollary \ref{cor:phiscaling}): $U_L = (1/\varphi) U_R$
 
-    \item \textbf{Column norm duality} (Proposition \ref{prop:colnorms}): Columns 0--3 have norm $\sqrt{3-\varphi}$; columns 4--7 have norm $\sqrt{\varphi+2}$
+    \item \textbf{Rank structure} (Proposition \ref{prop:rank}): $\mathrm{rank}(U) = 4$, $\det(U) = 0$, consistent with 8D$\to$4D projection
 
-    \item \textbf{Rank structure} (Proposition \ref{prop:rank}): $\mathrm{rank}(U) = 7$, $\det(U) = 0$
-
-    \item \textbf{Null space} (Proposition \ref{prop:nullspace}): One-dimensional, with $\varphi$-coefficients in the linear dependency
+    \item \textbf{Null space} (Proposition \ref{prop:nullspace}): Four-dimensional, with at least one linear dependency involving $\varphi$-coefficients
 \end{enumerate}
 
-These results follow from elementary algebraic identities involving the golden ratio, particularly $(3-\varphi)(\varphi+2) = 5$ and $\varphi - 1 = 1/\varphi$. The $\varphi$-scaling structure indicates that E8$\to$H4 folding does not produce two independent H4 copies, but rather one H4 structure viewed at two $\varphi$-related scales.
+These results follow from elementary algebraic identities involving the golden ratio, particularly $(3-\varphi)(\varphi+2) = 5$ and $\varphi - 1 = 1/\varphi$. The $\varphi$-scaling structure indicates that the H4L and H4R blocks are not independent but represent one H4 structure viewed at two $\varphi$-related scales.
 
-Crucially, arbitrary $\varphi$-containing coefficients do \emph{not} produce these identities; only the geometrically-required Moxness coefficients do. This confirms that our results document genuine structural properties of E8$\to$H4 folding, not numerical coincidences.
+Crucially, arbitrary $\varphi$-containing coefficients do \emph{not} produce these identities; only the geometrically-motivated coefficients with $b = a/\varphi$ and $c = a\varphi$ do. This confirms that our results document genuine structural properties of E8$\to$H4 folding, not numerical coincidences.
 
-To our knowledge, these specific algebraic characterizations have not been previously published.
+We note that our projection matrix differs from Moxness's unimodular rotation matrix (which has $\det = 1$), though both share the same coefficient structure. The $\sqrt{5}$-coupling and $\varphi$-scaling identities depend on the coefficient relationships, not on whether the overall matrix is a rotation or projection.
 
 \section*{Acknowledgments}
 
