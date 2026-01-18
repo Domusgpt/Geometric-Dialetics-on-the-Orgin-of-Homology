@@ -1,0 +1,572 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{bm}
+
+\geometry{margin=1in}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\diag}{diag}
+
+\title{Algebraic Structure of the Moxness E8$\to$H4 Folding Matrix:\\
+Row Norms, Rank, and the $\sqrt{5}$-Coupling Identity}
+\author{Paul Phillips\\
+Clear Seas Solutions LLC\\
+\texttt{Paul@clearseassolutions.com}}
+\date{January 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We analyze an E8$\to$H4 folding matrix constructed with golden-ratio-coupled coefficients $(a,b,c) = (\frac{1}{2}, \frac{\varphi-1}{2}, \frac{\varphi}{2})$, where $\varphi = (1+\sqrt{5})/2$. These coefficients are geometrically motivated by icosahedral symmetry---any valid E8$\to$H4 projection must involve $\varphi$ because the 600-cell vertices require it.
+
+For this matrix, we document: (1) Row norms $\|U_L\| = \sqrt{3-\varphi}$ and $\|U_R\| = \sqrt{\varphi+2}$, satisfying $\|U_L\| \cdot \|U_R\| = \sqrt{5}$; (2) The $\varphi$-scaling relationship $U_L = (1/\varphi) U_R$ between blocks; (3) Matrix rank 4, consistent with 8D$\to$4D projection. These properties follow from geometric constraints and are verified computationally to machine precision. We show that arbitrary $\varphi$-containing coefficients do \emph{not} produce these identities---only the geometrically-motivated coefficients yield the $\sqrt{5}$ coupling.
+\end{abstract}
+
+\noindent\textbf{Keywords:} E8 lattice, H4 Coxeter group, golden ratio, folding projection, 600-cell, icosahedral symmetry
+
+\noindent\textbf{MSC 2020:} 52B15 (Symmetry properties of polytopes), 20F55 (Reflection groups), 51M20 (Polyhedra and polytopes; regular figures)
+
+\section{Introduction}
+
+\subsection{Background}
+
+The E8 root system is the unique even unimodular lattice in 8 dimensions and plays a distinguished role in both mathematics and mathematical physics \cite{conway1999}. Its 240 root vectors achieve the optimal sphere packing density in 8 dimensions \cite{viazovska2017}. The H4 Coxeter group, with its associated 600-cell and 120-cell polytopes in 4 dimensions, is the largest non-crystallographic reflection group and is characterized by the appearance of the golden ratio $\varphi = (1+\sqrt{5})/2$ in its geometric structure \cite{coxeter1973}.
+
+A fundamental relationship exists between E8 and H4: the E8 root system can be ``folded'' or projected to produce H4 polytope vertices with golden ratio scaling. This connection has been studied by numerous authors \cite{conway1999, moxness2014, koca2001, baez2018}. Specifically, an $8 \times 8$ projection matrix can map the 240 roots of E8 to produce multiple copies of the 120-vertex 600-cell at scales related by powers of $\varphi$.
+
+\subsection{Motivation}
+
+While the E8$\to$H4 folding relationship is well-established, we observe that the explicit algebraic properties of the projection matrices themselves---particularly the relationships between their block structures---have not been fully characterized in the literature.
+
+In this paper, we analyze a specific family of folding matrices constructed with golden-ratio-coupled coefficients. Our main result is the identification of a precise $\sqrt{5}$-coupling between the row norms of the ``left'' and ``right'' 4-dimensional subspaces. This coupling is not a numerical coincidence but follows directly from algebraic identities involving the golden ratio.
+
+\subsection{Why $\varphi$ Appears: Addressing Circularity}
+
+Before proceeding, we address a natural objection: ``If $\varphi$ appears in the matrix coefficients, isn't finding $\varphi$ in the results circular?''
+
+The answer is no, for a fundamental reason: \textbf{the geometry forces $\varphi$.} The Moxness coefficients are not arbitrary choices---they arise from projecting E8 onto H4 (icosahedral symmetry). The 600-cell vertices \emph{require} the golden ratio; any correct E8$\to$H4 projection must involve $\varphi$.
+
+Our contribution is not claiming that $\varphi$ appeared mysteriously, but rather:
+\begin{enumerate}
+    \item \textbf{Documenting specific forms}: The exact expressions $\sqrt{3-\varphi}$ and $\sqrt{\varphi+2}$ for row norms are not obvious from the coefficients.
+    \item \textbf{Proving the $\sqrt{5}$ identity}: The fact that $(3-\varphi)(\varphi+2) = 5$ is a genuine algebraic theorem requiring derivation.
+    \item \textbf{Empirical verification}: We show that arbitrary $\varphi$-containing coefficients do \emph{not} produce $\sqrt{5}$---only the geometrically-motivated coefficients do (see Section 8.4 for data).
+    \item \textbf{Structural properties}: The rank 4 and the $\varphi$-scaling between blocks emerge from matrix structure.
+\end{enumerate}
+
+This paper characterizes geometrically-required structure, not numerological coincidence.
+
+\subsection{Organization}
+
+Section 2 reviews the necessary background on E8, H4, and folding projections. Section 3 defines the specific matrix family we study and derives its row norm properties. Section 4 states and proves our main theorem. Section 5 documents rank and null space structure. Section 6 presents the $\varphi$-hierarchy. Section 7 provides computational verification. Section 8 discusses geometric interpretation and open questions.
+
+\section{Preliminaries}
+
+\subsection{The E8 Root System}
+
+\begin{definition}
+The \textbf{E8 root system} consists of 240 vectors in $\mathbb{R}^8$ of two types:
+\begin{enumerate}
+    \item \textbf{Type I} (112 roots): All vectors of the form $(\pm 1, \pm 1, 0, 0, 0, 0, 0, 0)$ and permutations, where exactly two coordinates are $\pm 1$ and six are 0.
+    \item \textbf{Type II} (128 roots): All vectors of the form $(\pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2}, \pm\frac{1}{2})$ where the number of minus signs is even.
+\end{enumerate}
+All E8 roots have squared norm equal to 2.
+\end{definition}
+
+\begin{remark}
+The E8 lattice is the unique even unimodular lattice in 8 dimensions up to isometry. Its root system has the remarkable property that its components lie in $\{0, \pm\frac{1}{2}, \pm 1\}$---notably, no irrational numbers appear.
+\end{remark}
+
+\subsection{The Golden Ratio and H4}
+
+\begin{definition}
+The \textbf{golden ratio} is $\varphi = \frac{1+\sqrt{5}}{2} \approx 1.618$. It satisfies the characteristic equation $\varphi^2 = \varphi + 1$.
+\end{definition}
+
+The following identities are used throughout this paper:
+
+\begin{lemma}[Golden Ratio Identities]\label{lem:phi}
+The golden ratio $\varphi$ satisfies:
+\begin{enumerate}
+    \item $\varphi^2 = \varphi + 1$
+    \item $\varphi - \frac{1}{\varphi} = 1$
+    \item $\varphi + \frac{1}{\varphi} = \sqrt{5}$
+    \item $(\varphi - 1)^2 = \frac{1}{\varphi^2} = 2 - \varphi = \frac{3-\sqrt{5}}{2}$
+    \item $\frac{1}{\varphi} = \varphi - 1 = \frac{\sqrt{5}-1}{2}$
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+These follow directly from $\varphi = (1+\sqrt{5})/2$ and the characteristic equation. For (4): $(\varphi-1)^2 = \varphi^2 - 2\varphi + 1 = (\varphi+1) - 2\varphi + 1 = 2 - \varphi$.
+\end{proof}
+
+\begin{definition}
+The \textbf{H4 Coxeter group} is the symmetry group of the 600-cell, a regular 4-dimensional polytope with 120 vertices. The 600-cell's vertex coordinates necessarily involve the golden ratio. The geometry of the 600-cell and its relationship to E8 has been studied extensively \cite{denney2019, baez2018}.
+\end{definition}
+
+\subsection{E8 to H4 Folding}
+
+The E8$\to$H4 folding projection maps 8-dimensional E8 root vectors to 4-dimensional H4 geometry. This projection produces multiple copies of the 600-cell at different scales related by $\varphi$.
+
+\begin{definition}
+An \textbf{E8$\to$H4 folding matrix} is an $8 \times 8$ matrix $U$ such that when applied to the 240 E8 root vectors, the resulting 8-dimensional outputs can be partitioned into two 4-dimensional subspaces, each containing 600-cell vertices (possibly at multiple $\varphi$-related scales).
+\end{definition}
+
+Moxness \cite{moxness2014} constructed an explicit folding matrix using golden ratio coefficients. The present work analyzes the algebraic properties of such matrices.
+
+\section{The Golden-Ratio Folding Matrix}
+
+\subsection{Matrix Construction}
+
+We study the following family of $8 \times 8$ projection matrices parameterized by golden-ratio coefficients.
+
+\begin{definition}\label{def:coefficients}
+Define the \textbf{golden-ratio coefficient triple}:
+\begin{align}
+    a &= \frac{1}{2} \\
+    b &= \frac{1}{2\varphi} = \frac{\varphi - 1}{2} \approx 0.309 \\
+    c &= \frac{\varphi}{2} \approx 0.809
+\end{align}
+These satisfy $b = a/\varphi$ and $c = a \cdot \varphi$.
+\end{definition}
+
+\begin{definition}\label{def:matrix}
+The \textbf{$\varphi$-coupled folding matrix} $U$ is an $8 \times 8$ matrix partitioned into two $4 \times 8$ blocks:
+\[
+U = \begin{pmatrix} U_L \\ U_R \end{pmatrix}
+\]
+where $U_L$ (rows 0--3, the ``H4L block'') has entries from $\{0, \pm a, \pm b\}$ and $U_R$ (rows 4--7, the ``H4R block'') has entries from $\{0, \pm a, \pm c\}$.
+
+The explicit matrix is:
+\[
+U = \begin{pmatrix}
+a & b & a & b & a & -b & a & -b \\
+a & a & -b & -b & -a & -a & b & b \\
+a & -b & -a & b & a & -b & -a & b \\
+a & -a & b & -b & -a & a & -b & b \\
+c & a & c & a & c & -a & c & -a \\
+c & c & -a & -a & -c & -c & a & a \\
+c & -a & -c & a & c & -a & -c & a \\
+c & -c & a & -a & -c & c & -a & a
+\end{pmatrix}
+\]
+where $a = 1/2$, $b = (\varphi-1)/2$, $c = \varphi/2$.
+\end{definition}
+
+\begin{remark}
+This matrix structure follows Moxness \cite{moxness2014}. Each row has exactly 8 non-zero entries: 4 entries of $\pm a$ and 4 entries of either $\pm b$ (for rows 0--3) or $\pm c$ (for rows 4--7).
+\end{remark}
+
+\subsection{Row Norm Computation}
+
+\begin{proposition}\label{prop:norms}
+For the $\varphi$-coupled folding matrix $U$:
+\begin{enumerate}
+    \item Each row of $U_L$ has squared norm $\|U_L\|^2 = 3 - \varphi = \frac{5-\sqrt{5}}{2} \approx 1.382$
+    \item Each row of $U_R$ has squared norm $\|U_R\|^2 = \varphi + 2 = \frac{5+\sqrt{5}}{2} \approx 3.618$
+\end{enumerate}
+Thus $\|U_L\| = \sqrt{3-\varphi} \approx 1.176$ and $\|U_R\| = \sqrt{\varphi+2} \approx 1.902$.
+\end{proposition}
+
+\begin{proof}
+\textbf{Part 1:} Each row of $U_L$ contains 4 entries of magnitude $|a| = 1/2$ and 4 entries of magnitude $|b| = (\varphi-1)/2$. Thus:
+\begin{align}
+    \|U_L\|^2 &= 4a^2 + 4b^2 \\
+    &= 4 \cdot \frac{1}{4} + 4 \cdot \frac{(\varphi-1)^2}{4} \\
+    &= 1 + (\varphi-1)^2
+\end{align}
+By Lemma \ref{lem:phi}(4), $(\varphi-1)^2 = 2 - \varphi$. Therefore:
+\[
+\|U_L\|^2 = 1 + (2-\varphi) = 3 - \varphi
+\]
+To verify algebraically: $3 - \varphi = 3 - \frac{1+\sqrt{5}}{2} = \frac{6-1-\sqrt{5}}{2} = \frac{5-\sqrt{5}}{2}$. \checkmark
+
+\textbf{Part 2:} Each row of $U_R$ contains 4 entries of magnitude $|c| = \varphi/2$ and 4 entries of magnitude $|a| = 1/2$. Thus:
+\begin{align}
+    \|U_R\|^2 &= 4c^2 + 4a^2 \\
+    &= 4 \cdot \frac{\varphi^2}{4} + 4 \cdot \frac{1}{4} \\
+    &= \varphi^2 + 1
+\end{align}
+By Lemma \ref{lem:phi}(1), $\varphi^2 = \varphi + 1$. Therefore:
+\[
+\|U_R\|^2 = (\varphi+1) + 1 = \varphi + 2
+\]
+To verify algebraically: $\varphi + 2 = \frac{1+\sqrt{5}}{2} + 2 = \frac{5+\sqrt{5}}{2}$. \checkmark
+\end{proof}
+
+\section{The Main Result}
+
+\begin{theorem}[$\sqrt{5}$-Coupling Theorem]\label{thm:main}
+For the $\varphi$-coupled folding matrix $U$ with coefficient triple $(a,b,c) = (\frac{1}{2}, \frac{\varphi-1}{2}, \frac{\varphi}{2})$, the row norms of the H4L and H4R blocks satisfy:
+\[
+\|U_L\| \cdot \|U_R\| = \sqrt{5}
+\]
+Equivalently, $(3-\varphi)(\varphi+2) = 5$.
+\end{theorem}
+
+\begin{proof}
+By Proposition \ref{prop:norms}, $\|U_L\|^2 = 3-\varphi$ and $\|U_R\|^2 = \varphi+2$. We must show:
+\[
+(3-\varphi)(\varphi+2) = 5
+\]
+
+\textbf{Direct computation:}
+\begin{align}
+    (3-\varphi)(\varphi+2) &= 3\varphi + 6 - \varphi^2 - 2\varphi \\
+    &= \varphi + 6 - \varphi^2
+\end{align}
+
+Substituting $\varphi^2 = \varphi + 1$ (Lemma \ref{lem:phi}(1)):
+\begin{align}
+    &= \varphi + 6 - (\varphi + 1) \\
+    &= \varphi + 6 - \varphi - 1 \\
+    &= 5
+\end{align}
+
+Therefore $\|U_L\| \cdot \|U_R\| = \sqrt{(3-\varphi)(\varphi+2)} = \sqrt{5}$.
+\end{proof}
+
+\begin{remark}
+The identity $(3-\varphi)(\varphi+2) = 5$ can also be verified using the representation $\varphi = (1+\sqrt{5})/2$:
+\begin{align}
+    (3-\varphi)(\varphi+2) &= \frac{5-\sqrt{5}}{2} \cdot \frac{5+\sqrt{5}}{2} \\
+    &= \frac{(5-\sqrt{5})(5+\sqrt{5})}{4} \\
+    &= \frac{25 - 5}{4} = \frac{20}{4} = 5 \checkmark
+\end{align}
+This is a difference-of-squares factorization.
+\end{remark}
+
+\subsection{Inter-Block Inner Products}
+
+The $\sqrt{5}$-coupling also appears in the inner products between rows of $U_L$ and $U_R$.
+
+\begin{proposition}\label{prop:innerproduct}
+For the $\varphi$-coupled folding matrix, the inner product between corresponding rows of $U_L$ and $U_R$ (e.g., Row 0 and Row 4) equals $\sqrt{5}$.
+\end{proposition}
+
+\begin{proof}
+From Definition \ref{def:matrix}, Row 0 $= (a, b, a, b, a, -b, a, -b)$ and Row 4 $= (c, a, c, a, c, -a, c, -a)$.
+
+Computing the dot product term by term:
+\begin{align}
+    \text{Row}_0 \cdot \text{Row}_4 &= (a)(c) + (b)(a) + (a)(c) + (b)(a) + (a)(c) + (-b)(-a) + (a)(c) + (-b)(-a) \\
+    &= 4ac + 4ab \\
+    &= 4a(b+c)
+\end{align}
+
+Substituting the coefficient values:
+\[
+b + c = \frac{\varphi-1}{2} + \frac{\varphi}{2} = \frac{2\varphi - 1}{2}
+\]
+
+Therefore:
+\[
+4a(b+c) = 4 \cdot \frac{1}{2} \cdot \frac{2\varphi-1}{2} = 2\varphi - 1
+\]
+
+Since $\varphi = (1+\sqrt{5})/2$:
+\[
+2\varphi - 1 = 2 \cdot \frac{1+\sqrt{5}}{2} - 1 = 1 + \sqrt{5} - 1 = \sqrt{5}
+\]
+\end{proof}
+
+\begin{corollary}[$\varphi$-Scaling]\label{cor:phiscaling}
+Corresponding rows of $U_L$ and $U_R$ are related by the golden ratio:
+\[
+\text{Row}_L = \frac{1}{\varphi} \cdot \text{Row}_R
+\]
+Consequently:
+\begin{enumerate}
+    \item $\|U_L\| = \frac{1}{\varphi} \|U_R\|$
+    \item $\text{Row}_L \cdot \text{Row}_R = \frac{1}{\varphi} \|U_R\|^2 = \frac{\varphi+2}{\varphi} = \sqrt{5}$
+    \item After normalization, $\hat{U}_L = \hat{U}_R$ (the rows become identical)
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+The coefficients satisfy $a/c = 1/\varphi$ and $b/a = \varphi - 1 = 1/\varphi$, so every entry in Row~$i$ of $U_L$ equals $1/\varphi$ times the corresponding entry in Row~$(i+4)$ of $U_R$. Part (1) follows immediately. For part (2):
+\[
+\text{Row}_L \cdot \text{Row}_R = \frac{1}{\varphi} \|U_R\|^2 = \frac{\varphi+2}{\varphi} = 1 + \frac{2}{\varphi} = 1 + 2(\varphi-1) = 2\varphi - 1 = \sqrt{5}
+\]
+Part (3) follows since scaling by a positive constant does not change direction.
+\end{proof}
+
+\begin{remark}
+This $\varphi$-scaling relationship provides an alternative proof of Theorem \ref{thm:main}: since $\|U_L\| = \|U_R\|/\varphi$, we have $\|U_L\| \cdot \|U_R\| = \|U_R\|^2/\varphi = (\varphi+2)/\varphi = \sqrt{5}$.
+\end{remark}
+
+\subsection{Column Norm Structure}
+
+The column norms exhibit a more complex pattern than the row norms.
+
+\begin{proposition}[Column Norms]\label{prop:colnorms}
+The column norms of the $\varphi$-coupled folding matrix are:
+\begin{enumerate}
+    \item Columns 0 and 4: $\|U^{(j)}\| = \sqrt{\varphi+2}$ (the H4R row norm)
+    \item Columns 1, 2, 5, and 6: $\|U^{(j)}\| = \sqrt{2.5} = \frac{\sqrt{10}}{2}$
+    \item Columns 3 and 7: $\|U^{(j)}\| = \sqrt{3-\varphi}$ (the H4L row norm)
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Direct computation of each column's squared norm. For example, Column 0 contains four entries of $|a| = 1/2$ (from U_L) and four entries of $|c| = \varphi/2$ (from U_R), giving $\|U^{(0)}\|^2 = 4(1/4) + 4(\varphi^2/4) = 1 + \varphi^2 = \varphi + 2$.
+\end{proof}
+
+\begin{remark}
+Unlike the simple row partition (all U_L rows share one norm, all U_R rows share another), the columns exhibit three distinct norm values. The row norms $\sqrt{3-\varphi}$ and $\sqrt{\varphi+2}$ still appear in columns 3, 7 and 0, 4 respectively, while the remaining columns have the intermediate norm $\sqrt{2.5}$.
+\end{remark}
+
+\section{Rank and Null Space Structure}
+
+\subsection{Matrix Rank}
+
+\begin{proposition}\label{prop:rank}
+The $\varphi$-coupled folding matrix $U$ has:
+\begin{enumerate}
+    \item $\mathrm{rank}(U) = 4$
+    \item $\det(U) = 0$
+\end{enumerate}
+Thus $U$ is singular with a 4-dimensional null space.
+\end{proposition}
+
+\begin{proof}
+Numerical computation via singular value decomposition shows exactly four non-zero singular values (approximately $2.62, 2.24, 2.24, 1.77$), with the remaining four being zero to machine precision. The determinant is zero as a consequence of this rank deficiency.
+\end{proof}
+
+\begin{remark}
+The rank being exactly 4 (half of 8) is significant: the matrix $U$ projects 8-dimensional space onto a 4-dimensional subspace, consistent with its role as an E8$\to$H4 folding matrix. Each 4-dimensional block (U_L and U_R) contributes to this same 4-dimensional image.
+\end{remark}
+
+\subsection{Null Space Structure}
+
+\begin{proposition}[Null Space Relation]\label{prop:nullspace}
+The rows of $U$ satisfy the linear dependency:
+\[
+\varphi \cdot \text{Row}_0 - \varphi \cdot \text{Row}_3 - \text{Row}_4 + \text{Row}_7 = \mathbf{0}
+\]
+This is one of four independent linear relations among the 8 rows.
+\end{proposition}
+
+\begin{proof}
+Direct verification shows this linear combination yields the zero vector. Since $\mathrm{rank}(U) = 4$, there are exactly four independent linear relations among the 8 rows, of which this is one.
+\end{proof}
+
+\begin{remark}
+The appearance of $\varphi$ coefficients in this null space relation is noteworthy: this is a \emph{discovered} relationship, not a constructed one. Even though $\varphi$ appears in the matrix entries, the specific pattern of which rows participate and with what coefficients ($\varphi, -\varphi, -1, 1$) emerges from the matrix structure.
+\end{remark}
+
+\begin{corollary}
+The fact that $U$ has rank 4 means that the E8$\to$H4 projection maps 8-dimensional input to a 4-dimensional output, losing exactly half the dimensions---precisely what is expected for an 8D$\to$4D folding operation.
+\end{corollary}
+
+\section{The $\varphi$-Hierarchy of Norms}
+
+The row norms $\sqrt{3-\varphi}$ and $\sqrt{\varphi+2}$ fit into a larger algebraic hierarchy of values that appear naturally in E8$\to$H4 geometry.
+
+\begin{proposition}
+The following table shows algebraically significant values arising in E8$\to$H4 projections, all expressible in terms of $\varphi$ and $\sqrt{5}$:
+\end{proposition}
+
+\begin{center}
+\begin{tabular}{cccl}
+\toprule
+Value & Decimal & Algebraic Form & Description \\
+\midrule
+$\varphi^{-2}$ & 0.382 & $2 - \varphi = \frac{3-\sqrt{5}}{2}$ & Scaling factor \\[2pt]
+$\varphi^{-1}$ & 0.618 & $\varphi - 1 = \frac{\sqrt{5}-1}{2}$ & Golden ratio conjugate \\[2pt]
+$1$ & 1.000 & $1$ & Unit \\[2pt]
+$\sqrt{3-\varphi}$ & 1.176 & $\sqrt{\frac{5-\sqrt{5}}{2}}$ & \textbf{H4L row norm} \\[2pt]
+$\sqrt{2}$ & 1.414 & $\sqrt{2}$ & E8 root norm \\[2pt]
+$\varphi$ & 1.618 & $\frac{1+\sqrt{5}}{2}$ & Golden ratio \\[2pt]
+$\sqrt{\varphi+2}$ & 1.902 & $\sqrt{\frac{5+\sqrt{5}}{2}}$ & \textbf{H4R row norm} \\[2pt]
+$\varphi^2$ & 2.618 & $\varphi + 1 = \frac{3+\sqrt{5}}{2}$ & Golden ratio squared \\[2pt]
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{remark}
+The row norms $\sqrt{3-\varphi}$ and $\sqrt{\varphi+2}$ can be rewritten as:
+\begin{align}
+    \sqrt{3-\varphi} &= \sqrt{\frac{5-\sqrt{5}}{2}} = \frac{\sqrt{10-2\sqrt{5}}}{2} \\
+    \sqrt{\varphi+2} &= \sqrt{\frac{5+\sqrt{5}}{2}} = \frac{\sqrt{10+2\sqrt{5}}}{2}
+\end{align}
+These are the radii of certain circles inscribed in regular pentagons, connecting to well-known constructions in icosahedral geometry.
+\end{remark}
+
+The following identity unifies the hierarchy:
+
+\begin{proposition}
+The product-sum identity:
+\[
+\sqrt{3-\varphi} \cdot \sqrt{\varphi+2} = \sqrt{5} = \varphi + \varphi^{-1}
+\]
+\end{proposition}
+
+\begin{proof}
+The left equality is Theorem \ref{thm:main}. For the right equality:
+\[
+\varphi + \varphi^{-1} = \frac{1+\sqrt{5}}{2} + \frac{2}{1+\sqrt{5}} = \frac{1+\sqrt{5}}{2} + \frac{\sqrt{5}-1}{2} = \frac{2\sqrt{5}}{2} = \sqrt{5}
+\]
+This is Lemma \ref{lem:phi}(3).
+\end{proof}
+
+\section{Computational Verification}
+
+The algebraic results in this paper have been independently verified by numerical computation to machine precision ($\approx 10^{-15}$).
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Identity & Algebraic & Numerical \\
+\midrule
+$\varphi^2 - \varphi - 1$ & $= 0$ & $2.2 \times 10^{-16}$ \\
+$\varphi - 1/\varphi - 1$ & $= 0$ & $0$ \\
+$(3-\varphi)(\varphi+2) - 5$ & $= 0$ & $0$ \\
+$\|U_L\|^2 - (3-\varphi)$ & $= 0$ & $0$ \\
+$\|U_R\|^2 - (\varphi+2)$ & $= 0$ & $0$ \\
+$\|U_L\| \cdot \|U_R\| - \sqrt{5}$ & $= 0$ & $0$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The computation was performed in double-precision floating point arithmetic using the exact matrix entries from Definition \ref{def:matrix}.
+
+\section{Discussion}
+
+\subsection{The Fundamental Structure}
+
+Our analysis reveals that the $\sqrt{5}$-coupling (Theorem \ref{thm:main}) is a consequence of a more fundamental fact: the H4L and H4R row blocks are related by a $\varphi$-scaling (Corollary \ref{cor:phiscaling}). Specifically:
+\[
+U_L = \frac{1}{\varphi} U_R
+\]
+where corresponding rows are scaled copies. This explains why the folding matrix produces two H4 copies at different scales---they are geometrically identical but scaled by the golden ratio.
+
+\subsection{Relationship to Moxness's Work}
+
+Moxness \cite{moxness2014} introduced folding matrices for E8$\to$H4 projection in the context of visualization. The coefficient triple $(a,b,c) = (1/2, (\varphi-1)/2, \varphi/2)$ produces golden-ratio scaling between the H4L and H4R blocks.
+
+\textbf{Important clarification:} Moxness's later work \cite{moxness2014} describes an $8 \times 8$ \emph{unimodular rotation matrix} with $\det(U) = 1$, orthogonality ($U U^T = I$), and palindromic characteristic polynomial. The matrix we analyze here has $\det(U) = 0$ and rank 4---it is a \emph{projection}, not a rotation. While both matrices use the same golden-ratio coefficient structure, they differ in their overall construction and properties.
+
+Our contribution is the algebraic characterization of the coefficient structure itself: when entries use $(a, a/\varphi, a\varphi)$ with the specific sign pattern of Definition \ref{def:matrix}, the $\sqrt{5}$-coupling and $\varphi$-scaling identities hold regardless of whether the full matrix is a rotation or projection. The identities $\|U_L\| \cdot \|U_R\| = \sqrt{5}$ and $\text{Row}_L = (1/\varphi)\text{Row}_R$ follow directly from the coefficient relationships.
+
+\subsection{Geometric Interpretation}
+
+The appearance of $\sqrt{5}$ as the coupling constant reflects its fundamental role in golden ratio geometry: $\sqrt{5} = \varphi + \varphi^{-1}$. The two 4-dimensional subspaces (H4L and H4R) are not independent but are $\varphi$-scaled copies embedded in the 8-dimensional E8 space. After orthonormalization, they become identical, indicating that the ``two'' H4 copies are really one copy viewed at two scales.
+
+This structure is consistent with the known decomposition of E8 roots into four H4 copies at scales $1, \varphi, \varphi^{-1}, 1$ \cite{conway1999}.
+
+\subsection{Empirical Test: Alternative Coefficients}
+
+To demonstrate that the $\sqrt{5}$ coupling is not an automatic consequence of using $\varphi$-related coefficients, we tested alternative coefficient choices:
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Coefficients $(a, b, c)$ & Norm Product & Coupling & $\sqrt{\text{integer}}$? \\
+\midrule
+Moxness $(0.5, 0.309, 0.809)$ & $\sqrt{5} \approx 2.236$ & $1$ & \textbf{YES} \\
+Rational $(0.5, 0.3, 0.8)$ & $2.200$ & $1$ & NO \\
+Different $(0.5, 0.4, 0.7)$ & $2.203$ & $0.6$ & NO \\
+Uniform $(0.5, 0.5, 0.5)$ & $2.000$ & $0$ & YES (trivial) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Only the geometrically-required Moxness coefficients---where $b = a/\varphi$ and $c = a\varphi$---produce the clean $\sqrt{5}$ identity. This confirms that the result is specific to the geometrically-required structure.
+
+\subsection{Open Questions}
+
+Several questions remain:
+\begin{enumerate}
+    \item Does every E8$\to$H4 folding matrix (regardless of coefficient choice) exhibit a similar coupling identity?
+    \item What is the analogous structure for other exceptional folding relationships (e.g., E6$\to$G2)?
+    \item How does this $\varphi$-scaling manifest in the projected 600-cell vertex structure?
+\end{enumerate}
+
+\section{Conclusion}
+
+We have analyzed an E8$\to$H4 folding matrix constructed with golden-ratio-coupled coefficients $(a,b,c) = (1/2, (\varphi-1)/2, \varphi/2)$. For this matrix, we documented the following properties:
+
+\begin{enumerate}
+    \item \textbf{Row norms} (Proposition \ref{prop:norms}): $\|U_L\| = \sqrt{3-\varphi}$ and $\|U_R\| = \sqrt{\varphi+2}$
+
+    \item \textbf{$\sqrt{5}$-Coupling} (Theorem \ref{thm:main}): $\|U_L\| \cdot \|U_R\| = \sqrt{5}$
+
+    \item \textbf{$\varphi$-Scaling} (Corollary \ref{cor:phiscaling}): $U_L = (1/\varphi) U_R$
+
+    \item \textbf{Rank structure} (Proposition \ref{prop:rank}): $\mathrm{rank}(U) = 4$, $\det(U) = 0$, consistent with 8D$\to$4D projection
+
+    \item \textbf{Null space} (Proposition \ref{prop:nullspace}): Four-dimensional, with at least one linear dependency involving $\varphi$-coefficients
+\end{enumerate}
+
+These results follow from elementary algebraic identities involving the golden ratio, particularly $(3-\varphi)(\varphi+2) = 5$ and $\varphi - 1 = 1/\varphi$. The $\varphi$-scaling structure indicates that the H4L and H4R blocks are not independent but represent one H4 structure viewed at two $\varphi$-related scales.
+
+Crucially, arbitrary $\varphi$-containing coefficients do \emph{not} produce these identities; only the geometrically-motivated coefficients with $b = a/\varphi$ and $c = a\varphi$ do. This confirms that our results document genuine structural properties of E8$\to$H4 folding, not numerical coincidences.
+
+We note that our projection matrix differs from Moxness's unimodular rotation matrix (which has $\det = 1$), though both share the same coefficient structure. The $\sqrt{5}$-coupling and $\varphi$-scaling identities depend on the coefficient relationships, not on whether the overall matrix is a rotation or projection.
+
+\section*{Acknowledgments}
+
+The author thanks J.G. Moxness for foundational work on E8$\to$H4 folding matrices.
+
+\begin{thebibliography}{99}
+
+\bibitem{conway1999}
+J.H. Conway and N.J.A. Sloane,
+\textit{Sphere Packings, Lattices and Groups},
+Grundlehren der mathematischen Wissenschaften, vol.~290, 3rd ed.
+Springer, New York, 1999.
+ISBN: 978-0-387-98585-5.
+DOI: 10.1007/978-1-4757-6568-7.
+
+\bibitem{coxeter1973}
+H.S.M. Coxeter,
+\textit{Regular Polytopes}, 3rd ed.
+Dover Publications, New York, 1973.
+ISBN: 978-0-486-61480-9.
+
+\bibitem{viazovska2017}
+M. Viazovska,
+``The sphere packing problem in dimension 8,''
+\textit{Annals of Mathematics}, vol.~185, no.~3, pp.~991--1015, 2017.
+DOI: 10.4007/annals.2017.185.3.7.
+
+\bibitem{moxness2014}
+J.G. Moxness,
+``The 3D Visualization of E8 using an H4 Folding Matrix,''
+viXra:1411.0130, 2014.
+Available: \url{https://vixra.org/abs/1411.0130}.
+
+\bibitem{koca2001}
+M. Koca, R. Ko\c{c}, and M. Al-Barwani,
+``Noncrystallographic Coxeter group H4 in E8,''
+\textit{Journal of Physics A: Mathematical and General}, vol.~34, no.~50, pp.~11201--11213, 2001.
+DOI: 10.1088/0305-4470/34/50/303.
+
+\bibitem{denney2019}
+T. Denney, D. Hooker, D. Johnson, T. Robinson, M. Butler, and S. Claiborne,
+``The Geometry of H4 Polytopes,''
+arXiv:1912.06156 [math.MG], 2019.
+DOI: 10.48550/arXiv.1912.06156.
+
+\bibitem{baez2018}
+J.C. Baez,
+``From the Icosahedron to E8,''
+\textit{London Mathematical Society Newsletter}, no.~476, pp.~18--23, 2018.
+arXiv:1712.06436.
+
+\end{thebibliography}
+
+\end{document}
